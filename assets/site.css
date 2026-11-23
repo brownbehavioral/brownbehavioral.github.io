@@ -285,3 +285,11 @@ details.faq ul{padding-left:1.1em;margin:0}
 .inscard li{display:flex;gap:9px;align-items:flex-start;font-size:.9rem;padding:7px 0;border-bottom:1px solid #eef3f2}
 .inscard li:last-child{border:0}
 .inscard li svg{flex:0 0 auto;color:var(--teal);margin-top:4px}
+
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:240px 240px;gap:16px}
+.gallery figure{margin:0;position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+.gallery .g-big{grid-row:span 2}
+.gallery figure:nth-child(4){grid-column:2/4}
+.gallery img{width:100%;height:100%;object-fit:cover}
+.gallery figcaption{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.92);color:var(--deep);font-weight:600;font-size:.85rem;padding:6px 12px;border-radius:999px}
+@media (max-width:760px){.gallery{grid-template-columns:1fr;grid-template-rows:auto}.gallery .g-big{grid-row:auto}.gallery figure:nth-child(4){grid-column:auto}.gallery figure{height:240px}}

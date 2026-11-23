@@ -176,11 +176,10 @@ LOCS = f'''<div class="locs">
 
 home = f'''
 <section class="hero"><div class="slides">
-  <img class="on" src="/images/slider-1.jpg" alt="man listening to his psychiatrist">
-  <img src="/images/slider-2.jpg" alt="medical personnel and a woman chatting" loading="lazy">
-  <img src="/images/slider-3.jpg" alt="medical personnel comforting a woman" loading="lazy">
-  <img src="/images/slider-4.jpg" alt="man sharing in front of the group" loading="lazy">
-  <img src="/images/slider-5.jpg" alt="mother and her daughter listening to the psychiatrist" loading="lazy">
+  <img class="on" src="/images/hero-ribbon-cutting.jpg" alt="BBHS team and community members at the Mobile Health Clinic ribbon cutting">
+  <img src="/images/counseling-session.jpg" alt="A therapist meeting with a client" loading="lazy">
+  <img src="/images/mobile-clinic.jpg" alt="The Brown Behavioral Health Services Mobile Health Clinic" loading="lazy">
+  <img src="/images/mental-health-awareness.jpg" alt="BBHS team celebrating Mental Health Awareness Month" loading="lazy">
 </div><div class="wrap">
   <span class="pill">{ico("video",16)} Tennessee &amp; Mississippi &middot; In Office and Secure Telehealth</span>
   <h1>Exceptional Behavioral Health Care, Delivered With Distinction.</h1>
@@ -204,7 +203,7 @@ home = f'''
     <p>Our practice pairs doctoral-prepared, board-certified clinicians with a deeply personal approach to care. Whether you are navigating everyday challenges or a complex diagnosis, for yourself or for someone you love, every treatment plan is designed around you. We would be honored to be your first choice in care.</p>
     <ul class="chips" style="margin:22px 0 28px"><li>Ages 5 and older</li><li>Tennessee &amp; Mississippi</li><li>Secure telehealth</li><li>Sliding fee scale available</li></ul>
     <a class="btn btn-teal" href="/behavioral-health-care-about-us/">Discover Our Practice</a></div>
-  <div class="media arch reveal"><img src="/images/main-img.png" alt="psychiatrist comforting her emotional client"><div class="badge-float"><b>Your Care Begins Here</b>The same attentive care, in office or online.</div></div>
+  <div class="media arch reveal"><img src="/images/community-outreach.jpg" alt="BBHS team members at a community outreach event with the Mobile Health Clinic" style="aspect-ratio:4/5;object-fit:cover;width:100%"><div class="badge-float"><b>Your Care Begins Here</b>The same attentive care, in office or online.</div></div>
 </div></section>
 
 <section class="mist"><div class="wrap">
@@ -215,7 +214,7 @@ home = f'''
 <section><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow">Our Providers</span><h2 style="margin:0">Board-Certified. Deeply Committed.</h2></div><a class="btn btn-outline" href="/behavioral-health-care-meet-our-professionals/">Meet the Full Team</a></div>
   <div class="pgrid">
-   <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-Avanti-Brown.jpg" alt="Dr. Avanti Cross-Brown" loading="lazy"><div><b>Dr. Avanti Cross-Brown, APRN, DNP, PMHNP-BC, CARN-AP, NRCME</b><span>Founder &amp; CEO | Provider | Educator &amp; Community Advocate<br>Board-Certified Psychiatric Mental Health Practitioner | Addictions Advanced Practice Provider</span></div></a>
+   <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-Avanti-Cross-Brown.jpg" alt="Dr. Avanti Cross-Brown" loading="lazy"><div><b>Dr. Avanti Cross-Brown, APRN, DNP, PMHNP-BC, CARN-AP, NRCME</b><span>Founder &amp; CEO | Provider | Educator &amp; Community Advocate<br>Board-Certified Psychiatric Mental Health Practitioner | Addictions Advanced Practice Provider</span></div></a>
    <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-Kayla-Williams.jpg" alt="Dr. Kayla Williams" loading="lazy"><div><b>Dr. Kayla Williams, APRN, DNP, PMHNP-BC</b><span>Board-Certified Psychiatric Mental Health Nurse Practitioner</span></div></a>
    <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-Jessica-Allen.jpg" alt="Dr. Jessica Allen" loading="lazy"><div><b>Dr. Jessica Allen, MSN, DNP, FNP-BC, PMHNP-BC</b><span>Board-Certified Psychiatric Mental Health Nurse and Family Nurse Practitioner</span></div></a>
    <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-DiYana-Fisher.jpg" alt="Dr. Di&rsquo;Yana Fisher" loading="lazy"><div><b>Dr. Di&rsquo;Yana Fisher, APRN, DNP, PMHNP-BC</b><span>Board-Certified Psychiatric Mental Health Nurse Practitioner</span></div></a>
@@ -228,6 +227,16 @@ home = f'''
     <div class="hstep"><h3>Request Your Appointment</h3><p>Book online anytime through healow, or call {PHONE}. Choose &ldquo;New Patient&rdquo; for your first visit.</p></div>
     <div class="hstep"><h3>Meet Your Provider</h3><p>Visit us in Bolivar or Olive Branch, or connect by secure telehealth from home.</p></div>
     <div class="hstep"><h3>Receive a Personalized Plan</h3><p>Together we set short-term and long-term goals and support you every step of the way.</p></div>
+  </div>
+</div></section>
+
+<section class="mist"><div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">In the Community</span><h2 style="margin:0">Bringing Care to Where You Are</h2></div><p class="lead">Our Mobile Health Clinic travels to rural communities so more families can get care close to home.</p></div>
+  <div class="gallery">
+   <figure class="g-big reveal"><img src="/images/hero-ribbon-cutting.jpg" alt="Mobile Health Clinic ribbon cutting with the BBHS team and community leaders" loading="lazy"><figcaption>Mobile Health Clinic ribbon cutting</figcaption></figure>
+   <figure class="reveal"><img src="/images/mobile-clinic.jpg" alt="BBHS Mobile Health Clinic" loading="lazy"><figcaption>Our Mobile Health Clinic</figcaption></figure>
+   <figure class="reveal"><img src="/images/mental-health-awareness.jpg" alt="BBHS team and partners during Mental Health Awareness Month" loading="lazy"><figcaption>Mental Health Awareness Month</figcaption></figure>
+   <figure class="reveal"><img src="/images/community-outreach.jpg" alt="BBHS staff at a community outreach event" loading="lazy" style="object-position:center 60%"><figcaption>Community outreach events</figcaption></figure>
   </div>
 </div></section>
 
@@ -267,7 +276,7 @@ about = f'''
  <p class="lead">Brown Behavioral Health Services, PLLC takes pride in offering mental health, minor medical, weight loss, substance abuse treatment, and IV hydration services across the state of Tennessee and Mississippi.</p>
  <p>Our in person and telehealth capabilities provide a more accessible approach to healthcare across rural communities. We encourage you to choose a premiere clinic such as ours to help facilitate your mental health needs as well as other medical services.</p>
  <ul class="chips" style="margin-top:20px"><li>Mental Health</li><li>Minor Medical</li><li>Weight Loss</li><li>Substance Abuse Treatment</li><li>IV Hydration</li></ul></div>
- <div class="media arch"><img src="/images/main-img.png" alt="psychiatrist comforting her emotional client"></div>
+ <div class="media"><img src="/images/hero-ribbon-cutting.jpg" alt="BBHS team and community members at the Mobile Health Clinic ribbon cutting" style="aspect-ratio:4/3;object-fit:cover;width:100%"></div>
 </div></section>
 <section class="alt" id="mission"><div class="wrap two">
  <div class="panel"><span class="eyebrow">Our Mission</span><p>The mission of Brown Behavioral Health Services is to provide proficient and competent care related to diagnosing and treating psychiatric illnesses in pediatrics and adults while improving overall health status. BBHS is committed to the mental health population and is eager to serve each individual holistically while enhancing mental health awareness, promoting individual empowerment, and increasing access to treatment and services for persons living with mental illnesses.</p></div>
@@ -287,7 +296,7 @@ def person(img,name,role,cred,paras,tag=""):
     pic=f'<img src="/images/{img}" alt="image of {name.split(",")[0]}">' if img else f'<div class="avatar" aria-hidden="true">{ini}</div>'
     return f'''<article class="person reveal">{pic}<div><h3>{name}</h3><div class="role">{role}</div><div class="cred">{cred}</div><p>{first}</p>{more}{f'<span class="tag">{tag}</span>' if tag else ""}</div></article>'''
 _prov = ([
- person("Dr-Avanti-Brown.jpg","Dr. Avanti Cross-Brown, APRN, DNP, PMHNP-BC, CARN-AP, NRCME","Founder &amp; CEO | Provider | Educator &amp; Community Advocate","Board-Certified Psychiatric Mental Health Practitioner | Addictions Advanced Practice Provider",[
+ person("Dr-Avanti-Cross-Brown.jpg","Dr. Avanti Cross-Brown, APRN, DNP, PMHNP-BC, CARN-AP, NRCME","Founder &amp; CEO | Provider | Educator &amp; Community Advocate","Board-Certified Psychiatric Mental Health Practitioner | Addictions Advanced Practice Provider",[
   "Dr. Avanti Cross-Brown is the Founder and CEO of Brown Behavioral Health Services (BBHS), a CMS certified Rural Health Clinic based in Bolivar, Tennessee and Olive Branch, Mississippi that serves urban and rural residents across both states. A native of West Tennessee, she has been serving the mental health community since 2013.",
   "Under her leadership, BBHS holds facility licenses in Office-Based Opioid Treatment, Outpatient Mental Health, Alcohol and Drug Detox, and DUI School. The practice delivers behavioral health, primary care, addictions treatment, school-based telehealth, correctional health, and mobile clinic services, as well as free care for uninsured patients.",
   "Dr. Cross-Brown earned her Bachelor of Science in Nursing from the University of Memphis in 2015 and worked as a Registered Nurse for many years. In 2021, she completed her Doctor of Nursing Practice at the University of Tennessee Health Science Center (UTHSC), specializing as a Psychiatric Mental Health Nurse Practitioner, and became ANCC board-certified. During graduate school, she received more than five competitive scholarships, including the Chancellor Diversity Scholarship Award, University Scholar Diversity Scholarship, and Grace S. Wallace Scholarship Award, as well as the fully funded HRSA ANEW Award.",
@@ -380,7 +389,7 @@ pe = f'''<section><div class="wrap split" style="align-items:start"><div class="
 <li>Complete medical history, including description of the person&rsquo;s overall physical health, list of any other illnesses or conditions present, and any current treatments</li>
 <li>Lab tests including:<ul><li>Blood tests</li><li>Radiology studies to look for abnormalities, particularly in the brain structures</li><li>Educational assessments</li><li>Speech and language assessments</li><li>Psychological assessments</li></ul></li></ul>
 <p>After reviewing the evaluation and formulating a diagnosis, we will work with you to establish long-term and short-term treatment goals.</p></div>
-<aside><div class="media" style="margin-bottom:22px"><img src="/images/btm1-box2.jpg" alt="parents comforting their daughter"></div><div class="panel deep"><h3>Ready to talk?</h3><p>If you are interested in hearing more about our services, please feel free to reach out to us at any time.</p><a class="btn btn-gold" href="/behavioral-health-request-an-appointment/">Request an Appointment</a><p style="margin:16px 0 0">Or call <a style="color:#fff" href="{PHONE_LINK}">{PHONE}</a></p></div></aside>
+<aside><div class="media" style="margin-bottom:22px"><img src="/images/therapy-notes.jpg" alt="A provider taking notes during an evaluation" style="aspect-ratio:4/3;object-fit:cover;width:100%"></div><div class="panel deep"><h3>Ready to talk?</h3><p>If you are interested in hearing more about our services, please feel free to reach out to us at any time.</p><a class="btn btn-gold" href="/behavioral-health-request-an-appointment/">Request an Appointment</a><p style="margin:16px 0 0">Or call <a style="color:#fff" href="{PHONE_LINK}">{PHONE}</a></p></div></aside>
 </div></section>'''
 page("/behavioral-health-care-psychiatric-evaluation/","Psychiatric Evaluation | Brown Behavioral Health Services","Comprehensive psychiatric evaluations for children, adolescents and adults in Tennessee and Mississippi.",pe,("Psychiatric Evaluation","Schedule an evaluation to understand your cognitive status.",'<a href="/behavioral-health-care-services/">Services</a> / Psychiatric Evaluation'))
 
@@ -498,7 +507,7 @@ page("/behavioral-health-care-send-your-referrals/","Send Your Referrals | Brown
 # ---------------- CAREERS ----------------
 careers = f'''<section><div class="wrap split" style="grid-template-columns:1fr 1.6fr;align-items:start">
 <aside class="sidecard"><span class="eyebrow">Careers</span><h2>Join Our Team</h2><p class="lead">Join our team of professionals and share your expertise with those who need your help. Apply now!</p>
-<div class="media" style="margin:22px 0"><img src="/images/slider-2.jpg" alt="medical personnel and a woman chatting" style="aspect-ratio:4/3;object-fit:cover"></div>
+<div class="media" style="margin:22px 0"><img src="/images/mental-health-awareness.jpg" alt="The BBHS team at a Mental Health Awareness Month event" style="aspect-ratio:4/3;object-fit:cover"></div>
 <div class="panel"><h3>Why BBHS</h3><ul class="ilist">
 <li>{ico("check",18)}<span>Mission-driven care for rural and underserved communities</span></li>
 <li>{ico("check",18)}<span>Integrated team across behavioral health, primary care, and recovery</span></li>
