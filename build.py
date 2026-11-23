@@ -541,7 +541,8 @@ INS_GROUPS = [
   "TennCare is Tennessee&rsquo;s Medicaid program for eligible children, families, pregnant women, and adults. TennCare members choose or are assigned a health plan, and the plan name appears on your card.",
   [("BlueCare Tennessee","A TennCare health plan offered by BlueCross BlueShield of Tennessee.","BlueCare"),
    ("TennCare Select","A TennCare plan mainly for children in state custody and some children with special health care needs.","Offered by BlueCross BlueShield of Tennessee"),
-   ("Wellpoint","A TennCare health plan, formerly called Amerigroup. Wellpoint also offers Medicare and other plans.","Formerly Amerigroup")]),
+   ("Wellpoint","A TennCare health plan, formerly called Amerigroup. Wellpoint also offers Medicare and other plans.","Formerly Amerigroup"),
+   ("UnitedHealthcare Community Plan","A TennCare health plan offered by UnitedHealthcare.","UHC Community Plan")]),
  ("Mississippi Medicaid","Mississippi Medicaid",
   "Mississippi Medicaid covers eligible children, families, pregnant women, and adults. Many members are enrolled in a MississippiCAN or CHIP health plan, and the plan name appears on your card.",
   [("Magnolia Health","A Mississippi Medicaid (MississippiCAN and CHIP) health plan.","A Centene company"),
@@ -574,7 +575,7 @@ ins = f'''<section style="padding-bottom:30px"><div class="wrap"><div class="pan
 <div><span class="eyebrow">Not Sure What Plan You Have?</span><h2 style="margin-bottom:10px">We Will Help You Figure It Out</h2>
 <ul class="ilist">
 <li>{ico("check",18)}<span>Look at the <b>front of your insurance card</b>. The company name and plan name are usually printed at the top.</span></li>
-<li>{ico("check",18)}<span>In Tennessee, Medicaid is called <b>TennCare</b>. Your card will show BlueCare, TennCare Select, or Wellpoint.</span></li>
+<li>{ico("check",18)}<span>In Tennessee, Medicaid is called <b>TennCare</b>. Your card will show BlueCare, TennCare Select, Wellpoint, or UnitedHealthcare Community Plan.</span></li>
 <li>{ico("check",18)}<span>In Mississippi, Medicaid plans are often called <b>MississippiCAN</b>. Your card will show Magnolia, Molina, or TrueCare.</span></li>
 <li>{ico("check",18)}<span>Have both Medicare and Medicaid? You may be in a <b>D-SNP</b> or <b>BlueCare Plus</b> plan. We accept these.</span></li></ul></div>
 <div style="text-align:center"><p style="font-family:var(--serif);font-size:1.25rem;color:var(--deep);margin-bottom:14px">Call us and we will check your coverage before your visit.</p><a class="btn btn-teal" href="{PHONE_LINK}">{ico("phone",16)} Call {PHONE}</a><p class="note" style="margin-top:12px">Bring your insurance card and a photo ID to every visit.</p></div>
