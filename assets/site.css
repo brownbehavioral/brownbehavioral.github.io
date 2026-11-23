@@ -251,3 +251,5 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:48px;padding
 .ilist li svg{flex:0 0 auto;color:var(--gold);margin-top:3px}
 @media (max-width:1060px){.cats,.pgrid{grid-template-columns:repeat(2,1fr)}.locs,.hsteps{grid-template-columns:1fr}.payband{grid-template-columns:1fr}.sidecard{position:static}}
 @media (max-width:640px){.cats,.pgrid,.row3{grid-template-columns:1fr}.formcard{padding:24px}}
+@media (max-width:760px){article.formcard{grid-template-columns:1fr!important}.svc[style]{grid-template-columns:1fr!important}}
+.icw .ci{width:52px;height:52px;border-radius:14px;background:var(--deep);color:var(--gold);display:grid;place-items:center;margin-bottom:18px}
