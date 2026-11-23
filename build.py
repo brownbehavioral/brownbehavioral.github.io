@@ -33,16 +33,23 @@ def ico(name, size=22):
      "fb":'<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>',
      "user":'<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
      "brief":'<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
+     "brain":'<path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24A2.5 2.5 0 0 1 9.5 2z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24A2.5 2.5 0 0 0 14.5 2z"/>',
+     "steth":'<path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/>',
+     "leaf":'<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>',
+     "shield":'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+     "check":'<path d="M20 6 9 17l-5-5"/>',
+     "clock":'<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',
+     "file":'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>',
      "life":'<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.9 4.9 4.3 4.3M14.8 14.8l4.3 4.3M14.8 9.2l4.3-4.3M4.9 19.1l4.3-4.3"/>',
     }[name]
     return f'<svg width="{size}" height="{size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{p}</svg>'
 
 NAV = [
  ("Home","/",None),
- ("About",None,[("About Us","/behavioral-health-care-about-us/"),("Meet Our Professionals","/behavioral-health-care-meet-our-professionals/")]),
- ("Services",None,[("Behavioral Health Services","/behavioral-health-care-services/"),("Psychiatric Evaluation","/behavioral-health-care-psychiatric-evaluation/"),("Medical Services","/behavioral-health-care-medical-services/"),("MS Medical Card Certification","/docs/MS-Cannabis-Certification.pdf")]),
- ("Patients",None,[("Request an Appointment","/behavioral-health-request-an-appointment/"),("Healow Patient Portal","/behavioral-health-care-healow-patient-portal/"),("Payment Options","/behavioral-health-care-payment/"),("Send Your Referrals","/behavioral-health-care-send-your-referrals/")]),
- ("Careers",None,[("Join Our Team","/behavioral-health-care-careers/"),("Request for Proposals","/behavioral-health-care-careers/request-for-proposals/")]),
+ ("About",None,[("Our Practice","/behavioral-health-care-about-us/"),("Our Team","/behavioral-health-care-meet-our-professionals/"),("Careers","/behavioral-health-care-careers/"),("Request for Proposals","/behavioral-health-care-careers/request-for-proposals/")]),
+ ("Services",None,[("All Services","/behavioral-health-care-services/"),("Psychiatric Evaluation","/behavioral-health-care-psychiatric-evaluation/"),("Medical Services","/behavioral-health-care-medical-services/"),("MS Medical Card Certification","/docs/MS-Cannabis-Certification.pdf")]),
+ ("Patients",None,[("Patient Center","/patient-center/"),("Request an Appointment","/behavioral-health-request-an-appointment/"),("Patient Portal","/behavioral-health-care-healow-patient-portal/"),("Pay Your Bill","/behavioral-health-care-payment/")]),
+ ("Referrals","/behavioral-health-care-send-your-referrals/",None),
  ("Contact","/behavioral-health-care-contact-us/",None),
 ]
 
@@ -95,22 +102,23 @@ def page(path, title, desc, body, phero=None):
 </main>
 <div class="crisis-band"><div class="wrap">
   <div class="ic">{ico("life",26)}</div>
-  <p><b>If you have an emergency or need immediate assistance, please call 911.</b> The Tennessee Statewide Crisis Line, available 24 hours a day, 365 days a year, is a free resource for anyone experiencing a mental health crisis. All calls are routed to a trained crisis counselor in your area, who will provide support and guidance and work to connect you with appropriate community supports.</p>
-  <div class="nums"><a href="tel:18552747471">TN Crisis Line: 1-855-CRISIS-1 (1-855-274-7471)</a><a href="tel:988">988 Suicide &amp; Crisis Lifeline (formerly 1-800-273-TALK)</a></div>
+  <p><b>In an emergency, call 911.</b> If you or someone you love is in a mental health or substance use crisis, free and confidential help is available 24 hours a day, 7 days a week, 365 days a year.</p>
+  <div class="nums"><a href="tel:988">Call or Text 988: Suicide &amp; Crisis Lifeline</a><a href="tel:18552747471">TN Statewide Crisis Line: 855-CRISIS-1 (855-274-7471)</a><a href="tel:18772108513">MS Dept. of Mental Health Helpline: 1-877-210-8513</a><a href="sms:741741">Crisis Text Line: Text HOME to 741741</a><a href="tel:988">Veterans: Dial 988, then Press 1</a></div>
 </div></div>
 <footer class="site"><div class="wrap">
   <div class="fgrid">
     <div><a class="brand" href="/" style="color:#fff"><img src="/images/logo-270.png" alt="" width="58" height="58"><span><b style="color:#fff">Brown Behavioral<br>Health Services, PLLC</b></span></a>
       <p style="margin-top:16px">If you need our services or want to learn more, you can reach out to us anytime.</p>
       <div class="fee"><b>No one will be denied access to services due to inability to pay.</b> There is a discounted/sliding fee schedule available based on family size and income.</div>
-      <div class="social"><a href="{FACEBOOK}" target="_blank" rel="noopener" aria-label="Facebook">{ico("fb",18)}</a><a href="{PSYTODAY}" target="_blank" rel="noopener" aria-label="Psychology Today profile">{ico("user",18)}</a></div>
+      <p style="margin-top:14px">Phone: <a href="{PHONE_LINK}">{PHONE}</a><br>Fax: {FAX}<br><a href="mailto:{EMAIL}">{EMAIL}</a></p><div class="social"><a href="{FACEBOOK}" target="_blank" rel="noopener" aria-label="Facebook">{ico("fb",18)}</a><a href="{PSYTODAY}" target="_blank" rel="noopener" aria-label="Psychology Today profile">{ico("user",18)}</a></div>
     </div>
-    <div><h4>Navigation</h4><ul><li><a href="/">Home</a></li><li><a href="/behavioral-health-care-about-us/">About Us</a></li><li><a href="/behavioral-health-care-meet-our-professionals/">Meet Our Professionals</a></li><li><a href="/behavioral-health-care-services/">Services</a></li><li><a href="/behavioral-health-care-medical-services/">Medical Services</a></li><li><a href="/behavioral-health-care-careers/">Careers</a></li><li><a href="/behavioral-health-care-contact-us/">Contact Us</a></li></ul></div>
-    <div><h4>Patients</h4><ul><li><a href="/behavioral-health-request-an-appointment/">Request an Appointment</a></li><li><a href="/behavioral-health-care-healow-patient-portal/">Healow Patient Portal</a></li><li><a href="/behavioral-health-care-payment/">Payment Options</a></li><li><a href="{REFERRAL}" target="_blank" rel="noopener">Referral Form</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div>
-    <div><h4>Contact Information</h4><ul>
-      <li><b style="color:#fff">Service Areas:</b> Accept patients in the State of Tennessee and Mississippi</li>
-      <li>Bolivar, TN 38008<br>Olive Branch, MS 38654</li><li>Also Offer Telehealth Visits</li>
-      <li>Phone: <a href="{PHONE_LINK}">{PHONE}</a><br>Fax: {FAX}<br>Email: <a href="mailto:{EMAIL}">{EMAIL}</a></li></ul></div>
+    <div><h4>Navigation</h4><ul><li><a href="/">Home</a></li><li><a href="/behavioral-health-care-about-us/">About Us</a></li><li><a href="/behavioral-health-care-meet-our-professionals/">Meet Our Professionals</a></li><li><a href="/behavioral-health-care-services/">Services</a></li><li><a href="/behavioral-health-care-medical-services/">Medical Services</a></li><li><a href="/behavioral-health-care-send-your-referrals/">Referrals</a></li><li><a href="/behavioral-health-care-careers/">Careers</a></li><li><a href="/behavioral-health-care-contact-us/">Contact Us</a></li></ul></div>
+    <div><h4>Patients</h4><ul><li><a href="/patient-center/">Patient Center</a></li><li><a href="/behavioral-health-request-an-appointment/">Request an Appointment</a></li><li><a href="/behavioral-health-care-healow-patient-portal/">Healow Patient Portal</a></li><li><a href="/behavioral-health-care-payment/">Payment Options</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div>
+    <div><h4>Our Offices</h4><ul>
+      <li>Accepting patients throughout Tennessee and Mississippi</li>
+      <li><b style="color:#fff">Tennessee Office</b><br>793 Tennessee Street<br>Bolivar, TN 38008</li>
+      <li><b style="color:#fff">Mississippi Office</b><br>9851 Hwy 178, Suite B<br>Olive Branch, MS 38654</li><li>Telehealth visits available throughout TN and MS</li>
+      </ul></div>
   </div>
   <div class="bottom"><span>&copy; 2022 - <span id="yr">2026</span> Brown Behavioral Health Services, PLLC. All rights reserved.</span><span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;|&nbsp; <a href="/behavioral-health-care-about-us/#nondiscrimination">Nondiscrimination Policy</a></span></div>
 </div></footer>
@@ -140,6 +148,32 @@ def contact_form(subject):
 <button class="btn btn-teal" type="submit">{ico("send",18)} Send Message</button></form>'''
 
 # ---------------- HOME ----------------
+BOLIVAR_MAP = "https://www.google.com/maps?q=793+Tennessee+Street,+Bolivar,+TN+38008&output=embed"
+OLIVE_MAP = "https://www.google.com/maps?q=9851+Hwy+178+Ste+B,+Olive+Branch,+MS+38654&output=embed"
+
+CATS = [
+ ("brain","Behavioral Health","Psychiatric care for children, adolescents, and adults.",
+  [("Psychiatric Evaluation","/behavioral-health-care-psychiatric-evaluation/"),("Medication Management","/behavioral-health-care-services/#behavioral"),("Psychotherapy","/behavioral-health-care-services/#behavioral"),("ADHD Testing","/behavioral-health-care-services/#behavioral"),("Genetic Testing","/behavioral-health-care-services/#behavioral")],"/behavioral-health-care-services/#behavioral"),
+ ("shield","Addiction &amp; Recovery","Compassionate, evidence-based support for recovery.",
+  [("MAT (Medication Assisted Treatment) Program","/behavioral-health-care-services/#recovery"),("Alcohol and Drug: DUI School","/behavioral-health-care-services/#recovery")],"/behavioral-health-care-services/#recovery"),
+ ("steth","Primary &amp; Medical Care","Everyday medical care under the same roof.",
+  [("Primary Care Services","/behavioral-health-care-medical-services/"),("Minor Medical Services","/behavioral-health-care-medical-services/"),("DOT Physicals","/behavioral-health-care-medical-services/"),("Sports Physicals","/behavioral-health-care-medical-services/"),("Mobile IV Hydration Service","/behavioral-health-care-medical-services/")],"/behavioral-health-care-medical-services/"),
+ ("leaf","Wellness &amp; Specialty","Programs that support your whole-person health.",
+  [("Slim Program","/behavioral-health-care-services/#wellness"),("MS Medical Card Certification","/docs/MS-Cannabis-Certification.pdf")],"/behavioral-health-care-services/#wellness"),
+]
+def cats_html():
+    out=[]
+    for ic,t,d,items,href in CATS:
+        lis="".join(f'<li><a href="{h}">{n}</a></li>' for n,h in items)
+        out.append(f'<div class="cat reveal"><div class="ci">{ico(ic,24)}</div><h3>{t}</h3><p class="note">{d}</p><ul>{lis}</ul><a class="more" href="{href}">Explore &rarr;</a></div>')
+    return '<div class="cats">'+"".join(out)+'</div>'
+
+LOCS = f'''<div class="locs">
+ <div class="loc"><iframe src="{BOLIVAR_MAP}" title="Map of Bolivar, TN office" loading="lazy"></iframe><div class="lb"><span class="eyebrow">Tennessee</span><h3>Bolivar Office</h3><p>793 Tennessee Street<br>Bolivar, TN 38008</p><p class="note">Medicare-Certified Rural Health Clinic</p></div></div>
+ <div class="loc"><iframe src="{OLIVE_MAP}" title="Map of Olive Branch, MS office" loading="lazy"></iframe><div class="lb"><span class="eyebrow">Mississippi</span><h3>Olive Branch Office</h3><p>9851 Hwy 178, Suite B<br>Olive Branch, MS 38654</p></div></div>
+ <div class="loc"><div class="tele">{ico("video",56)}</div><div class="lb"><span class="eyebrow">Anywhere in TN &amp; MS</span><h3>Secure Telehealth</h3><p>Private video visits from the comfort of home for patients throughout Tennessee and Mississippi.</p></div></div>
+</div>'''
+
 home = f'''
 <section class="hero"><div class="slides">
   <img class="on" src="/images/slider-1.jpg" alt="man listening to his psychiatrist">
@@ -152,14 +186,14 @@ home = f'''
   <h1>Exceptional Behavioral Health Care, Delivered With Distinction.</h1>
   <p>Board-certified psychiatric care, integrated primary care, and addiction medicine for children, adolescents, and adults, provided with discretion, compassion, and clinical excellence.</p>
   <p class="tag-line">One small crack does not mean you&rsquo;re broken.</p>
-  <div class="actions"><a class="btn btn-gold" href="/behavioral-health-request-an-appointment/">{ico("cal",18)} Schedule a Consultation</a><a class="btn btn-ghost" href="/behavioral-health-care-about-us/">Discover Our Practice</a></div>
+  <div class="actions"><a class="btn btn-gold" href="/behavioral-health-request-an-appointment/">{ico("cal",18)} Schedule a Consultation</a><a class="btn btn-ghost" href="/behavioral-health-care-services/">Explore Our Services</a></div>
 </div></section>
 
 <div class="quick"><div class="wrap"><div class="grid">
   <a class="qcard" href="/behavioral-health-request-an-appointment/"><span class="ic">{ico("cal")}</span><span><b>Schedule Online</b><span>Book at any hour, day or night</span></span></a>
   <a class="qcard" href="/behavioral-health-care-healow-patient-portal/"><span class="ic">{ico("portal")}</span><span><b>Patient Portal</b><span>Secure access to your health records</span></span></a>
-  <a class="qcard" href="/behavioral-health-care-payment/"><span class="ic">{ico("card")}</span><span><b>Payment Options</b><span>Flexible financing available</span></span></a>
-  <a class="qcard" href="{REFERRAL}" target="_blank" rel="noopener"><span class="ic">{ico("send")}</span><span><b>Provider Referrals</b><span>Refer a patient with confidence</span></span></a>
+  <a class="qcard" href="/behavioral-health-care-payment/"><span class="ic">{ico("card")}</span><span><b>Pay Your Bill</b><span>Flexible financing available</span></span></a>
+  <a class="qcard" href="/behavioral-health-care-send-your-referrals/"><span class="ic">{ico("send")}</span><span><b>Provider Referrals</b><span>Refer a patient with confidence</span></span></a>
 </div></div></div>
 
 <div class="trust"><div class="wrap"><span>Doctoral-Prepared, Board-Certified Providers</span><span>Children, Adolescents, Adults &amp; Older Adults</span><span>In Office &amp; Secure Telehealth</span><span>Medicare-Certified Rural Health Clinic</span></div></div>
@@ -173,40 +207,58 @@ home = f'''
   <div class="media arch reveal"><img src="/images/main-img.png" alt="psychiatrist comforting her emotional client"><div class="badge-float"><b>Your Care Begins Here</b>The same attentive care, in office or online.</div></div>
 </div></section>
 
-<section class="alt"><div class="wrap">
-  <div class="center"><span class="eyebrow">Our Expertise</span><h2>Comprehensive Care, Thoughtfully Delivered</h2><p class="lead">Specialized psychiatric, medical, and recovery services for individuals ages 5 and older.</p></div>
-  <div class="cards">
-    <div class="card reveal"><img src="/images/btm1-box0.jpg" alt="cannabis" loading="lazy"><div class="body"><h3>Medical Card Certification</h3><p>Mississippi medical cannabis certification, completed with professional guidance and care.</p><a class="more" href="/docs/MS-Cannabis-Certification.pdf">Learn More</a></div></div>
-    <div class="card reveal"><img src="/images/btm1-box1.jpg" alt="medical personnel giving medicine to a woman" loading="lazy"><div class="body"><h3>Medication Management</h3><p>Ongoing, evidence-based oversight so every medication works safely and effectively for you.</p><a class="more" href="/behavioral-health-care-services/#medication-management">Learn More</a></div></div>
-    <div class="card reveal"><img src="/images/btm1-box2.jpg" alt="parents comforting their daughter" loading="lazy"><div class="body"><h3>Psychiatric Evaluation</h3><p>Comprehensive assessments that bring clarity to diagnosis and direction to treatment.</p><a class="more" href="/behavioral-health-care-psychiatric-evaluation/">Learn More</a></div></div>
-    <div class="card reveal"><img src="/images/btm1-box3.jpg" alt="psychiatrist and a woman chatting" loading="lazy"><div class="body"><h3>Our Full Range of Services</h3><p>Psychotherapy, ADHD testing, MAT, DOT physicals, and much more.</p><a class="more" href="/behavioral-health-care-services/">Explore Services</a></div></div>
+<section class="mist"><div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">Our Expertise</span><h2 style="margin:0">Comprehensive Care, Thoughtfully Delivered</h2></div><p class="lead">Specialized psychiatric, medical, and recovery services for individuals ages 5 and older, all coordinated by one dedicated team.</p></div>
+  {cats_html()}
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">Our Providers</span><h2 style="margin:0">Board-Certified. Deeply Committed.</h2></div><a class="btn btn-outline" href="/behavioral-health-care-meet-our-professionals/">Meet the Full Team</a></div>
+  <div class="pgrid">
+   <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-Avanti-Brown.jpg" alt="Dr. Avanti Brown" loading="lazy"><div><b>Dr. Avanti Brown</b><span>CEO &amp; Psychiatric Mental Health Nurse Practitioner</span></div></a>
+   <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-Kayla-Williams.jpg" alt="Dr. Kayla Williams" loading="lazy"><div><b>Dr. Kayla Williams</b><span>Psychiatric Mental Health Nurse Practitioner</span></div></a>
+   <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-Jessica-Allen.jpg" alt="Dr. Jessica Allen" loading="lazy"><div><b>Dr. Jessica Allen</b><span>Psychiatric &amp; Family Nurse Practitioner</span></div></a>
+   <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-DiYana-Fisher.jpg" alt="Dr. Di&rsquo;Yana Fisher" loading="lazy"><div><b>Dr. Di&rsquo;Yana Fisher</b><span>Psychiatric Mental Health Nurse Practitioner</span></div></a>
   </div>
 </div></section>
 
-<section><div class="wrap split rev">
-  <div class="media reveal"><img src="/images/btm2-img.jpg" alt="man with a hoodie listening to his psychiatrist" loading="lazy"></div>
-  <div class="reveal"><span class="eyebrow">Begin Your Journey</span><h2>Your path forward begins with one conversation.</h2>
-    <p class="lead">We are honored to walk alongside you and to help create meaningful, lasting change in your life and in the lives of those you love.</p>
-    <div class="two" style="margin-top:26px">
-      <div class="panel"><h3>Meet Our Professionals</h3><p class="note">Get to know the board-certified clinicians and dedicated team behind your care.</p><a class="more" style="font-weight:600;text-decoration:none" href="/behavioral-health-care-meet-our-professionals/">Meet the Team &rarr;</a></div>
-      <div class="panel gold"><h3>Refer a Patient</h3><p class="note">Partner with us to extend exceptional care to those who need it most.</p><a style="font-weight:600;text-decoration:none" href="{REFERRAL}" target="_blank" rel="noopener">Submit a Referral &rarr;</a></div>
-    </div></div>
+<section class="band"><div class="wrap" style="position:relative">
+  <div class="sec-head"><div><span class="eyebrow gold">Getting Started</span><h2 style="margin:0">Three Simple Steps to Care</h2></div><a class="btn btn-gold" href="/behavioral-health-request-an-appointment/">Schedule a Consultation</a></div>
+  <div class="hsteps">
+    <div class="hstep"><h3>Request Your Appointment</h3><p>Book online at any hour, or call our office at {PHONE}. New patients are welcome.</p></div>
+    <div class="hstep"><h3>Meet Your Provider</h3><p>Visit us in Bolivar or Olive Branch, or connect by secure telehealth from home.</p></div>
+    <div class="hstep"><h3>Receive a Personalized Plan</h3><p>Together we set short-term and long-term goals and support you every step of the way.</p></div>
+  </div>
 </div></section>
 
-<section class="band"><div class="wrap" style="max-width:900px;position:relative">
-  <span class="eyebrow gold">Our Commitment</span><h2>Our Mission</h2>
-  <blockquote>The mission of Brown Behavioral Health Services is to provide proficient and competent care related to diagnosing and treating psychiatric illnesses in pediatrics and adults while improving overall health status. BBHS is committed to the mental health population and is eager to serve each individual holistically while enhancing mental health awareness, promoting individual empowerment, and increasing access to treatment and services for persons living with mental illnesses.</blockquote>
-  <p style="margin-top:28px"><a class="btn btn-gold" href="/behavioral-health-care-about-us/#mission">Learn About Our Practice</a></p>
+<section><div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">Locations</span><h2 style="margin:0">Serving Tennessee and Mississippi</h2></div><p class="lead">We accept patients throughout the State of Tennessee and Mississippi, in office and by telehealth.</p></div>
+  {LOCS}
 </div></section>
 
-<section><div class="wrap split">
+<section class="mist"><div class="wrap" style="max-width:920px;text-align:center">
+  <span class="eyebrow">Our Commitment</span><h2>Our Mission</h2>
+  <p style="font-family:var(--serif);font-size:clamp(1.1rem,2vw,1.35rem);line-height:1.7;color:var(--deep)">The mission of Brown Behavioral Health Services is to provide proficient and competent care related to diagnosing and treating psychiatric illnesses in pediatrics and adults while improving overall health status. BBHS is committed to the mental health population and is eager to serve each individual holistically while enhancing mental health awareness, promoting individual empowerment, and increasing access to treatment and services for persons living with mental illnesses.</p>
+  <a class="btn btn-teal" href="/behavioral-health-care-about-us/#mission">Learn About Our Practice</a>
+</div></section>
+
+<section><div class="wrap"><div class="panel gold payband">
+  <div><span class="eyebrow">Accessible Care</span><h2 style="margin-bottom:10px">Care for Every Family</h2><p style="margin:0"><b>No one will be denied access to services due to inability to pay.</b> A discounted/sliding fee schedule is available based on family size and income, and we proudly accept CareCredit and Scratchpay financing.</p></div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end"><a class="btn btn-teal" href="/behavioral-health-care-payment/">Payment Options</a><a class="btn btn-outline" href="{CARECREDIT}" target="_blank" rel="noopener">Apply for CareCredit</a></div>
+</div></div></section>
+
+<section class="mist"><div class="wrap split" style="align-items:start">
   <div><span class="eyebrow">Connect With Us</span><h2>We Welcome Your Inquiry</h2><p class="lead">Share your questions or concerns, and a member of our team will respond promptly and confidentially.</p>
-    <div class="panel" style="margin-top:20px">{contact_form("New message from brownbehavioral.com (home page)")}</div></div>
-  <div><iframe class="map" src="{MAP}" title="Map of Bolivar, TN" loading="lazy" style="height:520px"></iframe></div>
+    <div class="panel deep" style="margin-top:24px"><ul class="ilist">
+      <li>{ico("phone",18)}<span>Phone: <a style="color:#fff" href="{PHONE_LINK}">{PHONE}</a></span></li>
+      <li>{ico("fax",18)}<span>Fax: {FAX}</span></li>
+      <li>{ico("mail",18)}<span><a style="color:#fff" href="mailto:{EMAIL}">{EMAIL}</a></span></li>
+      <li>{ico("pin",18)}<span>Bolivar, TN &amp; Olive Branch, MS<br>Telehealth throughout TN &amp; MS</span></li></ul></div></div>
+  <div class="formcard">{contact_form("New message from brownbehavioral.com (home page)")}</div>
 </div></section>
 '''
 page("/", "Brown Behavioral Health Services, PLLC | Behavioral Health Care in Tennessee and Mississippi",
-     "Psychiatric evaluation, medication management, therapy, MAT, primary care and more for ages 5 and up. Offices in Bolivar, TN and Olive Branch, MS, plus telehealth.", home)
+     "Board-certified psychiatric care, primary care, and addiction medicine for ages 5 and up. Offices in Bolivar, TN and Olive Branch, MS, plus secure telehealth.", home)
 
 # ---------------- ABOUT ----------------
 about = f'''
@@ -265,23 +317,41 @@ team = f'''<section><div class="wrap"><div class="center"><span class="eyebrow">
 page("/behavioral-health-care-meet-our-professionals/","Meet Our Professionals | Brown Behavioral Health Services","Meet the board-certified psychiatric nurse practitioners and clinical team at Brown Behavioral Health Services.",team,("Meet Our Professionals","Get to know the professionals who are available to help and support you anytime.","Meet Our Professionals"))
 
 # ---------------- SERVICES ----------------
-svc = ["Psychiatric Evaluation|/behavioral-health-care-psychiatric-evaluation/","Medication Management|#medication-management","Genetic Testing","Psychotherapy","ADHD Testing","DOT Physicals","Medical Card Certification|/docs/MS-Cannabis-Certification.pdf","Slim Program","MAT (Medication Assisted Treatment) Program","Alcohol and Drug: DUI School"]
-def li(x):
-    if "|" in x: t,h=x.split("|"); return f'<li><a href="{h}">{t}</a></li>'
-    return f"<li>{x}</li>"
+SVC = {
+ "behavioral":("brain","Behavioral Health",[
+   ("Psychiatric Evaluation","A comprehensive assessment that brings clarity to diagnosis and direction to treatment.","/behavioral-health-care-psychiatric-evaluation/"),
+   ("Medication Management","Ongoing, evidence-based oversight so every medication works safely and effectively for you.",None),
+   ("Psychotherapy","Talk therapy with licensed professionals to build coping skills, insight, and resilience.",None),
+   ("ADHD Testing","Thorough testing for children, adolescents, and adults to guide an accurate diagnosis.",None),
+   ("Genetic Testing","Testing that can help personalize your treatment plan.",None)]),
+ "recovery":("shield","Addiction &amp; Recovery",[
+   ("MAT (Medication Assisted Treatment) Program","Medication combined with counseling and support for substance use disorders.",None),
+   ("Alcohol and Drug: DUI School","Required alcohol and drug education delivered in a respectful, supportive setting.",None)]),
+ "medical":("steth","Primary &amp; Medical Care",[
+   ("Primary Care Services","Everyday medical care that works hand in hand with your behavioral health care.","/behavioral-health-care-medical-services/"),
+   ("DOT Physicals","Department of Transportation physical exams for CDL drivers and students.","/behavioral-health-care-medical-services/"),
+   ("Minor Medical Services","Prompt care for common, non-emergency medical needs.","/behavioral-health-care-medical-services/"),
+   ("Sports Physicals","Pre-participation physicals for student athletes.","/behavioral-health-care-medical-services/"),
+   ("Mobile IV Hydration Service","IV hydration brought to you.","/behavioral-health-care-medical-services/")]),
+ "wellness":("leaf","Wellness &amp; Specialty",[
+   ("Slim Program","Medically guided weight-loss support.",None),
+   ("Medical Card Certification","Mississippi medical cannabis certification.","/docs/MS-Cannabis-Certification.pdf")]),
+}
+def svc_sections():
+    out=[]
+    for i,(key,(ic,title,items)) in enumerate(SVC.items()):
+        cards="".join(f'<div class="panel reveal"><h3>{n}</h3><p class="note" style="margin:0 0 {"12px" if h else "0"}">{d}</p>{f"<a class=more style=font-weight:600;text-decoration:none href={chr(34)}{h}{chr(34)}>Learn More &rarr;</a>" if h else ""}</div>' for n,d,h in items)
+        out.append(f'<section id="{key}" class="{"mist" if i%2 else ""}"><div class="wrap"><div class="sec-head"><div style="display:flex;gap:18px;align-items:center"><div class="cat" style="padding:0;border:0;background:none"><div class="ci" style="margin:0">{ico(ic,24)}</div></div><h2 style="margin:0">{title}</h2></div></div><div class="cards three" style="margin-top:0">{cards}</div></div></section>')
+    if True:
+        out.insert(1,"")
+    return "".join(out)
 cond=["Major Depressive Disorders","Generalized Anxiety Disorder","PTSD","ADHD","Disruptive Mood Dysregulation Disorder","Conduct Disorders","Postpartum Depression","Bipolar Disorders","Schizophrenic Disorders","Medication Assisted Treatment for Substance Use Disorders","Many more"]
-services = f'''<section><div class="wrap split">
-<div><span class="eyebrow">Our Service Programs</span><h2>Behavioral health care for ages 5 and up</h2>
-<p>If you want to avail any of them, we recommend you request an appointment and meet with our professionals. They will help you determine your situation and the services appropriate to address your concerns. We are here to support you.</p>
-<ul class="svc" style="margin-top:24px">{"".join(li(x) for x in svc)}</ul></div>
-<div class="media"><img src="/images/slider-1.jpg" alt="man listening to his psychiatrist" style="aspect-ratio:4/5;object-fit:cover"></div></div></section>
-<section class="alt" id="medication-management"><div class="wrap two">
-<div class="panel"><span class="eyebrow">Featured Service</span><h3>Medication Management</h3><p>Let us help manage your medications and their effectiveness.</p><a class="btn btn-outline" href="/behavioral-health-request-an-appointment/">Request an Appointment</a></div>
-<div class="panel"><span class="eyebrow">Featured Service</span><h3>Psychiatric Evaluation</h3><p>Schedule an evaluation to understand your cognitive status.</p><a class="btn btn-outline" href="/behavioral-health-care-psychiatric-evaluation/">Learn More</a></div>
-</div></section>
-<section><div class="wrap"><div class="center"><span class="eyebrow">Conditions We Treat</span><h2>We treat a wide range of conditions</h2></div>
-<ul class="chips" style="justify-content:center;margin-top:28px">{"".join(f"<li>{c}</li>" for c in cond)}</ul></div></section>{CONNECT}'''
-page("/behavioral-health-care-services/","Services | Brown Behavioral Health Services","Psychiatric evaluation, medication management, genetic testing, psychotherapy, ADHD testing, MAT, DUI school and more.",services,("Services","Our behavioral health care services are available for individuals aging 5 and up.","Services"))
+services = f'''<section style="padding-bottom:40px"><div class="wrap" style="max-width:900px;text-align:center"><p class="lead">Our behavioral health care services are available for individuals aging 5 and up. If you want to avail any of them, we recommend you request an appointment and meet with our professionals. They will help you determine your situation and the services appropriate to address your concerns. We are here to support you.</p>
+<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px"><a class="btn btn-outline" href="#behavioral">Behavioral Health</a><a class="btn btn-outline" href="#recovery">Addiction &amp; Recovery</a><a class="btn btn-outline" href="#medical">Primary &amp; Medical</a><a class="btn btn-outline" href="#wellness">Wellness &amp; Specialty</a></div></div></section>
+<span id="medication-management"></span>{svc_sections()}
+<section class="band"><div class="wrap center" style="position:relative"><span class="eyebrow gold">Conditions We Treat</span><h2>Expert Care for a Wide Range of Conditions</h2>
+<ul class="chips" style="justify-content:center;margin-top:28px">{"".join(f'<li style="background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.18)">{c}</li>' for c in cond)}</ul></div></section>{CONNECT}'''
+page("/behavioral-health-care-services/","Services | Brown Behavioral Health Services","Behavioral health, addiction and recovery, primary care, and wellness services for ages 5 and up in Tennessee and Mississippi.",services,("Our Services","Behavioral health, recovery, medical, and wellness services, coordinated by one dedicated team.","Services"))
 
 # ---------------- PSYCH EVAL ----------------
 pe = f'''<section><div class="wrap split" style="align-items:start"><div class="prose">
@@ -308,8 +378,8 @@ appt = f'''<section><div class="wrap split">
 <a class="btn btn-teal" href="{HEALOW_BOOK}" target="_blank" rel="noopener">{ico("cal",18)} Book Now</a>
 <p style="margin-top:22px">Prefer to call? Reach us at <a href="{PHONE_LINK}">{PHONE}</a>.</p></div>
 <div class="two">
-<div class="panel"><span class="eyebrow">Tennessee</span><h3>TN Brown Behavioral Health Services</h3><p class="note">Bolivar, TN 38008</p><p class="note">Medical Provider Only</p><a class="btn btn-outline" href="{HEALOW_BOOK}" target="_blank" rel="noopener">Book in TN</a></div>
-<div class="panel"><span class="eyebrow">Mississippi</span><h3>MS Brown Behavioral Health Services</h3><p class="note">Olive Branch, MS 38654</p><p class="note">&nbsp;</p><a class="btn btn-outline" href="{HEALOW_BOOK}" target="_blank" rel="noopener">Book in MS</a></div>
+<div class="panel"><span class="eyebrow">Tennessee</span><h3>TN Brown Behavioral Health Services</h3><p class="note">793 Tennessee Street, Bolivar, TN 38008</p><p class="note">Medical Provider Only</p><a class="btn btn-outline" href="{HEALOW_BOOK}" target="_blank" rel="noopener">Book in TN</a></div>
+<div class="panel"><span class="eyebrow">Mississippi</span><h3>MS Brown Behavioral Health Services</h3><p class="note">9851 Hwy 178, Suite B, Olive Branch, MS 38654</p><p class="note">&nbsp;</p><a class="btn btn-outline" href="{HEALOW_BOOK}" target="_blank" rel="noopener">Book in MS</a></div>
 </div></div></section>
 <section class="alt"><div class="wrap center"><h2>New to BBHS?</h2><p class="lead">No one will be denied access to services due to inability to pay. There is a discounted/sliding fee schedule available based on family size and income.</p><a class="btn btn-outline" href="/behavioral-health-care-payment/">See Payment Options</a></div></section>'''
 page("/behavioral-health-request-an-appointment/","Request an Appointment | Brown Behavioral Health Services","Book your appointment online with Brown Behavioral Health Services in Tennessee or Mississippi.",appt,("Request an Appointment","Book online or through the app to schedule your appointment.","Request an Appointment"))
@@ -337,31 +407,95 @@ pay = f'''<section><div class="wrap three">
 <div class="alert">No one will be denied access to services due to inability to pay. There is a discounted/sliding fee schedule available based on family size and income.</div></div></section>'''
 page("/behavioral-health-care-payment/","Payment Options | Brown Behavioral Health Services","Pay by debit/credit card, CareCredit, or Scratchpay. Sliding fee scale available.",pay,("Payment Options","Flexible ways to pay for your care.","Payment Options"))
 
+# ---------------- PATIENT CENTER ----------------
+pc = f'''<section><div class="wrap"><div class="cards" style="margin-top:0">
+ <div class="panel reveal"><div class="cat" style="padding:0;border:0;background:none"><div class="ci">{ico("cal",24)}</div></div><h3>Request an Appointment</h3><p class="note">Book online at any hour through healow, or call {PHONE}.</p><a class="btn btn-teal" href="/behavioral-health-request-an-appointment/">Schedule</a></div>
+ <div class="panel reveal"><div class="cat" style="padding:0;border:0;background:none"><div class="ci">{ico("portal",24)}</div></div><h3>Patient Portal</h3><p class="note">View records, message your care team, and more. Practice code <span class="code">ACGHDD</span>.</p><a class="btn btn-teal" href="/behavioral-health-care-healow-patient-portal/">Open Portal</a></div>
+ <div class="panel reveal"><div class="cat" style="padding:0;border:0;background:none"><div class="ci">{ico("card",24)}</div></div><h3>Pay Your Bill</h3><p class="note">Copays, balances, and financing through CareCredit and Scratchpay.</p><a class="btn btn-teal" href="/behavioral-health-care-payment/">Payment Options</a></div>
+ <div class="panel reveal"><div class="cat" style="padding:0;border:0;background:none"><div class="ci">{ico("file",24)}</div></div><h3>MS Medical Card</h3><p class="note">Information on Mississippi medical cannabis certification.</p><a class="btn btn-teal" href="/docs/MS-Cannabis-Certification.pdf">View Details</a></div>
+</div></div></section>
+<section class="mist"><div class="wrap two">
+ <div class="panel"><span class="eyebrow">Before Your Visit</span><h3>What to Bring</h3><ul class="ilist">
+  <li>{ico("check",18)}<span>A photo ID and your insurance card, if you have insurance</span></li>
+  <li>{ico("check",18)}<span>A list of your current medications and doses</span></li>
+  <li>{ico("check",18)}<span>Any prior records, evaluations, or school reports that may help your provider</span></li>
+  <li>{ico("check",18)}<span>For telehealth: a quiet, private space and a charged phone, tablet, or computer</span></li></ul></div>
+ <div class="panel deep"><span class="eyebrow gold">Financial Assistance</span><h3>Care for Every Family</h3><p>No one will be denied access to services due to inability to pay. There is a discounted/sliding fee schedule available based on family size and income.</p><p>Ask our front desk about the sliding fee schedule at {PHONE}.</p></div>
+</div></section>{CONNECT}'''
+page("/patient-center/","Patient Center | Brown Behavioral Health Services","Appointments, patient portal, bill pay, and visit information for patients of Brown Behavioral Health Services.",pc,("Patient Center","Everything you need for your care, in one place.","Patient Center"))
+
 # ---------------- REFERRALS ----------------
-ref = f'''<section><div class="wrap" style="max-width:820px"><div class="panel center"><div style="width:64px;height:64px;border-radius:16px;background:var(--teal-l);color:var(--teal);display:grid;place-items:center;margin:0 auto 18px">{ico("send",30)}</div>
-<h2>Allow us to help others by sending your referrals.</h2><p class="lead">Help us extend our reach to other people who can benefit from our services.</p><a class="btn btn-teal" href="{REFERRAL}" target="_blank" rel="noopener">Open Referral Form</a><p class="note" style="margin-top:16px">Providers may also fax referrals to {FAX}.</p></div></div></section>'''
-page("/behavioral-health-care-send-your-referrals/","Send Your Referrals | Brown Behavioral Health Services","Refer a patient to Brown Behavioral Health Services.",ref,("Send Your Referrals","Allow us to help others by sending your referrals.","Send Your Referrals"))
+REF_ENDPOINT = FORM_ENDPOINT  # see note in README: use a HIPAA-covered form service before go-live
+def radios(name, opts, req=False):
+    return '<div class="radios">'+"".join(f'<label><input type="radio" name="{name}" value="{o}"{" required" if req and i==0 else ""}> {o}</label>' for i,o in enumerate(opts))+'</div>'
+ref = f'''<section><div class="wrap split" style="grid-template-columns:1.6fr 1fr;align-items:start">
+<div class="formcard"><h2 style="margin-bottom:6px">Patient Referral Form</h2><p class="note">Fields marked <span class="req" style="color:#b4441c">*</span> are required. Our team will contact the patient to schedule.</p>
+<form action="{REF_ENDPOINT}" method="POST" enctype="multipart/form-data">
+<input type="hidden" name="_subject" value="New patient referral from brownbehavioral.com"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="{SITE}/thank-you/"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<fieldset><legend>Referring Provider or Agency</legend>
+<div class="row"><div><label for="r1">Your Name <span class="req">*</span></label><input id="r1" name="Referring_Name" required></div><div><label for="r2">Organization / Practice <span class="req">*</span></label><input id="r2" name="Referring_Organization" required></div></div>
+<div class="row3"><div><label for="r3">Phone <span class="req">*</span></label><input id="r3" type="tel" name="Referring_Phone" required></div><div><label for="r4">Fax</label><input id="r4" type="tel" name="Referring_Fax"></div><div><label for="r5">Email <span class="req">*</span></label><input id="r5" type="email" name="Referring_Email" required></div></div>
+<label for="r6">Referral Source Type</label><select id="r6" name="Referral_Source_Type"><option>Physician / Provider Office</option><option>Hospital / Emergency Department</option><option>School / School Counselor</option><option>Court / Probation / Drug Court</option><option>Community Agency</option><option>Employer</option><option>Family Member / Self-Referral</option><option>Other</option></select>
+</fieldset>
+<fieldset><legend>Patient Information</legend>
+<div class="row3"><div><label for="p1">Patient Full Name <span class="req">*</span></label><input id="p1" name="Patient_Name" required></div><div><label for="p2">Date of Birth <span class="req">*</span></label><input id="p2" type="date" name="Patient_DOB" required></div><div><label for="p3">Patient Phone <span class="req">*</span></label><input id="p3" type="tel" name="Patient_Phone" required></div></div>
+<div class="row"><div><label for="p4">Parent / Guardian (if under 18)</label><input id="p4" name="Guardian_Name"></div><div><label for="p5">Insurance</label><select id="p5" name="Insurance"><option value="">Select...</option><option>TennCare</option><option>Mississippi Medicaid</option><option>Medicare</option><option>Commercial Insurance</option><option>Self-Pay / Uninsured</option><option>Unknown</option></select></div></div>
+</fieldset>
+<fieldset><legend>Referral Details</legend>
+<label>Services Requested <span class="req">*</span></label>
+<div class="radios"><label><input type="checkbox" name="Services[]" value="Psychiatric Evaluation"> Psychiatric Evaluation</label><label><input type="checkbox" name="Services[]" value="Medication Management"> Medication Management</label><label><input type="checkbox" name="Services[]" value="Psychotherapy"> Psychotherapy</label><label><input type="checkbox" name="Services[]" value="ADHD Testing"> ADHD Testing</label><label><input type="checkbox" name="Services[]" value="MAT Program"> MAT Program</label><label><input type="checkbox" name="Services[]" value="DUI School"> DUI School</label><label><input type="checkbox" name="Services[]" value="Primary Care"> Primary Care</label><label><input type="checkbox" name="Services[]" value="Other"> Other</label></div>
+<label>Preferred Visit Type</label>{radios("Preferred_Visit",["Bolivar, TN Office","Olive Branch, MS Office","Telehealth","No Preference"])}
+<label>Urgency</label>{radios("Urgency",["Routine","Soon (within 2 weeks)","Urgent"])}
+<label for="d1">Reason for Referral <span class="req">*</span></label><textarea id="d1" name="Reason_for_Referral" required placeholder="Briefly describe presenting concerns and any relevant history."></textarea>
+<label for="d2">Attach Records (optional)</label><input id="d2" type="file" name="attachment" accept=".pdf,.doc,.docx,.jpg,.png">
+</fieldset>
+<label class="check"><input type="checkbox" name="Consent" value="Confirmed" required> <span>I confirm the patient (or guardian) is aware of and agrees to this referral, and the information provided is accurate to the best of my knowledge.</span></label>
+<button class="btn btn-teal" type="submit" style="margin-top:8px">{ico("send",18)} Submit Referral</button></form></div>
+<aside class="sidecard"><div class="panel deep"><span class="eyebrow gold">For Referral Partners</span><h3>Thank You for Trusting Us</h3><p>Allow us to help others by sending your referrals. We contact every referred patient promptly to schedule care.</p><ul class="ilist">
+<li>{ico("clock",18)}<span>Urgent referrals: please also call {PHONE}</span></li>
+<li>{ico("fax",18)}<span>Prefer to fax? Send records to {FAX}</span></li>
+<li>{ico("shield",18)}<span>Psychiatric, medical, and recovery services for ages 5 and up</span></li>
+<li>{ico("pin",18)}<span>Bolivar, TN, Olive Branch, MS, and telehealth throughout TN and MS</span></li></ul>
+<p class="note" style="color:#c9d3e0;margin:14px 0 0">If the patient is in crisis, call 911 or direct them to the 988 Suicide &amp; Crisis Lifeline.</p></div></aside>
+</div></section>'''
+page("/behavioral-health-care-send-your-referrals/","Send Your Referrals | Brown Behavioral Health Services","Refer a patient to Brown Behavioral Health Services for psychiatric, medical, or recovery care in Tennessee and Mississippi.",ref,("Patient Referrals","Help us extend our reach to people who can benefit from our services.","Referrals"))
 
 # ---------------- CAREERS ----------------
-careers = f'''<section><div class="wrap split" style="align-items:start">
-<div><span class="eyebrow">Careers</span><h2>Join our team</h2><p class="lead">Join our team of professionals and share your expertise with those who need your help. Apply now!</p>
-<div class="media" style="margin-top:24px"><img src="/images/slider-2.jpg" alt="medical personnel and a woman chatting" style="aspect-ratio:4/3;object-fit:cover"></div></div>
-<div class="panel"><h3>Careers Form</h3><p class="note"><span class="req" style="color:#b4441c">*</span> Required Information</p>
+careers = f'''<section><div class="wrap split" style="grid-template-columns:1fr 1.6fr;align-items:start">
+<aside class="sidecard"><span class="eyebrow">Careers</span><h2>Join Our Team</h2><p class="lead">Join our team of professionals and share your expertise with those who need your help. Apply now!</p>
+<div class="media" style="margin:22px 0"><img src="/images/slider-2.jpg" alt="medical personnel and a woman chatting" style="aspect-ratio:4/3;object-fit:cover"></div>
+<div class="panel"><h3>Why BBHS</h3><ul class="ilist">
+<li>{ico("check",18)}<span>Mission-driven care for rural and underserved communities</span></li>
+<li>{ico("check",18)}<span>Integrated team across behavioral health, primary care, and recovery</span></li>
+<li>{ico("check",18)}<span>In-office and telehealth settings in Tennessee and Mississippi</span></li>
+<li>{ico("check",18)}<span>Clinical training site partnerships and student rotations</span></li></ul></div>
+<p style="margin-top:18px"><a href="/behavioral-health-care-careers/request-for-proposals/">Consultants and vendors: view our Requests for Proposals &rarr;</a></p></aside>
+<div class="formcard"><h2 style="margin-bottom:6px">Employment Application</h2><p class="note">Fields marked <span class="req" style="color:#b4441c">*</span> are required.</p>
 <form action="{FORM_ENDPOINT}" method="POST" enctype="multipart/form-data">
 <input type="hidden" name="_subject" value="New job application from brownbehavioral.com"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="{SITE}/thank-you/"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<fieldset><legend>Your Information</legend>
 <div class="row"><div><label for="c1">First Name <span class="req">*</span></label><input id="c1" name="First_Name" required></div><div><label for="c2">Last Name <span class="req">*</span></label><input id="c2" name="Last_Name" required></div></div>
-<div class="row"><div><label for="c3">Email <span class="req">*</span></label><input id="c3" type="email" name="Email" required></div><div><label for="c4">Phone Number <span class="req">*</span></label><input id="c4" type="tel" name="Phone_Number" required></div></div>
-<div class="row"><div><label for="c5">Cell Number <span class="req">*</span></label><input id="c5" type="tel" name="Cell_Number" required></div><div><label for="c6">Position Applying For <span class="req">*</span></label><input id="c6" name="Position_Applying_For" required></div></div>
-<label for="c7">Attach Resume</label><input id="c7" type="file" name="attachment" accept=".pdf,.doc,.docx">
-<label for="c8">Message</label><textarea id="c8" name="Message"></textarea>
+<div class="row3"><div><label for="c3">Email <span class="req">*</span></label><input id="c3" type="email" name="Email" required></div><div><label for="c4">Phone Number <span class="req">*</span></label><input id="c4" type="tel" name="Phone_Number" required></div><div><label for="c5">Cell Number</label><input id="c5" type="tel" name="Cell_Number"></div></div>
+<div class="row"><div><label for="c6">City</label><input id="c6" name="City"></div><div><label for="c7">State</label><select id="c7" name="State"><option>Tennessee</option><option>Mississippi</option><option>Other</option></select></div></div>
+</fieldset>
+<fieldset><legend>Position</legend>
+<div class="row"><div><label for="c8">Position Applying For <span class="req">*</span></label><select id="c8" name="Position_Applying_For" required><option value="">Select...</option><option>Psychiatric Mental Health Nurse Practitioner (PMHNP)</option><option>Family Nurse Practitioner (FNP)</option><option>Therapist / Counselor (LCSW, LPC, LMFT, LMSW)</option><option>Registered Nurse (RN)</option><option>Licensed Practical Nurse (LPN)</option><option>Certified Medical Assistant (CMA)</option><option>Front Desk / Patient Services</option><option>Billing / Administrative</option><option>Student Rotation / Internship</option><option>Other</option></select></div>
+<div><label for="c9">License or Certification</label><input id="c9" name="License_or_Certification" placeholder="e.g., APRN, LCSW, CMA"></div></div>
+<label>Preferred Location</label><div class="radios"><label><input type="checkbox" name="Preferred_Location[]" value="Bolivar, TN"> Bolivar, TN</label><label><input type="checkbox" name="Preferred_Location[]" value="Olive Branch, MS"> Olive Branch, MS</label><label><input type="checkbox" name="Preferred_Location[]" value="Telehealth / Remote"> Telehealth / Remote</label></div>
+<label>Availability</label><div class="radios"><label><input type="radio" name="Availability" value="Full-Time"> Full-Time</label><label><input type="radio" name="Availability" value="Part-Time"> Part-Time</label><label><input type="radio" name="Availability" value="PRN"> PRN</label><label><input type="radio" name="Availability" value="Contract (1099)"> Contract (1099)</label></div>
+<div class="row"><div><label for="c10">Earliest Start Date</label><input id="c10" type="date" name="Start_Date"></div><div><label for="c11">How did you hear about us?</label><select id="c11" name="How_Heard"><option value="">Select...</option><option>Indeed</option><option>LinkedIn</option><option>School / Clinical Rotation</option><option>Employee Referral</option><option>Social Media</option><option>Other</option></select></div></div>
+</fieldset>
+<fieldset><legend>Resume and Message</legend>
+<label for="c12">Attach Resume <span class="req">*</span></label><input id="c12" type="file" name="attachment" accept=".pdf,.doc,.docx" required>
+<label for="c13">Message</label><textarea id="c13" name="Message" placeholder="Tell us about your experience and what draws you to BBHS."></textarea>
+</fieldset>
 <button class="btn btn-teal" type="submit">{ico("brief",18)} Submit Application</button></form></div>
-</div></section>
-<section class="alt"><div class="wrap center"><h2>Are you a consultant or vendor?</h2><p class="lead">View our current and past Requests for Proposals.</p><a class="btn btn-outline" href="/behavioral-health-care-careers/request-for-proposals/">Request for Proposals</a></div></section>'''
-page("/behavioral-health-care-careers/","Careers | Brown Behavioral Health Services","Join the team at Brown Behavioral Health Services. Apply online.",careers,("Careers","Join our team of professionals and share your expertise with those who need your help.","Careers"))
+</div></section>'''
+page("/behavioral-health-care-careers/","Careers | Brown Behavioral Health Services","Join the team at Brown Behavioral Health Services. Apply online for clinical and administrative positions in Tennessee and Mississippi.",careers,("Careers","Join our team of professionals and share your expertise with those who need your help.",'<a href="/behavioral-health-care-about-us/">About</a> / Careers'))
 
 # ---------------- RFP ----------------
 rfp = f'''<section><div class="wrap" style="max-width:900px"><div class="prose">
-<span class="eyebrow">Request for Proposal (RFP)</span><h2 style="margin-top:0">Technical Assistance and Evaluation Advisor: Brown Behavioral Health Services</h2>
+<div class="alert" style="margin-bottom:24px"><b>Status: Closed.</b> This Request for Proposal closed on July 8, 2025, and is no longer accepting submissions. Future opportunities will be posted on this page.</div><span class="eyebrow">Request for Proposal (RFP)</span><h2 style="margin-top:0">Technical Assistance and Evaluation Advisor: Brown Behavioral Health Services</h2>
 <h3>Overview</h3>
 <p>The mission of Brown Behavioral Health Services (BBHS) is to provide proficient and competent care related to diagnosing and treating psychiatric illnesses in pediatrics and adults while improving overall health status. BBHS is committed to the mental health population and is eager to serve everyone holistically while enhancing mental health awareness, promoting individual empowerment, and increasing access to treatment and services for people living with mental illnesses.</p>
 <p>Brown Behavioral Health&rsquo;s Bolivar location received Rural Health Clinic status by the Centers for Medicare and Medicaid Services (CMS) in April 2025. At the same time, BBHS was awarded a Rural Health Resiliency grant from the Tennessee Department of Health to expand primary and behavioral health services in Hardeman County, Tennessee. We are looking for a technical assistance partner who can help us build a solid foundation by supporting adoption of our new Electronic Health Record (EHR) eClinicalWorks, build workflows and automation between our Office Manager and back-office billing and coding provider, and analyze our patient population needs and service offerings.</p>
@@ -377,7 +511,7 @@ contact = f'''<section><div class="wrap">
 <div class="three" style="margin-bottom:40px">
  <div class="panel"><span class="eyebrow">{ico("phone",16)} Call</span><h3><a href="{PHONE_LINK}" style="text-decoration:none">{PHONE}</a></h3><p class="note" style="margin:0">Fax: {FAX}</p></div>
  <div class="panel"><span class="eyebrow">{ico("mail",16)} Email</span><h3 style="font-size:1.05rem;word-break:break-all"><a href="mailto:{EMAIL}" style="text-decoration:none">{EMAIL}</a></h3><p class="note" style="margin:0">We will respond as soon as possible.</p></div>
- <div class="panel"><span class="eyebrow">{ico("pin",16)} Service Areas</span><p style="margin:0">Accept patients in the State of Tennessee and Mississippi<br><b>Bolivar, TN 38008</b><br><b>Olive Branch, MS 38654</b><br>Also Offer Telehealth Visits</p></div>
+ <div class="panel"><span class="eyebrow">{ico("pin",16)} Our Offices</span><p style="margin:0"><b>793 Tennessee Street</b><br>Bolivar, TN 38008<br><b>9851 Hwy 178, Suite B</b><br>Olive Branch, MS 38654<br>Telehealth throughout TN and MS</p></div>
 </div>
 <div class="split" style="align-items:start"><div class="panel"><h2>Contact Us Form</h2><p class="note">* Required Information</p>{contact_form("New message from brownbehavioral.com (contact page)")}</div>
 <iframe class="map" src="{MAP}" title="Map of Bolivar, TN" loading="lazy" style="height:640px"></iframe></div></div></section>'''
@@ -385,21 +519,22 @@ page("/behavioral-health-care-contact-us/","Contact Us | Brown Behavioral Health
 
 # ---------------- PRIVACY ----------------
 priv = f'''<section><div class="wrap prose" style="max-width:860px">
-<p><b>Effective Date: March 2024</b></p>
+<p><b>Effective Date: March 2024. Last Updated: November 2026</b></p>
 <p>Welcome to Brown Behavioral Health Services (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, share, and safeguard your data when you use our services. By using our services, you consent to the practices described in this Privacy Policy.</p>
-<h2>Information We Collect</h2><p>We may collect the following types of information when you use our website creation services:</p><ul>
-<li><b>Personal Information:</b> We may collect personal information, including your name, email address, phone number, and business information when you sign up for our services or communicate with us.</li>
+<h2>Information We Collect</h2><p>We may collect the following types of information when you use our website or contact us:</p><ul>
+<li><b>Personal Information:</b> We may collect personal information, including your name, email address, phone number, and business information when you submit a form, request an appointment, or otherwise communicate with us.</li>
 <li><b>Payment Information:</b> We may collect payment data for purchases, orders, or service requests, including valid credit card numbers, brands, and expiration dates. We store only very limited, if any, payment information (e.g. payment accounts, bank accounts, credit cards, or cheques) that we collect. Otherwise, all financial information is stored by our payment processor, and you are encouraged to review their privacy policy and contact them directly for responses to your questions.</li>
-<li><b>Website Information:</b> In creating websites, we may collect content, images, and other materials provided by you to design and customize your website.</li>
+<li><b>Form Submissions:</b> Information you choose to provide through our contact, referral, and careers forms, including any files you attach.</li>
 <li><b>Technical Information:</b> We collect information related to your website&rsquo;s usage, such as IP addresses, browser type, and access times.</li>
 <li><b>Cookies and Tracking Technologies:</b> We use cookies and similar technologies to track user behavior on our website. You can manage your cookie preferences through your browser settings.</li></ul>
 <h2>How We Use Your Information</h2><p>We use your information for the following purposes:</p><ul>
-<li><b>Website Creation:</b> We use your provided data and materials to create and customize websites according to your specifications.</li>
-<li><b>Communication:</b> We use your contact information to respond to your inquiries, provide support, and keep you updated on the progress of your website project.</li>
+<li><b>Providing Care and Services:</b> We use the information you provide to respond to appointment requests, referrals, and employment applications.</li>
+<li><b>Communication:</b> We use your contact information to respond to your inquiries, provide support, and keep you informed about your request.</li>
 <li><b>Improvement of Services:</b> We may use your website usage data to enhance and optimize our services and user experience.</li>
 <li><b>Legal Compliance:</b> We process your data to comply with legal obligations and protect our rights.</li></ul>
 <h2>How We Share Your Information</h2><p>No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All other categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
 <ul><li><b>Service Providers and Legal Requirements:</b> We may disclose your information if required by law or to protect and ensure your safety and our rights, privacy, safety, or property.</li></ul>
+<h2>Your Health Information</h2><p>Protected health information you share as a patient is handled in accordance with HIPAA and our Notice of Privacy Practices, which is available at our offices or upon request. Please do not send private medical details through our general contact form.</p>
 <h2>Security of Your Information</h2><p>We take appropriate measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. We use encryption, access controls, and regular security assessments to safeguard your data.</p>
 <h2>Your Choices and Rights</h2><ul><li><b>Access and Correction:</b> You have the right to access and correct your personal information. You can do this by contacting us at {PHONE}.</li><li><b>Opt-Out:</b> You can opt out of receiving promotional communications from us at any time by following the instructions provided in the communication.</li></ul>
 <h2>Changes to this Privacy Policy</h2><p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal reasons. We will notify you of any significant changes via email or a notice on our website.</p>
@@ -409,7 +544,7 @@ priv = f'''<section><div class="wrap prose" style="max-width:860px">
 page("/privacy-policy/","Privacy Policy | Brown Behavioral Health Services","Privacy Policy for Brown Behavioral Health Services.",priv,("Privacy Policy","","Privacy Policy"))
 
 # ---------------- SITEMAP + THANK YOU + 404 ----------------
-links = [("Home","/"),("About Us","/behavioral-health-care-about-us/"),("Meet Our Professionals","/behavioral-health-care-meet-our-professionals/"),("Services","/behavioral-health-care-services/"),("Psychiatric Evaluation","/behavioral-health-care-psychiatric-evaluation/"),("Medical Services","/behavioral-health-care-medical-services/"),("Request an Appointment","/behavioral-health-request-an-appointment/"),("Healow Patient Portal","/behavioral-health-care-healow-patient-portal/"),("Payment Options","/behavioral-health-care-payment/"),("Send Your Referrals","/behavioral-health-care-send-your-referrals/"),("Careers","/behavioral-health-care-careers/"),("Request for Proposals","/behavioral-health-care-careers/request-for-proposals/"),("Contact Us","/behavioral-health-care-contact-us/"),("Privacy Policy","/privacy-policy/")]
+links = [("Home","/"),("About Us","/behavioral-health-care-about-us/"),("Meet Our Professionals","/behavioral-health-care-meet-our-professionals/"),("Services","/behavioral-health-care-services/"),("Psychiatric Evaluation","/behavioral-health-care-psychiatric-evaluation/"),("Medical Services","/behavioral-health-care-medical-services/"),("Patient Center","/patient-center/"),("Request an Appointment","/behavioral-health-request-an-appointment/"),("Healow Patient Portal","/behavioral-health-care-healow-patient-portal/"),("Payment Options","/behavioral-health-care-payment/"),("Send Your Referrals","/behavioral-health-care-send-your-referrals/"),("Careers","/behavioral-health-care-careers/"),("Request for Proposals","/behavioral-health-care-careers/request-for-proposals/"),("Contact Us","/behavioral-health-care-contact-us/"),("Privacy Policy","/privacy-policy/")]
 page("/sitemap/","Sitemap | Brown Behavioral Health Services","All pages on brownbehavioral.com.",f'<section><div class="wrap"><ul class="svc">{"".join(f"<li><a href={chr(34)}{h}{chr(34)}>{t}</a></li>" for t,h in links)}</ul></div></section>',("Sitemap","","Sitemap"))
 page("/thank-you/","Thank You | Brown Behavioral Health Services","Thank you for contacting Brown Behavioral Health Services.",f'<section><div class="wrap center" style="max-width:700px"><h2>Thank you!</h2><p class="lead">Your submission has been received. Our team will get back to you as soon as possible.</p><p>If this is an emergency, please call 911.</p><a class="btn btn-teal" href="/">Back to Home</a></div></section>',("Thank You","","Thank You"))
 page("/404/","Page Not Found | Brown Behavioral Health Services","Page not found.",f'<section><div class="wrap center"><h2>Sorry, we could not find that page.</h2><p class="lead">Try one of the links in the menu, or call us at {PHONE}.</p><a class="btn btn-teal" href="/">Back to Home</a></div></section>',("Page Not Found","","404"))
