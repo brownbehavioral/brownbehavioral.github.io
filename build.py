@@ -415,5 +415,5 @@ os.replace("404/index.html","404.html"); os.rmdir("404")
 with open("sitemap.xml","w") as f:
     f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+"".join(f"<url><loc>{SITE}{h}</loc></url>" for _,h in links)+"</urlset>\n")
 with open("robots.txt","w") as f: f.write(f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n")
-with open("CNAME","w") as f: f.write("www.brownbehavioral.com\n")
+# CNAME is added at launch: with open("CNAME","w") as f: f.write("www.brownbehavioral.com\n")
 print("Built.")
