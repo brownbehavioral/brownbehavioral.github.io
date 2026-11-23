@@ -46,7 +46,7 @@ def ico(name, size=22):
 
 NAV = [
  ("Home","/",None),
- ("About",None,[("Our Practice","/behavioral-health-care-about-us/"),("Our Team","/behavioral-health-care-meet-our-professionals/"),("Grants &amp; Funding","/funding/"),("Careers","/behavioral-health-care-careers/"),("Request for Proposals","/behavioral-health-care-careers/request-for-proposals/")]),
+ ("About",None,[("Our Practice","/behavioral-health-care-about-us/"),("Our Team","/behavioral-health-care-meet-our-professionals/"),("Funding","/funding/"),("Careers","/behavioral-health-care-careers/"),("Request for Proposals","/behavioral-health-care-careers/request-for-proposals/")]),
  ("Services",None,[("All Services","/behavioral-health-care-services/"),("Psychiatric Evaluation","/behavioral-health-care-psychiatric-evaluation/"),("Medical Services","/behavioral-health-care-medical-services/"),("MS Medical Card Certification","/docs/MS-Cannabis-Certification.pdf")]),
  ("Patients",None,[("Patient Center","/patient-center/"),("Request an Appointment","/behavioral-health-request-an-appointment/"),("Insurance Accepted","/insurance/"),("Patient Portal","/behavioral-health-care-healow-patient-portal/"),("Pay Your Bill","/behavioral-health-care-payment/")]),
  ("Referrals","/behavioral-health-care-send-your-referrals/",None),
@@ -113,7 +113,7 @@ def page(path, title, desc, body, phero=None):
       <p style="margin-top:14px">Phone: <a href="{PHONE_LINK}">{PHONE}</a><br>Fax: {FAX}<br><a href="mailto:{EMAIL}">{EMAIL}</a></p><div class="social"><a href="{FACEBOOK}" target="_blank" rel="noopener" aria-label="Facebook">{ico("fb",18)}</a><a href="{PSYTODAY}" target="_blank" rel="noopener" aria-label="Psychology Today profile">{ico("user",18)}</a></div>
     </div>
     <div><h4>Navigation</h4><ul><li><a href="/">Home</a></li><li><a href="/behavioral-health-care-about-us/">About Us</a></li><li><a href="/behavioral-health-care-meet-our-professionals/">Meet Our Professionals</a></li><li><a href="/behavioral-health-care-services/">Services</a></li><li><a href="/behavioral-health-care-medical-services/">Medical Services</a></li><li><a href="/behavioral-health-care-send-your-referrals/">Referrals</a></li><li><a href="/behavioral-health-care-careers/">Careers</a></li><li><a href="/behavioral-health-care-contact-us/">Contact Us</a></li></ul></div>
-    <div><h4>Patients</h4><ul><li><a href="/patient-center/">Patient Center</a></li><li><a href="/behavioral-health-request-an-appointment/">Request an Appointment</a></li><li><a href="/behavioral-health-care-healow-patient-portal/">Healow Patient Portal</a></li><li><a href="/insurance/">Insurance Accepted</a></li><li><a href="/behavioral-health-care-payment/">Payment Options</a></li><li><a href="/funding/">Grants &amp; Funding</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div>
+    <div><h4>Patients</h4><ul><li><a href="/patient-center/">Patient Center</a></li><li><a href="/behavioral-health-request-an-appointment/">Request an Appointment</a></li><li><a href="/behavioral-health-care-healow-patient-portal/">Patient Portal (healow)</a></li><li><a href="/insurance/">Insurance Accepted</a></li><li><a href="/behavioral-health-care-payment/">Payment Options</a></li><li><a href="/funding/">Funding</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div>
     <div><h4>Our Offices</h4><ul>
       <li>Accepting patients throughout Tennessee and Mississippi</li>
       <li><b style="color:#fff">Tennessee Office</b><br>793 Tennessee Street<br>Bolivar, TN 38008</li>
@@ -190,8 +190,8 @@ home = f'''
 </div></section>
 
 <div class="quick"><div class="wrap"><div class="grid">
-  <a class="qcard" href="/behavioral-health-request-an-appointment/"><span class="ic">{ico("cal")}</span><span><b>Schedule Online</b><span>Book at any hour, day or night</span></span></a>
-  <a class="qcard" href="/behavioral-health-care-healow-patient-portal/"><span class="ic">{ico("portal")}</span><span><b>Patient Portal</b><span>Secure access to your health records</span></span></a>
+  <a class="qcard" href="/behavioral-health-request-an-appointment/"><span class="ic">{ico("cal")}</span><span><b>Schedule Online</b><span>Book anytime on healow</span></span></a>
+  <a class="qcard" href="/behavioral-health-care-healow-patient-portal/"><span class="ic">{ico("portal")}</span><span><b>Patient Portal</b><span>eClinicalWorks &amp; healow app</span></span></a>
   <a class="qcard" href="/behavioral-health-care-payment/"><span class="ic">{ico("card")}</span><span><b>Pay Your Bill</b><span>Flexible financing available</span></span></a>
   <a class="qcard" href="/behavioral-health-care-send-your-referrals/"><span class="ic">{ico("send")}</span><span><b>Provider Referrals</b><span>Refer a patient with confidence</span></span></a>
 </div></div></div>
@@ -215,17 +215,17 @@ home = f'''
 <section><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow">Our Providers</span><h2 style="margin:0">Board-Certified. Deeply Committed.</h2></div><a class="btn btn-outline" href="/behavioral-health-care-meet-our-professionals/">Meet the Full Team</a></div>
   <div class="pgrid">
-   <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-Avanti-Brown.jpg" alt="Dr. Avanti Brown" loading="lazy"><div><b>Dr. Avanti Brown</b><span>CEO &amp; Psychiatric Mental Health Nurse Practitioner</span></div></a>
-   <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-Kayla-Williams.jpg" alt="Dr. Kayla Williams" loading="lazy"><div><b>Dr. Kayla Williams</b><span>Psychiatric Mental Health Nurse Practitioner</span></div></a>
-   <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-Jessica-Allen.jpg" alt="Dr. Jessica Allen" loading="lazy"><div><b>Dr. Jessica Allen</b><span>Psychiatric &amp; Family Nurse Practitioner</span></div></a>
-   <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-DiYana-Fisher.jpg" alt="Dr. Di&rsquo;Yana Fisher" loading="lazy"><div><b>Dr. Di&rsquo;Yana Fisher</b><span>Psychiatric Mental Health Nurse Practitioner</span></div></a>
+   <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-Avanti-Brown.jpg" alt="Dr. Avanti Brown" loading="lazy"><div><b>Dr. Avanti Brown, APRN, DNP, PMHNP-BC, CARN-AP, NRCME</b><span>CEO | Provider | Educator &amp; Community Advocate<br>Board-Certified Psychiatric Mental Health Practitioner | Addictions Advanced Practice Provider</span></div></a>
+   <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-Kayla-Williams.jpg" alt="Dr. Kayla Williams" loading="lazy"><div><b>Dr. Kayla Williams, APRN, DNP, PMHNP-BC</b><span>Board-Certified Psychiatric Mental Health Nurse Practitioner</span></div></a>
+   <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-Jessica-Allen.jpg" alt="Dr. Jessica Allen" loading="lazy"><div><b>Dr. Jessica Allen, MSN, DNP, FNP-BC, PMHNP-BC</b><span>Board-Certified Psychiatric Mental Health Nurse and Family Nurse Practitioner</span></div></a>
+   <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-DiYana-Fisher.jpg" alt="Dr. Di&rsquo;Yana Fisher" loading="lazy"><div><b>Dr. Di&rsquo;Yana Fisher, APRN, DNP, PMHNP-BC</b><span>Board-Certified Psychiatric Mental Health Nurse Practitioner</span></div></a>
   </div>
 </div></section>
 
 <section class="band"><div class="wrap" style="position:relative">
   <div class="sec-head"><div><span class="eyebrow gold">Getting Started</span><h2 style="margin:0">Three Simple Steps to Care</h2></div><a class="btn btn-gold" href="/behavioral-health-request-an-appointment/">Schedule a Consultation</a></div>
   <div class="hsteps">
-    <div class="hstep"><h3>Request Your Appointment</h3><p>Book online at any hour, or call our office at {PHONE}. New patients are welcome.</p></div>
+    <div class="hstep"><h3>Request Your Appointment</h3><p>Book online anytime through healow, or call {PHONE}. Choose &ldquo;New Patient&rdquo; for your first visit.</p></div>
     <div class="hstep"><h3>Meet Your Provider</h3><p>Visit us in Bolivar or Olive Branch, or connect by secure telehealth from home.</p></div>
     <div class="hstep"><h3>Receive a Personalized Plan</h3><p>Together we set short-term and long-term goals and support you every step of the way.</p></div>
   </div>
@@ -283,8 +283,10 @@ page("/behavioral-health-care-about-us/","About Us | Brown Behavioral Health Ser
 def person(img,name,role,cred,paras,tag=""):
     first,rest=paras[0],paras[1:]
     more = f'<details><summary>Read full bio</summary>{"".join(f"<p>{p}</p>" for p in rest)}</details>' if rest else ""
-    return f'''<article class="person reveal"><img src="/images/{img}" alt="image of {name.split(",")[0]}"><div><h3>{name}</h3><div class="role">{role}</div><div class="cred">{cred}</div><p>{first}</p>{more}{f'<span class="tag">{tag}</span>' if tag else ""}</div></article>'''
-providers = "".join([
+    ini="".join(w[0] for w in name.split(",")[0].replace("Dr. ","").split()[:2])
+    pic=f'<img src="/images/{img}" alt="image of {name.split(",")[0]}">' if img else f'<div class="avatar" aria-hidden="true">{ini}</div>'
+    return f'''<article class="person reveal">{pic}<div><h3>{name}</h3><div class="role">{role}</div><div class="cred">{cred}</div><p>{first}</p>{more}{f'<span class="tag">{tag}</span>' if tag else ""}</div></article>'''
+_prov = ([
  person("Dr-Avanti-Brown.jpg","Dr. Avanti Brown, APRN, DNP, PMHNP-BC, CARN-AP, NRCME","CEO | Provider | Educator &amp; Community Advocate","Board-Certified Psychiatric Mental Health Practitioner | Addictions Advanced Practice Provider",[
   "Dr. Avanti Brown, a native of West Tennessee, has been serving the mental health community since 2013. She is the CEO of Brown Behavioral Health Services, a Director on the University of Tennessee Health Science Center (UTHSC) Alumni Board, and a Healthcare Stakeholder for the Community Advisory Council (CAC) for the ACCESS (Achieving Cancer Care Equity and Systematic Solutions) Study.",
   "Dr. Brown earned her Bachelor of Science in Nursing in 2015 and worked as a Registered Nurse for many years. In 2021, she completed her Doctor of Nursing Practice at UTHSC, specializing as a Psychiatric Mental Health Nurse Practitioner, and became ANCC board-certified. During her graduate studies, she received multiple awards, including the Chancellor Diversity Scholarship Award, University Scholar Diversity Scholarship, HRSA ANEW Grant, and the Grace S. Wallace Scholarship Award.",
@@ -301,9 +303,9 @@ providers = "".join([
   "Dr. Fisher is committed to ensuring every patient feels heard, supported, and understood. She takes a collaborative, whole-person approach to care, recognizing the connection between mind, body, and life experiences. She develops individualized treatment plans for conditions including anxiety, depression, ADHD, bipolar disorder, trauma, and other mental health concerns.",
   "Known for her warm, nonjudgmental style, Dr. Fisher creates a welcoming space where patients feel comfortable asking questions and actively participating in their care. She offers both in-office and secure telehealth appointments and is dedicated to expanding access to high-quality mental health services throughout Tennessee and Mississippi."],"Now accepting new patients. Weekend appointments available."),
 ])
-leaders = "".join([
- person("Destiny-Shaw.jpg","Destiny Shaw, BS, MBA","Practice Administrator | Chief of Operations","",[
-  "Destiny Shaw serves as Practice Administrator and Chief of Operations at Brown Behavioral Health Services, where she oversees daily clinic operations and ensures patients experience seamless, coordinated care.",
+_lead = ([
+ person("Destiny-Shaw.jpg","Destiny Shaw, BS, MBA","Chief Operating Officer (COO) | Practice Administrator","",[
+  "Destiny Shaw serves as Chief Operating Officer and Practice Administrator at Brown Behavioral Health Services, where she oversees daily clinic operations and ensures patients experience seamless, coordinated care.",
   "With a five-year background in clinical mental health, rural health policy, and patient advocacy, Destiny brings both operational expertise and a deep commitment to expanding access to care in rural communities. She also serves as the Special Grant Projects Team Manager, leading initiatives that strengthen and grow the services BBHS provides."]),
  person("Brook-Pittman.jpg","Brook Pittman, CMA","Clinical Lead Medical Assistant | Community Health Coordinator","",[
   "With 15 years of dedicated work in the medical field, Brook Pittman serves compassionately as the Clinical Lead Medical Assistant at Brown Behavioral Health Services, supporting providers and patients across the clinic&rsquo;s behavioral health and primary care services.",
@@ -312,9 +314,20 @@ leaders = "".join([
   "Andreina Acuna serves as the School Health Coordinator and Medical Assistant on the BBHS Clinical Administration team.",
   "With three years of experience in medical and legal translation services, Andreina transitioned into a front-facing healthcare role at BBHS after completing her rural student rotation with the clinic in the fall of 2025. She is excited to assist patients in both English and Spanish, helping expand accessible, welcoming care for every family BBHS serves."],"Se habla espa&ntilde;ol"),
 ])
-team = f'''<section><div class="wrap"><div class="center"><span class="eyebrow">Clinical Providers</span><h2>Meet Our Providers</h2></div><div class="team">{providers}</div></div></section>
-<section class="alt"><div class="wrap"><div class="center"><span class="eyebrow">Our People</span><h2>Meet Our Clinical and Leadership Team</h2></div><div class="team">{leaders}</div></div></section>{CONNECT}'''
-page("/behavioral-health-care-meet-our-professionals/","Meet Our Professionals | Brown Behavioral Health Services","Meet the board-certified psychiatric nurse practitioners and clinical team at Brown Behavioral Health Services.",team,("Meet Our Professionals","Get to know the professionals who are available to help and support you anytime.","Meet Our Professionals"))
+THERAPISTS = [
+ ("Bernice Lofties","Therapist"),
+ ("Broderick Webster","Therapist"),
+ ("Cameron Brown, MSW, MBA","Therapist"),
+ ("Rodques Jones, MSW","Therapist"),
+]
+_ther = "".join(person(None,n,r,"Behavioral Health Therapy",[f"{n.split(',')[0]} provides individual psychotherapy as part of the BBHS behavioral health team, supporting patients in building coping skills, insight, and resilience."]) for n,r in THERAPISTS)
+def tsec(eyebrow,title,body,alt=False):
+    return f'''<section class="{'mist' if alt else ''}"><div class="wrap"><div class="center"><span class="eyebrow">{eyebrow}</span><h2>{title}</h2></div><div class="team">{body}</div></div></section>'''
+team = (tsec("Leadership","Executive Leadership",_prov[0]+_lead[0])
+      + tsec("Clinical Providers","Our Providers","".join(_prov[1:]),True)
+      + tsec("Behavioral Health","Our Therapists",_ther)
+      + tsec("Clinical Support","Medical Assistant Team","".join(_lead[1:]),True) + CONNECT)
+page("/behavioral-health-care-meet-our-professionals/","Meet Our Professionals | Brown Behavioral Health Services","Meet the leadership, board-certified providers, therapists, and clinical team at Brown Behavioral Health Services.",team,("Meet Our Professionals","Get to know the professionals who are available to help and support you anytime.",'<a href="/behavioral-health-care-about-us/">About</a> / Our Team'))
 
 # ---------------- SERVICES ----------------
 SVC = {
@@ -373,28 +386,45 @@ medical = f'''<section><div class="wrap"><div class="cards three">{"".join(f'<di
 page("/behavioral-health-care-medical-services/","Medical Services | Brown Behavioral Health Services","Primary care, DOT physicals, minor medical services, Slim Program, mobile IV hydration and sports physicals.",medical,("Medical Services","Primary care and medical services alongside our behavioral health care.","Medical Services"))
 
 # ---------------- APPOINTMENT ----------------
-appt = f'''<section><div class="wrap split">
-<div><span class="eyebrow">Online Scheduling</span><h2>Book your next appointment online.</h2><p class="lead">No need to wait for our office to open the next day. Book online or through the app to schedule your appointment.</p>
-<a class="btn btn-teal" href="{HEALOW_BOOK}" target="_blank" rel="noopener">{ico("cal",18)} Book Now</a>
-<p style="margin-top:22px">Prefer to call? Reach us at <a href="{PHONE_LINK}">{PHONE}</a>.</p></div>
-<div class="two">
+appt = f'''<section><div class="wrap split" style="align-items:start">
+<div><span class="eyebrow">Online Scheduling with healow</span><h2>Book your next appointment online.</h2><p class="lead">No need to wait for our office to open the next day. BBHS uses <b>eClinicalWorks</b>, and appointments are booked online through <b>healow</b>, eClinicalWorks&rsquo; secure scheduling and patient app.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin:6px 0 20px"><a class="btn btn-teal" href="{HEALOW_BOOK}" target="_blank" rel="noopener">{ico("cal",18)} Book Now on healow</a><a class="btn btn-outline" href="{PHONE_LINK}">{ico("phone",16)} Call {PHONE}</a></div>
+<h3>How to book on healow</h3>
+<ol class="steps">
+<li><span>Click <b>Book Now on healow</b>. Our practice page on healow.com opens in a new window.</span></li>
+<li><span>Choose your <b>provider</b> and <b>visit reason</b>. Select <b>New Patient</b> if this is your first visit with BBHS, or <b>Established Patient</b> if you have been seen before.</span></li>
+<li><span>Pick an available <b>date and time</b>, in office or by telehealth.</span></li>
+<li><span>Enter your <b>name, date of birth, phone, email, and insurance</b>. healow will send a verification code by text or email to confirm it is you.</span></li>
+<li><span>Watch for your <b>confirmation</b> by text or email. Before your visit you may also receive an eClinicalWorks <b>check-in link</b> to complete your forms, insurance, and consents from your phone.</span></li>
+</ol></div>
+<div>
+<div class="two" style="margin-bottom:22px">
 <div class="panel"><span class="eyebrow">Tennessee</span><h3>TN Brown Behavioral Health Services</h3><p class="note">793 Tennessee Street, Bolivar, TN 38008</p><p class="note">Medical Provider Only</p><a class="btn btn-outline" href="{HEALOW_BOOK}" target="_blank" rel="noopener">Book in TN</a></div>
 <div class="panel"><span class="eyebrow">Mississippi</span><h3>MS Brown Behavioral Health Services</h3><p class="note">9851 Hwy 178, Suite B, Olive Branch, MS 38654</p><p class="note">&nbsp;</p><a class="btn btn-outline" href="{HEALOW_BOOK}" target="_blank" rel="noopener">Book in MS</a></div>
+</div>
+<div class="panel deep"><span class="eyebrow gold">Prefer the App?</span><h3>Book in the healow App</h3><ul class="ilist">
+<li>{ico("check",18)}<span>Download the free <b>healow&trade;</b> app from the App Store or Google Play.</span></li>
+<li>{ico("check",18)}<span>Search for our practice using practice code <b style="color:var(--gold)">ACGHDD</b>.</span></li>
+<li>{ico("check",18)}<span>Tap <b>Book Appointment</b>, then choose your provider, visit reason, and time.</span></li>
+<li>{ico("check",18)}<span>Telehealth visits: our team will send your secure video visit instructions before your appointment.</span></li></ul></div>
 </div></div></section>
-<section class="mist"><div class="wrap center" style="max-width:820px"><span class="eyebrow">New Patients</span><h2>New to BBHS?</h2><p class="lead">We are welcoming new patients ages 5 and up at our Bolivar and Olive Branch offices and by secure telehealth. Book your first visit online in minutes, or call us at {PHONE} and our team will help you get started.</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn btn-teal" href="{HEALOW_BOOK}" target="_blank" rel="noopener">{ico("cal",18)} Book a New Patient Appointment</a><a class="btn btn-outline" href="/insurance/">Check Insurance Accepted</a></div><p class="note" style="margin-top:18px">No one will be denied access to services due to inability to pay. A sliding fee schedule is available based on family size and income.</p></div></section>'''
-page("/behavioral-health-request-an-appointment/","Request an Appointment | Brown Behavioral Health Services","Book your appointment online with Brown Behavioral Health Services in Tennessee or Mississippi.",appt,("Request an Appointment","Book online or through the app to schedule your appointment.","Request an Appointment"))
+<section class="mist"><div class="wrap center" style="max-width:820px"><span class="eyebrow">New Patients</span><h2>New to BBHS?</h2><p class="lead">We are welcoming new patients ages 5 and up at our Bolivar and Olive Branch offices and by secure telehealth. Book your first visit on healow in minutes and choose <b>New Patient</b> as your visit type, or call {PHONE} and our team will schedule you and set up your eClinicalWorks patient portal.</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn btn-teal" href="{HEALOW_BOOK}" target="_blank" rel="noopener">{ico("cal",18)} Book a New Patient Appointment</a><a class="btn btn-outline" href="/insurance/">Check Insurance Accepted</a></div><p class="note" style="margin-top:18px">No one will be denied access to services due to inability to pay. A sliding fee schedule is available based on family size and income.</p></div></section>'''
+page("/behavioral-health-request-an-appointment/","Request an Appointment | Brown Behavioral Health Services","Book your appointment online through healow (eClinicalWorks) with Brown Behavioral Health Services in Tennessee or Mississippi.",appt,("Request an Appointment","Book online through healow, in the healow app, or by phone.",'<a href="/patient-center/">Patients</a> / Request an Appointment'))
 
 # ---------------- PORTAL ----------------
-portal = f'''<section><div class="wrap split">
-<div><span class="eyebrow">Healow App</span><h2>Set up the healow smartphone app in four easy steps!</h2>
-<ol class="steps" style="margin-top:22px">
-<li><span>Download the healow&trade; app from the App Store (iPhone) or Google Play (Android Phone).</span></li>
-<li><span>Search our practice by entering practice code. Practice Code: <span class="code">ACGHDD</span></span></li>
-<li><span>Enter your portal username and password to log in.</span></li>
-<li><span>Set up your PIN to securely access your health records.</span></li></ol></div>
-<div class="panel deep center"><div style="width:64px;height:64px;border-radius:16px;background:rgba(196,154,60,.2);color:var(--gold);display:grid;place-items:center;margin:0 auto 18px">{ico("portal",30)}</div><h3>Already have an account?</h3><p>Log in to view records, message your care team, and more.</p><a class="btn btn-gold" href="{PORTAL}" target="_blank" rel="noopener">Go to Patient Portal</a></div>
+portal = f'''<section><div class="wrap split" style="align-items:start">
+<div><span class="eyebrow">eClinicalWorks Patient Portal</span><h2>Your health records, anytime.</h2><p class="lead">Our patient portal is powered by <b>eClinicalWorks</b>. Use it on the web or in the <b>healow</b> app to view visit summaries and lab results, message your care team, request refills, update your information, and manage appointments.</p>
+<h3>First time logging in?</h3>
+<ol class="steps">
+<li><span>Ask our front desk at {PHONE} for a <b>portal invitation</b> if you did not receive one at your visit. It arrives by email or text with your <b>username</b> and a temporary password.</span></li>
+<li><span>Open the <b>Go to Patient Portal</b> button on this page, or download the <b>healow&trade;</b> app from the App Store (iPhone) or Google Play (Android).</span></li>
+<li><span>In the healow app, search our practice by entering practice code <span class="code">ACGHDD</span>.</span></li>
+<li><span>Enter your portal username and password to log in, then create a new password.</span></li>
+<li><span>Set up your PIN to securely access your health records.</span></li></ol>
+<p class="note" style="margin-top:16px">Forgot your password? Use the &ldquo;Forgot Password&rdquo; link on the login screen or call our office for a reset.</p></div>
+<div class="panel deep center sidecard"><div style="width:64px;height:64px;border-radius:16px;background:rgba(224,168,74,.2);color:var(--gold);display:grid;place-items:center;margin:0 auto 18px">{ico("portal",30)}</div><h3>Already have an account?</h3><p>Log in to the eClinicalWorks patient portal to view records, message your care team, and more.</p><a class="btn btn-gold" href="{PORTAL}" target="_blank" rel="noopener">Go to Patient Portal</a><p style="margin:18px 0 0">healow app practice code: <b style="color:var(--gold)">ACGHDD</b></p><p class="note" style="color:#d7ebe8;margin:10px 0 0">The portal is for non-urgent communication. In an emergency, call 911.</p></div>
 </div></section>'''
-page("/behavioral-health-care-healow-patient-portal/","Healow Patient Portal | Brown Behavioral Health Services","Access the Brown Behavioral Health Services patient portal through the healow app. Practice code ACGHDD.",portal,("Healow Patient Portal","Securely access your health records anytime.","Healow Patient Portal"))
+page("/behavioral-health-care-healow-patient-portal/","Patient Portal (eClinicalWorks and healow) | Brown Behavioral Health Services","Access the Brown Behavioral Health Services eClinicalWorks patient portal on the web or in the healow app. Practice code ACGHDD.",portal,("Patient Portal","Powered by eClinicalWorks and the healow app. Practice code ACGHDD.",'<a href="/patient-center/">Patients</a> / Patient Portal'))
 
 # ---------------- PAYMENT ----------------
 pay = f'''<section><div class="wrap three">
@@ -409,13 +439,14 @@ page("/behavioral-health-care-payment/","Payment Options | Brown Behavioral Heal
 
 # ---------------- PATIENT CENTER ----------------
 pc = f'''<section><div class="wrap"><div class="cards" style="margin-top:0">
- <div class="panel reveal"><div class="icw"><div class="ci">{ico("cal",24)}</div></div><h3>Request an Appointment</h3><p class="note">Book online at any hour through healow, or call {PHONE}.</p><a class="btn btn-teal" href="/behavioral-health-request-an-appointment/">Schedule</a></div>
- <div class="panel reveal"><div class="icw"><div class="ci">{ico("portal",24)}</div></div><h3>Patient Portal</h3><p class="note">View records, message your care team, and more. Practice code <span class="code">ACGHDD</span>.</p><a class="btn btn-teal" href="/behavioral-health-care-healow-patient-portal/">Open Portal</a></div>
+ <div class="panel reveal"><div class="icw"><div class="ci">{ico("cal",24)}</div></div><h3>Request an Appointment</h3><p class="note">Book online at any hour through healow (eClinicalWorks), in the healow app with practice code <span class="code">ACGHDD</span>, or call {PHONE}.</p><a class="btn btn-teal" href="/behavioral-health-request-an-appointment/">Schedule</a></div>
+ <div class="panel reveal"><div class="icw"><div class="ci">{ico("portal",24)}</div></div><h3>Patient Portal</h3><p class="note">Your eClinicalWorks portal on the web or in the healow app. Practice code <span class="code">ACGHDD</span>.</p><a class="btn btn-teal" href="/behavioral-health-care-healow-patient-portal/">Open Portal</a></div>
  <div class="panel reveal"><div class="icw"><div class="ci">{ico("card",24)}</div></div><h3>Pay Your Bill</h3><p class="note">Copays, balances, and financing through CareCredit and Scratchpay.</p><a class="btn btn-teal" href="/behavioral-health-care-payment/">Payment Options</a></div>
  <div class="panel reveal"><div class="icw"><div class="ci">{ico("file",24)}</div></div><h3>Insurance Accepted</h3><p class="note">Medicare, TennCare, Mississippi Medicaid, TRICARE, and most commercial plans.</p><a class="btn btn-teal" href="/insurance/">View Plans</a></div>
 </div></div></section>
 <section class="mist"><div class="wrap two">
  <div class="panel"><span class="eyebrow">Before Your Visit</span><h3>What to Bring</h3><ul class="ilist">
+  <li>{ico("check",18)}<span>Complete your eClinicalWorks check-in link if you receive one by text or email</span></li>
   <li>{ico("check",18)}<span>A photo ID and your insurance card, if you have insurance</span></li>
   <li>{ico("check",18)}<span>A list of your current medications and doses</span></li>
   <li>{ico("check",18)}<span>Any prior records, evaluations, or school reports that may help your provider</span></li>
@@ -531,13 +562,13 @@ def grant_cards():
 <div><p class="note" style="margin:0 0 4px;color:var(--teal);font-weight:600">{g["funder"]}</p><h3>{g["program"]}</h3><p style="margin:0">{g["body"]}</p></div></article>''')
     return "".join(out)
 funding = f'''<section><div class="wrap split" style="grid-template-columns:1fr 1.7fr;align-items:start">
-<aside class="sidecard"><span class="eyebrow">Investing in Rural Health</span><h2>Public Partnerships That Expand Access</h2><p class="lead">Grant funding allows Brown Behavioral Health Services to reach more patients, grow our workforce, and bring care directly into rural communities across Tennessee and Mississippi.</p>
+<aside class="sidecard"><span class="eyebrow">Investing in Rural Health</span><h2>Public Partnerships That Expand Access</h2><p class="lead">Public funding allows Brown Behavioral Health Services to reach more patients, grow our workforce, and bring care directly into rural communities across Tennessee and Mississippi.</p>
 <div class="panel deep" style="margin-top:20px"><h3>Funding Acknowledgment</h3><p style="margin:0">Programs described on this page are supported in whole or in part by the funding agencies listed. The contents are the responsibility of Brown Behavioral Health Services, PLLC and do not necessarily represent the official views of the funding agencies.</p></div>
-<p class="note" style="margin-top:18px">For grant partnerships or program inquiries, contact <a href="mailto:{EMAIL}">{EMAIL}</a> or call {PHONE}.</p></aside>
+<p class="note" style="margin-top:18px">For funding partnerships or program inquiries, contact <a href="mailto:{EMAIL}">{EMAIL}</a> or call {PHONE}.</p></aside>
 <div>{grant_cards()}</div>
 </div></section>
 <section class="mist"><div class="wrap center"><span class="eyebrow">Partner With Us</span><h2>Collaborating for Healthier Communities</h2><p class="lead">We welcome partnerships with schools, health systems, community organizations, and funders who share our commitment to rural health.</p><a class="btn btn-teal" href="/behavioral-health-care-contact-us/">Contact Our Team</a></div></section>'''
-page("/funding/","Grants and Funding | Brown Behavioral Health Services","State grant awards supporting rural behavioral health, primary care, workforce, and chronic disease prevention programs at Brown Behavioral Health Services.",funding,("Grants &amp; Funding","Public investment that expands access to care in rural Tennessee and Mississippi.",'<a href="/behavioral-health-care-about-us/">About</a> / Grants &amp; Funding'))
+page("/funding/","Funding | Brown Behavioral Health Services","State funding supporting rural behavioral health, primary care, workforce, and chronic disease prevention programs at Brown Behavioral Health Services.",funding,("Funding","Public investment that expands access to care in rural Tennessee and Mississippi.",'<a href="/behavioral-health-care-about-us/">About</a> / Funding'))
 
 # ---------------- RFP ----------------
 rfp = f'''<section><div class="wrap" style="max-width:900px"><div class="prose">
@@ -590,7 +621,7 @@ priv = f'''<section><div class="wrap prose" style="max-width:860px">
 page("/privacy-policy/","Privacy Policy | Brown Behavioral Health Services","Privacy Policy for Brown Behavioral Health Services.",priv,("Privacy Policy","","Privacy Policy"))
 
 # ---------------- SITEMAP + THANK YOU + 404 ----------------
-links = [("Home","/"),("About Us","/behavioral-health-care-about-us/"),("Meet Our Professionals","/behavioral-health-care-meet-our-professionals/"),("Services","/behavioral-health-care-services/"),("Psychiatric Evaluation","/behavioral-health-care-psychiatric-evaluation/"),("Medical Services","/behavioral-health-care-medical-services/"),("Patient Center","/patient-center/"),("Request an Appointment","/behavioral-health-request-an-appointment/"),("Healow Patient Portal","/behavioral-health-care-healow-patient-portal/"),("Insurance Accepted","/insurance/"),("Payment Options","/behavioral-health-care-payment/"),("Grants and Funding","/funding/"),("Send Your Referrals","/behavioral-health-care-send-your-referrals/"),("Careers","/behavioral-health-care-careers/"),("Request for Proposals","/behavioral-health-care-careers/request-for-proposals/"),("Contact Us","/behavioral-health-care-contact-us/"),("Privacy Policy","/privacy-policy/")]
+links = [("Home","/"),("About Us","/behavioral-health-care-about-us/"),("Meet Our Professionals","/behavioral-health-care-meet-our-professionals/"),("Services","/behavioral-health-care-services/"),("Psychiatric Evaluation","/behavioral-health-care-psychiatric-evaluation/"),("Medical Services","/behavioral-health-care-medical-services/"),("Patient Center","/patient-center/"),("Request an Appointment","/behavioral-health-request-an-appointment/"),("Patient Portal (eClinicalWorks / healow)","/behavioral-health-care-healow-patient-portal/"),("Insurance Accepted","/insurance/"),("Payment Options","/behavioral-health-care-payment/"),("Funding","/funding/"),("Send Your Referrals","/behavioral-health-care-send-your-referrals/"),("Careers","/behavioral-health-care-careers/"),("Request for Proposals","/behavioral-health-care-careers/request-for-proposals/"),("Contact Us","/behavioral-health-care-contact-us/"),("Privacy Policy","/privacy-policy/")]
 page("/sitemap/","Sitemap | Brown Behavioral Health Services","All pages on brownbehavioral.com.",f'<section><div class="wrap"><ul class="svc">{"".join(f"<li><a href={chr(34)}{h}{chr(34)}>{t}</a></li>" for t,h in links)}</ul></div></section>',("Sitemap","","Sitemap"))
 page("/thank-you/","Thank You | Brown Behavioral Health Services","Thank you for contacting Brown Behavioral Health Services.",f'<section><div class="wrap center" style="max-width:700px"><h2>Thank you!</h2><p class="lead">Your submission has been received. Our team will get back to you as soon as possible.</p><p>If this is an emergency, please call 911.</p><a class="btn btn-teal" href="/">Back to Home</a></div></section>',("Thank You","","Thank You"))
 page("/404/","Page Not Found | Brown Behavioral Health Services","Page not found.",f'<section><div class="wrap center"><h2>Sorry, we could not find that page.</h2><p class="lead">Try one of the links in the menu, or call us at {PHONE}.</p><a class="btn btn-teal" href="/">Back to Home</a></div></section>',("Page Not Found","","404"))
