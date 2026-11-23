@@ -620,8 +620,12 @@ GRANTS = [
       body="A community food access and chronic disease prevention initiative in Hardeman County featuring a community garden, a food pantry network serving Bolivar, Hickory Valley, Whiteville, Toone, and Grand Junction, and recurring nutrition and chronic disease education classes."),
  dict(show=True, state="Mississippi", funder="Mississippi State Department of Health, Rural Health Transformation Program", program="Workforce Expansion Initiative: Project MENTOR MS", amount="$448,140", term="2026 to 2027",
       body="Builds the rural behavioral health workforce in North Mississippi through preceptor development, clinical rotations for students, apprenticeships, and mobile clinic training sites in Marshall, Tate, Benton, Alcorn, and Tippah counties."),
- dict(show=False, state="Tennessee", funder="Tennessee Department of Health", program="Perinatal Behavioral Health Workforce Development: BLOOM Perinatal Fellowship", amount="$43,000", term="2026",
+ dict(show=True, state="Tennessee", funder="Tennessee Department of Health", program="Perinatal Behavioral Health Workforce Development: BLOOM Perinatal Fellowship", amount="$43,000", term="2026",
       body="Supports supervision, training, and specialty certification for clinicians serving mothers and families during the perinatal period."),
+ dict(show=True, state="National", funder="National Rural Health Resource Center, funded by HRSA&rsquo;s Federal Office of Rural Health Policy", program="Rural Healthcare Provider Transition Project", amount="National Selection", term="2026 to 2027",
+      body="BBHS was one of five organizations selected nationally to receive technical assistance that prepares rural providers for value-based care."),
+ dict(show=True, state="Tennessee", funder="Good Sports", program="Youth Sports Equipment Grant: Center of Integrated Health", amount="In-Kind Award", term="2026 to 2028",
+      body="Provides new sports equipment, apparel, and footwear for youth sports programs serving Hardeman County schools, awarded to Center of Integrated Health, the nonprofit founded by Dr. Avanti Cross-Brown."),
 ]
 def hl(g):
     if not g.get("highlights"): return ""
