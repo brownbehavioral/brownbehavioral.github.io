@@ -46,7 +46,7 @@ def ico(name, size=22):
 
 NAV = [
  ("Home","/",None),
- ("About",None,[("Our Practice","/behavioral-health-care-about-us/"),("Our Team","/behavioral-health-care-meet-our-professionals/"),("Funding","/funding/"),("Careers","/behavioral-health-care-careers/"),("Request for Proposals","/behavioral-health-care-careers/request-for-proposals/")]),
+ ("About",None,[("Our Practice","/behavioral-health-care-about-us/"),("Our Team","/behavioral-health-care-meet-our-professionals/"),("Funding","/funding/"),("Center of Integrated Health (Nonprofit)","/center-of-integrated-health/"),("Careers","/behavioral-health-care-careers/"),("Request for Proposals","/behavioral-health-care-careers/request-for-proposals/")]),
  ("Services",None,[("All Services","/behavioral-health-care-services/"),("Psychiatric Evaluation","/behavioral-health-care-psychiatric-evaluation/"),("Medical Services","/behavioral-health-care-medical-services/"),("MS Medical Card Certification","/docs/MS-Cannabis-Certification.pdf")]),
  ("Patients",None,[("Patient Center","/patient-center/"),("Request an Appointment","/behavioral-health-request-an-appointment/"),("Insurance Accepted","/insurance/"),("Patient Portal","/behavioral-health-care-healow-patient-portal/"),("Pay Your Bill","/behavioral-health-care-payment/")]),
  ("Referrals","/behavioral-health-care-send-your-referrals/",None),
@@ -113,7 +113,7 @@ def page(path, title, desc, body, phero=None):
       <p style="margin-top:14px">Phone: <a href="{PHONE_LINK}">{PHONE}</a><br>Fax: {FAX}<br><a href="mailto:{EMAIL}">{EMAIL}</a></p><div class="social"><a href="{FACEBOOK}" target="_blank" rel="noopener" aria-label="Facebook">{ico("fb",18)}</a><a href="{PSYTODAY}" target="_blank" rel="noopener" aria-label="Psychology Today profile">{ico("user",18)}</a></div>
     </div>
     <div><h4>Navigation</h4><ul><li><a href="/">Home</a></li><li><a href="/behavioral-health-care-about-us/">About Us</a></li><li><a href="/behavioral-health-care-meet-our-professionals/">Meet Our Professionals</a></li><li><a href="/behavioral-health-care-services/">Services</a></li><li><a href="/behavioral-health-care-medical-services/">Medical Services</a></li><li><a href="/behavioral-health-care-send-your-referrals/">Referrals</a></li><li><a href="/behavioral-health-care-careers/">Careers</a></li><li><a href="/behavioral-health-care-contact-us/">Contact Us</a></li></ul></div>
-    <div><h4>Patients</h4><ul><li><a href="/patient-center/">Patient Center</a></li><li><a href="/behavioral-health-request-an-appointment/">Request an Appointment</a></li><li><a href="/behavioral-health-care-healow-patient-portal/">Patient Portal (healow)</a></li><li><a href="/insurance/">Insurance Accepted</a></li><li><a href="/behavioral-health-care-payment/">Payment Options</a></li><li><a href="/funding/">Funding</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div>
+    <div><h4>Patients</h4><ul><li><a href="/patient-center/">Patient Center</a></li><li><a href="/behavioral-health-request-an-appointment/">Request an Appointment</a></li><li><a href="/behavioral-health-care-healow-patient-portal/">Patient Portal (healow)</a></li><li><a href="/insurance/">Insurance Accepted</a></li><li><a href="/behavioral-health-care-payment/">Payment Options</a></li><li><a href="/funding/">Funding</a></li><li><a href="/center-of-integrated-health/">Center of Integrated Health</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div>
     <div><h4>Our Offices</h4><ul>
       <li>Accepting patients throughout Tennessee and Mississippi</li>
       <li><b style="color:#fff">Tennessee Office</b><br>793 Tennessee Street<br>Bolivar, TN 38008</li>
@@ -250,6 +250,11 @@ home = f'''
   <p style="font-family:var(--serif);font-size:clamp(1.1rem,2vw,1.35rem);line-height:1.7;color:var(--deep)">The mission of Brown Behavioral Health Services is to provide proficient and competent care related to diagnosing and treating psychiatric illnesses in pediatrics and adults while improving overall health status. BBHS is committed to the mental health population and is eager to serve each individual holistically while enhancing mental health awareness, promoting individual empowerment, and increasing access to treatment and services for persons living with mental illnesses.</p>
   <a class="btn btn-teal" href="/behavioral-health-care-about-us/#mission">Learn About Our Practice</a>
 </div></section>
+
+<section style="padding-bottom:0"><div class="wrap"><div class="panel" style="display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:center">
+  <div><span class="eyebrow">Our Nonprofit Partner</span><h2 style="margin-bottom:8px">Center of Integrated Health</h2><p style="margin:0">Our 501(c)(3) nonprofit extends care beyond the clinic through youth sports and wellness, youth mental health, and community partnerships across rural Tennessee and Mississippi.</p></div>
+  <div style="text-align:right"><a class="btn btn-teal" href="/center-of-integrated-health/">Learn About the Center</a></div>
+</div></div></section>
 
 <section><div class="wrap"><div class="panel gold payband">
   <div><span class="eyebrow">Accessible Care</span><h2 style="margin-bottom:10px">Care for Every Family</h2><p style="margin:0"><b>No one will be denied access to services due to inability to pay.</b> A discounted/sliding fee schedule is available based on family size and income, and we proudly accept CareCredit and Scratchpay financing.</p><p style="margin:12px 0 0"><b>We accept Medicare, TennCare, Mississippi Medicaid, and most major private and Marketplace plans.</b></p></div>
@@ -625,7 +630,7 @@ GRANTS = [
  dict(show=True, state="National", funder="National Rural Health Resource Center, funded by HRSA&rsquo;s Federal Office of Rural Health Policy", program="Rural Healthcare Provider Transition Project", amount="National Selection", term="2026 to 2027",
       body="BBHS was one of five organizations selected nationally to receive technical assistance that prepares rural providers for value-based care."),
  dict(show=True, state="Tennessee", funder="Good Sports", program="Youth Sports Equipment Grant: Center of Integrated Health", amount="In-Kind Award", term="2026 to 2028",
-      body="Provides new sports equipment, apparel, and footwear for youth sports programs serving Hardeman County schools, awarded to Center of Integrated Health, the nonprofit founded by Dr. Avanti Cross-Brown."),
+      body="Provides new sports equipment, apparel, and footwear for youth sports programs serving Hardeman County schools, awarded to <a href=\"/center-of-integrated-health/\">Center of Integrated Health</a>, the nonprofit founded by Dr. Avanti Cross-Brown."),
 ]
 def hl(g):
     if not g.get("highlights"): return ""
@@ -645,6 +650,28 @@ funding = f'''<section><div class="wrap split" style="grid-template-columns:1fr 
 </div></section>
 <section class="mist"><div class="wrap center"><span class="eyebrow">Partner With Us</span><h2>Collaborating for Healthier Communities</h2><p class="lead">We welcome partnerships with schools, health systems, community organizations, and funders who share our commitment to rural health.</p><a class="btn btn-teal" href="/behavioral-health-care-contact-us/">Contact Our Team</a></div></section>'''
 page("/funding/","Funding | Brown Behavioral Health Services","State funding supporting rural behavioral health, primary care, workforce, and chronic disease prevention programs at Brown Behavioral Health Services.",funding,("Funding","Public investment that expands access to care in rural Tennessee and Mississippi.",'<a href="/behavioral-health-care-about-us/">About</a> / Funding'))
+
+# ---------------- NONPROFIT ----------------
+coi = f'''<section><div class="wrap split">
+<div><span class="eyebrow">Our Nonprofit Partner</span><h2>Center of Integrated Health</h2>
+<p class="lead">Center of Integrated Health is a Tennessee nonprofit and 501(c)(3) public charity founded by Dr. Avanti Cross-Brown to extend health, wellness, and opportunity to rural and underserved families beyond the walls of the clinic.</p>
+<p>Working hand in hand with Brown Behavioral Health Services, the Center pursues grants, community partnerships, and charitable support for programs that strengthen youth, families, and communities across West Tennessee and North Mississippi.</p>
+<ul class="chips" style="margin-top:18px"><li>501(c)(3) Public Charity</li><li>Founded 2023</li><li>Bolivar, Tennessee</li></ul></div>
+<div class="media"><img src="/images/mental-health-awareness.jpg" alt="Community members and BBHS team during a Mental Health Awareness Month event" style="aspect-ratio:4/3;object-fit:cover;width:100%"></div>
+</div></section>
+<section class="mist"><div class="wrap">
+<div class="sec-head"><div><span class="eyebrow">What We Do</span><h2 style="margin:0">Programs and Services</h2></div></div>
+<div class="cards three" style="margin-top:0">
+ <div class="panel reveal"><div class="icw"><div class="ci">{ico("heart",24)}</div></div><h3>Youth Sports and Wellness</h3><p class="note" style="margin:0">A youth sports program serving Hardeman County students for five years, now equipped through a Good Sports in-kind award so cost is never a barrier to playing.</p></div>
+ <div class="panel reveal"><div class="icw"><div class="ci">{ico("brain",24)}</div></div><h3>Youth Mental Health</h3><p class="note" style="margin:0">Wellness education and mental health support for young people, coordinated with the clinical care of Brown Behavioral Health Services.</p></div>
+ <div class="panel reveal"><div class="icw"><div class="ci">{ico("pin",24)}</div></div><h3>Community Health Partnerships</h3><p class="note" style="margin:0">Partnerships with schools, churches, and community organizations that bring outreach, resources, and services to rural families.</p></div>
+</div></div></section>
+<section><div class="wrap two" style="align-items:start">
+<div class="panel"><span class="eyebrow">Leadership</span><h3>Executive Director</h3><p style="margin:0 0 18px">Dr. Avanti Cross-Brown, APRN, DNP, PMHNP-BC, CARN-AP, NRCME, Founder and Executive Director</p>
+<h3>Board of Directors</h3><ul class="ilist"><li>{ico("check",18)}<span>Brent Brown</span></li><li>{ico("check",18)}<span>Destiny Shaw, BS, MBA</span></li><li>{ico("check",18)}<span>Rosie Cross</span></li><li>{ico("check",18)}<span>Dr. Di&rsquo;Yana Fisher, APRN, DNP, PMHNP-BC</span></li></ul></div>
+<div class="panel deep"><span class="eyebrow gold">Get Involved</span><h3>Partner, Volunteer, or Give</h3><p>We welcome partnerships with funders, schools, faith communities, and local organizations who share our commitment to healthier rural communities.</p><p>Center of Integrated Health is a 501(c)(3) public charity. Contributions may be tax-deductible as allowed by law.</p><a class="btn btn-gold" href="mailto:{EMAIL}?subject=Center%20of%20Integrated%20Health">Contact the Center</a><p class="note" style="color:#d7ebe8;margin:14px 0 0">Call {PHONE} or email {EMAIL}.</p></div>
+</div></section>'''
+page("/center-of-integrated-health/","Center of Integrated Health | Nonprofit Partner of Brown Behavioral Health Services","Center of Integrated Health is a 501(c)(3) nonprofit founded by Dr. Avanti Cross-Brown, supporting youth, families, and rural communities in partnership with Brown Behavioral Health Services.",coi,("Center of Integrated Health","Our 501(c)(3) nonprofit partner, extending care and opportunity to rural communities.",'<a href="/behavioral-health-care-about-us/">About</a> / Center of Integrated Health'))
 
 # ---------------- RFP ----------------
 rfp = f'''<section><div class="wrap" style="max-width:900px"><div class="prose">
@@ -697,7 +724,7 @@ priv = f'''<section><div class="wrap prose" style="max-width:860px">
 page("/privacy-policy/","Privacy Policy | Brown Behavioral Health Services","Privacy Policy for Brown Behavioral Health Services.",priv,("Privacy Policy","","Privacy Policy"))
 
 # ---------------- SITEMAP + THANK YOU + 404 ----------------
-links = [("Home","/"),("About Us","/behavioral-health-care-about-us/"),("Meet Our Professionals","/behavioral-health-care-meet-our-professionals/"),("Services","/behavioral-health-care-services/"),("Psychiatric Evaluation","/behavioral-health-care-psychiatric-evaluation/"),("Medical Services","/behavioral-health-care-medical-services/"),("Patient Center","/patient-center/"),("Request an Appointment","/behavioral-health-request-an-appointment/"),("Patient Portal (eClinicalWorks / healow)","/behavioral-health-care-healow-patient-portal/"),("Insurance Accepted","/insurance/"),("Payment Options","/behavioral-health-care-payment/"),("Funding","/funding/"),("Send Your Referrals","/behavioral-health-care-send-your-referrals/"),("Careers","/behavioral-health-care-careers/"),("Request for Proposals","/behavioral-health-care-careers/request-for-proposals/"),("Contact Us","/behavioral-health-care-contact-us/"),("Privacy Policy","/privacy-policy/")]
+links = [("Home","/"),("About Us","/behavioral-health-care-about-us/"),("Meet Our Professionals","/behavioral-health-care-meet-our-professionals/"),("Services","/behavioral-health-care-services/"),("Psychiatric Evaluation","/behavioral-health-care-psychiatric-evaluation/"),("Medical Services","/behavioral-health-care-medical-services/"),("Patient Center","/patient-center/"),("Request an Appointment","/behavioral-health-request-an-appointment/"),("Patient Portal (eClinicalWorks / healow)","/behavioral-health-care-healow-patient-portal/"),("Insurance Accepted","/insurance/"),("Payment Options","/behavioral-health-care-payment/"),("Funding","/funding/"),("Center of Integrated Health","/center-of-integrated-health/"),("Send Your Referrals","/behavioral-health-care-send-your-referrals/"),("Careers","/behavioral-health-care-careers/"),("Request for Proposals","/behavioral-health-care-careers/request-for-proposals/"),("Contact Us","/behavioral-health-care-contact-us/"),("Privacy Policy","/privacy-policy/")]
 page("/sitemap/","Sitemap | Brown Behavioral Health Services","All pages on brownbehavioral.com.",f'<section><div class="wrap"><ul class="svc">{"".join(f"<li><a href={chr(34)}{h}{chr(34)}>{t}</a></li>" for t,h in links)}</ul></div></section>',("Sitemap","","Sitemap"))
 page("/thank-you/","Thank You | Brown Behavioral Health Services","Thank you for contacting Brown Behavioral Health Services.",f'<section><div class="wrap center" style="max-width:700px"><h2>Thank you!</h2><p class="lead">Your submission has been received. Our team will get back to you as soon as possible.</p><p>If this is an emergency, please call 911.</p><a class="btn btn-teal" href="/">Back to Home</a></div></section>',("Thank You","","Thank You"))
 page("/404/","Page Not Found | Brown Behavioral Health Services","Page not found.",f'<section><div class="wrap center"><h2>Sorry, we could not find that page.</h2><p class="lead">Try one of the links in the menu, or call us at {PHONE}.</p><a class="btn btn-teal" href="/">Back to Home</a></div></section>',("Page Not Found","","404"))
