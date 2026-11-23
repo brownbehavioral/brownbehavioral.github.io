@@ -572,7 +572,8 @@ INS_GROUPS = [
 ORDER = [3,0,1,2,4]  # Private first, then Medicare, TennCare, MS Medicaid, Other
 SHORT = {3:"Commercial &amp; Marketplace",0:"Medicare &amp; Medicare Advantage",1:"TennCare (TN Medicaid)",2:"Mississippi Medicaid",4:"Other Plans"}
 def ins_lists():
-    cols="".join(f'<div class="inscol"><h3>{SHORT[k]}</h3><ul>{"".join(f"<li>{p}</li>" for p,_,_ in INS_GROUPS[k][3])}</ul></div>' for k in ORDER)
+    ICONS={3:"brief",0:"shield",1:"heart",2:"heart",4:"check"}
+    cols="".join(f'<div class="inscard reveal"><div class="inshead"><span class="insic">{ico(ICONS[k],20)}</span><h3>{SHORT[k]}</h3></div><ul>{"".join(f"<li>{ico(chr(99)+chr(104)+chr(101)+chr(99)+chr(107),15)}<span>{p}</span></li>" for p,_,_ in INS_GROUPS[k][3])}</ul></div>' for k in ORDER)
     return f'<div class="inscols">{cols}</div>'
 def ins_explain():
     out=[]
