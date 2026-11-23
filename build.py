@@ -569,25 +569,26 @@ INS_GROUPS = [
    ("Carelon Behavioral Health","A behavioral health network that manages mental health benefits for some plans.","Formerly Beacon Health Options"),
    ("Magellan","A behavioral health network that manages mental health benefits for some plans.","Magellan Healthcare")]),
 ]
-def ins_sections():
+ORDER = [3,0,1,2,4]  # Private first, then Medicare, TennCare, MS Medicaid, Other
+SHORT = {3:"Commercial &amp; Marketplace",0:"Medicare &amp; Medicare Advantage",1:"TennCare (TN Medicaid)",2:"Mississippi Medicaid",4:"Other Plans"}
+def ins_lists():
+    cols="".join(f'<div class="inscol"><h3>{SHORT[k]}</h3><ul>{"".join(f"<li>{p}</li>" for p,_,_ in INS_GROUPS[k][3])}</ul></div>' for k in ORDER)
+    return f'<div class="inscols">{cols}</div>'
+def ins_explain():
     out=[]
-    for k,(eb,title,intro,plans) in enumerate(INS_GROUPS):
-        cards="".join(f'<div class="panel reveal"><h3 style="margin-bottom:6px">{p}</h3><p class="note" style="margin:0">{d}</p>{f'<p class="aka">{a}</p>' if a else ""}</div>' for p,d,a in plans)
-        out.append(f'<section class="{"mist" if k%2 else ""}"><div class="wrap"><div class="sec-head"><div><span class="eyebrow">{eb}</span><h2 style="margin:0">{title}</h2></div><p class="lead">{intro}</p></div><div class="cards three" style="margin-top:0">{cards}</div></div></section>')
+    for k in ORDER:
+        eb,title,intro,plans=INS_GROUPS[k]
+        rows="".join(f'<li><b>{p}:</b> {d}</li>' for p,d,_ in plans)
+        out.append(f'<details class="faq"><summary>{SHORT[k]}: what these plans are</summary><p>{intro}</p><ul>{rows}</ul></details>')
     return "".join(out)
-ins = f'''<section style="padding-bottom:30px"><div class="wrap"><div class="panel gold" style="display:grid;grid-template-columns:1.4fr 1fr;gap:30px;align-items:center">
-<div><span class="eyebrow">Not Sure What Plan You Have?</span><h2 style="margin-bottom:10px">We Will Help You Figure It Out</h2>
-<ul class="ilist">
-<li>{ico("check",18)}<span>Look at the <b>front of your insurance card</b>. The company name and plan name are usually printed at the top.</span></li>
-<li>{ico("check",18)}<span>In Tennessee, Medicaid is called <b>TennCare</b>. Your card will show BlueCare, TennCare Select, Wellpoint, or UnitedHealthcare Community Plan.</span></li>
-<li>{ico("check",18)}<span>In Mississippi, Medicaid plans are often called <b>MississippiCAN</b>. Your card will show Magnolia, Molina, or TrueCare.</span></li>
-<li>{ico("check",18)}<span>Have both Medicare and Medicaid? You may be in a <b>D-SNP</b> or <b>BlueCare Plus</b> plan. We accept these.</span></li></ul></div>
-<div style="text-align:center"><p style="font-family:var(--serif);font-size:1.25rem;color:var(--deep);margin-bottom:14px">Call us and we will check your coverage before your visit.</p><a class="btn btn-teal" href="{PHONE_LINK}">{ico("phone",16)} Call {PHONE}</a><p class="note" style="margin-top:12px">Bring your insurance card and a photo ID to every visit.</p></div>
-</div></div></section>
-{ins_sections()}
-<section><div class="wrap two">
-<div class="panel"><span class="eyebrow">Good to Know</span><h3>Is my plan accepted for every service?</h3><p style="margin:0">Coverage can vary by plan, provider, and service. Some self-pay programs, such as DOT physicals, the Slim Program, DUI School, and Mississippi medical cannabis certification, are not billed to insurance. Call {PHONE} and we will confirm your benefits before your visit.</p></div>
-<div class="panel deep"><span class="eyebrow gold">No Insurance?</span><h3>Care Is Still Within Reach</h3><p><b>No one will be denied access to services due to inability to pay.</b> A discounted/sliding fee schedule is available based on family size and income, along with CareCredit and Scratchpay financing.</p><a class="btn btn-gold" href="/behavioral-health-care-payment/">Payment Options</a></div>
+ins = f'''<section style="padding-top:56px;padding-bottom:40px"><div class="wrap">
+<p class="lead" style="margin-bottom:26px">We accept the plans below at our Bolivar, TN and Olive Branch, MS offices and by telehealth. Don&rsquo;t see your plan? Call <a href="{PHONE_LINK}">{PHONE}</a> and we will check for you.</p>
+{ins_lists()}
+</div></section>
+<section class="mist" style="padding:56px 0"><div class="wrap two" style="align-items:start">
+<div><span class="eyebrow">Plain-Language Guide</span><h2>Not Sure What Your Plan Is?</h2><p>Look at the front of your insurance card. In Tennessee, Medicaid is called <b>TennCare</b>. In Mississippi, Medicaid plans are often called <b>MississippiCAN</b>. If you have both Medicare and Medicaid, you may be in a <b>D-SNP</b> or <b>BlueCare Plus</b> plan. Tap a group to learn more.</p>
+<div class="panel" style="padding:22px;margin-top:18px"><p style="margin:0"><b>No insurance?</b> No one will be denied access to services due to inability to pay. A sliding fee schedule, CareCredit, and Scratchpay are available. <a href="/behavioral-health-care-payment/">Payment options &rarr;</a></p><p class="note" style="margin:10px 0 0">Self-pay programs (DOT physicals, Slim Program, DUI School, and MS medical card certification) are not billed to insurance.</p></div></div>
+<div>{ins_explain()}</div>
 </div></section>'''
 page("/insurance/","Insurance Accepted | Brown Behavioral Health Services","Brown Behavioral Health Services accepts Medicare, Railroad Medicare, D-SNP plans, TennCare (BlueCare, TennCare Select, Wellpoint), Mississippi Medicaid (Magnolia, Molina, TrueCare), and major commercial and Marketplace plans.",ins,("Insurance Accepted","Medicare, TennCare, Mississippi Medicaid, and major private plans, explained in plain language.",'<a href="/patient-center/">Patients</a> / Insurance'))
 
