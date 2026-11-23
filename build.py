@@ -609,7 +609,13 @@ page("/insurance/","Insurance Accepted | Brown Behavioral Health Services","Brow
 # Set show=True only after the award may be announced publicly.
 GRANTS = [
  dict(show=True, state="Tennessee", funder="Tennessee Department of Health", program="Healthcare Rural Resiliency Program", amount="$3,577,860", term="2025 to 2028",
-      body="Expands primary care, mental health, and substance use services in Hardeman County, Tennessee, including a mobile medical unit serving communities across the county, school-based telehealth, behavioral health services for Whiteville Correctional Facility, remote patient monitoring, added licensed counselors, and an annual Rural Health Fair each October."),
+      body="Expands primary care, mental health, and substance use services in Hardeman County, Tennessee, including a mobile medical unit serving communities across the county, school-based telehealth, behavioral health services for Whiteville Correctional Facility, remote patient monitoring, added licensed counselors, and an annual Rural Health Fair each October.",
+      highlights=["Hosted the Rural Community Health Fair in Bolivar (July 2026): 578 attendees and 227 children and adolescents screened for depression, anxiety, and substance use",
+                  "Mobile clinic services and screenings across Hardeman County",
+                  "Presented on the HRP panel at the West Tennessee Regional Health Council (August 2026)",
+                  "Trained staff in addiction and psychiatric medication treatment (August 2026)",
+                  "Opened a third location through a University of Memphis partnership (September 2026)",
+                  "Advanced suicide prevention and pediatric care through TSPN and the Cumberland Pediatric Foundation"]),
  dict(show=True, state="Tennessee", funder="Tennessee Department of Health", program="Creating Healthier Rural Communities Through the End Zone for Chronic Disease Prevention: The Blue Plate Project", amount="$1,500,000", term="2026 to 2030",
       body="A community food access and chronic disease prevention initiative in Hardeman County featuring a community garden, a food pantry network serving Bolivar, Hickory Valley, Whiteville, Toone, and Grand Junction, and recurring nutrition and chronic disease education classes."),
  dict(show=True, state="Mississippi", funder="Mississippi State Department of Health, Rural Health Transformation Program", program="Workforce Expansion Initiative: Project MENTOR MS", amount="$448,140", term="2026 to 2027",
@@ -617,12 +623,15 @@ GRANTS = [
  dict(show=False, state="Tennessee", funder="Tennessee Department of Health", program="Perinatal Behavioral Health Workforce Development: BLOOM Perinatal Fellowship", amount="$43,000", term="2026",
       body="Supports supervision, training, and specialty certification for clinicians serving mothers and families during the perinatal period."),
 ]
+def hl(g):
+    if not g.get("highlights"): return ""
+    return '<p class="aka" style="margin-top:16px">2026 Highlights</p><ul class="hl">'+"".join(f'<li>{ico("check",15)}<span>{x}</span></li>' for x in g["highlights"])+'</ul>'
 def grant_cards():
     out=[]
     for g in [g for g in GRANTS if g["show"]]:
         out.append(f'''<article class="formcard reveal" style="padding:30px;margin-bottom:22px;display:grid;grid-template-columns:220px 1fr;gap:30px;align-items:start">
 <div><span class="eyebrow">{g["state"]}</span><div style="font-family:var(--serif);font-size:2rem;color:var(--deep);line-height:1.1">{g["amount"]}</div><p class="note" style="margin:6px 0 0">{g["term"]}</p></div>
-<div><p class="note" style="margin:0 0 4px;color:var(--teal);font-weight:600">{g["funder"]}</p><h3>{g["program"]}</h3><p style="margin:0">{g["body"]}</p></div></article>''')
+<div><p class="note" style="margin:0 0 4px;color:var(--teal);font-weight:600">{g["funder"]}</p><h3>{g["program"]}</h3><p style="margin:0">{g["body"]}</p>{hl(g)}</div></article>''')
     return "".join(out)
 funding = f'''<section><div class="wrap split" style="grid-template-columns:1fr 1.7fr;align-items:start">
 <aside class="sidecard"><span class="eyebrow">Investing in Rural Health</span><h2>Public Partnerships That Expand Access</h2><p class="lead">Public funding allows Brown Behavioral Health Services to reach more patients, grow our workforce, and bring care directly into rural communities across Tennessee and Mississippi.</p>
