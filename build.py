@@ -243,7 +243,7 @@ home = f'''
 </div></section>
 
 <section><div class="wrap"><div class="panel gold payband">
-  <div><span class="eyebrow">Accessible Care</span><h2 style="margin-bottom:10px">Care for Every Family</h2><p style="margin:0"><b>No one will be denied access to services due to inability to pay.</b> A discounted/sliding fee schedule is available based on family size and income, and we proudly accept CareCredit and Scratchpay financing.</p><p style="margin:12px 0 0"><b>We accept Medicare, TennCare, Mississippi Medicaid, TRICARE, and most major commercial plans.</b></p></div>
+  <div><span class="eyebrow">Accessible Care</span><h2 style="margin-bottom:10px">Care for Every Family</h2><p style="margin:0"><b>No one will be denied access to services due to inability to pay.</b> A discounted/sliding fee schedule is available based on family size and income, and we proudly accept CareCredit and Scratchpay financing.</p><p style="margin:12px 0 0"><b>We accept Medicare, TennCare, Mississippi Medicaid, and most major private and Marketplace plans.</b></p></div>
   <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end"><a class="btn btn-teal" href="/insurance/">Insurance Accepted</a><a class="btn btn-teal" href="/behavioral-health-care-payment/">Payment Options</a><a class="btn btn-outline" href="{CARECREDIT}" target="_blank" rel="noopener">Apply for CareCredit</a></div>
 </div></div></section>
 
@@ -295,7 +295,7 @@ _prov = ([
  person("Dr-Kayla-Williams.jpg","Dr. Kayla Williams, APRN, DNP, PMHNP-BC","Psychiatric Mental Health Nurse Practitioner","Board-Certified Psychiatric Mental Health Nurse Practitioner",[
   "Dr. Kayla Williams is a board-certified Psychiatric Mental Health Nurse Practitioner committed to delivering comprehensive, patient-centered care across the lifespan. She earned her Doctor of Nursing Practice from the University of Tennessee Health Science Center in 2024, following her Bachelor of Science in Nursing from Baptist College of Health Sciences in 2019.",
   "She provides evidence-based treatment for children, adolescents, adults, and older adults facing a wide range of mental health conditions, including mood disorders, anxiety, ADHD, and trauma-related concerns. Dr. Williams is passionate about reducing stigma and promoting early intervention in mental health care.",
-  "Her goal is to empower patients and families through education, individualized treatment planning, and ongoing support."]),
+  "Her goal is to empower patients and families through education, individualized treatment planning, and ongoing support."],"Now accepting new patients. Weekend appointments available."),
  person("Dr-Jessica-Allen.jpg","Dr. Jessica Allen, MSN, DNP, FNP-BC, PMHNP-BC","Psychiatric and Family Nurse Practitioner","Board-Certified Psychiatric Mental Health Nurse and Family Nurse Practitioner",[
   "Dr. Jessica Allen is a board-certified Psychiatric-Mental Health and Family Nurse Practitioner with a focus on providing client-centered, expert mental health and medical services, including medical consultations, psychiatric evaluations, and medication management to all communities. Dr. Allen treats individuals age 5 years and above. She offers flexible &amp; affordable telehealth, mobile, &amp; in-person appointments, with some evenings &amp; weekends available."],"Evenings &amp; weekends available"),
  person("Dr-DiYana-Fisher.jpg","Dr. Di&rsquo;Yana Fisher, APRN, DNP, PMHNP-BC","Psychiatric Mental Health Nurse Practitioner","Board-Certified Psychiatric Mental Health Nurse Practitioner",[
@@ -442,7 +442,7 @@ pc = f'''<section><div class="wrap"><div class="cards" style="margin-top:0">
  <div class="panel reveal"><div class="icw"><div class="ci">{ico("cal",24)}</div></div><h3>Request an Appointment</h3><p class="note">Book online at any hour through healow (eClinicalWorks), in the healow app with practice code <span class="code">ACGHDD</span>, or call {PHONE}.</p><a class="btn btn-teal" href="/behavioral-health-request-an-appointment/">Schedule</a></div>
  <div class="panel reveal"><div class="icw"><div class="ci">{ico("portal",24)}</div></div><h3>Patient Portal</h3><p class="note">Your eClinicalWorks portal on the web or in the healow app. Practice code <span class="code">ACGHDD</span>.</p><a class="btn btn-teal" href="/behavioral-health-care-healow-patient-portal/">Open Portal</a></div>
  <div class="panel reveal"><div class="icw"><div class="ci">{ico("card",24)}</div></div><h3>Pay Your Bill</h3><p class="note">Copays, balances, and financing through CareCredit and Scratchpay.</p><a class="btn btn-teal" href="/behavioral-health-care-payment/">Payment Options</a></div>
- <div class="panel reveal"><div class="icw"><div class="ci">{ico("file",24)}</div></div><h3>Insurance Accepted</h3><p class="note">Medicare, TennCare, Mississippi Medicaid, TRICARE, and most commercial plans.</p><a class="btn btn-teal" href="/insurance/">View Plans</a></div>
+ <div class="panel reveal"><div class="icw"><div class="ci">{ico("file",24)}</div></div><h3>Insurance Accepted</h3><p class="note">Medicare, TennCare, Mississippi Medicaid, and most major private plans, explained in plain language.</p><a class="btn btn-teal" href="/insurance/">View Plans</a></div>
 </div></div></section>
 <section class="mist"><div class="wrap two">
  <div class="panel"><span class="eyebrow">Before Your Visit</span><h3>What to Bring</h3><ul class="ilist">
@@ -525,22 +525,66 @@ careers = f'''<section><div class="wrap split" style="grid-template-columns:1fr 
 page("/behavioral-health-care-careers/","Careers | Brown Behavioral Health Services","Join the team at Brown Behavioral Health Services. Apply online for clinical and administrative positions in Tennessee and Mississippi.",careers,("Careers","Join our team of professionals and share your expertise with those who need your help.",'<a href="/behavioral-health-care-about-us/">About</a> / Careers'))
 
 # ---------------- INSURANCE ----------------
-GOV = [("Medicare","Tennessee and Mississippi"),("TennCare","Including BlueCare Tennessee and Wellpoint (formerly Amerigroup)"),("Mississippi Medicaid","Including Magnolia Health, Molina Healthcare, and TrueCare"),("TRICARE","Military and veteran families")]
-COMM = ["Aetna","Anthem","BlueCross BlueShield","Carelon Behavioral Health","Cigna and Evernorth","Humana","Magellan","Molina Healthcare","Optum","UnitedHealthcare / UBH","United Medical Resources (UMR)","Wellpoint | Amerigroup"]
-ins = f'''<section><div class="wrap">
-<div class="sec-head"><div><span class="eyebrow">Government Programs</span><h2 style="margin:0">Medicare and Medicaid in Tennessee and Mississippi</h2></div><p class="lead">We are proud to serve Medicare, TennCare, and Mississippi Medicaid members at both of our offices and by telehealth.</p></div>
-<div class="cards" style="margin-top:0">{"".join(f'<div class="panel reveal"><div class="icw"><div class="ci">{ico("shield",24)}</div></div><h3>{n}</h3><p class="note" style="margin:0">{d}</p></div>' for n,d in GOV)}</div>
-</div></section>
-<section class="mist"><div class="wrap">
-<div class="sec-head"><div><span class="eyebrow">Commercial Plans</span><h2 style="margin:0">Private Insurance We Accept</h2></div></div>
-<ul class="svc" style="grid-template-columns:repeat(3,1fr)">{"".join(f"<li>{c}</li>" for c in COMM)}</ul>
-<p class="note" style="margin-top:18px">Out-of-network benefits may also apply. Coverage varies by plan and provider, so please call {PHONE} to verify your benefits before your first visit.</p>
-</div></section>
-<section><div class="wrap"><div class="panel gold payband">
-<div><span class="eyebrow">Uninsured or Underinsured?</span><h2 style="margin-bottom:10px">Care Is Still Within Reach</h2><p style="margin:0"><b>No one will be denied access to services due to inability to pay.</b> A discounted/sliding fee schedule is available based on family size and income, along with CareCredit and Scratchpay financing.</p></div>
-<div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end"><a class="btn btn-teal" href="/behavioral-health-care-payment/">Payment Options</a><a class="btn btn-outline" href="/behavioral-health-request-an-appointment/">Schedule a Visit</a></div>
-</div></div></section>'''
-page("/insurance/","Insurance Accepted | Brown Behavioral Health Services","Brown Behavioral Health Services accepts Medicare, TennCare, Mississippi Medicaid, TRICARE, and most major commercial insurance plans.",ins,("Insurance Accepted","Medicare, Medicaid, and most major commercial plans in Tennessee and Mississippi.",'<a href="/patient-center/">Patients</a> / Insurance'))
+# Each group: (eyebrow, title, intro, [(plan, plain-language explanation, also-known-as)])
+INS_GROUPS = [
+ ("Medicare","Medicare and Medicare Advantage",
+  "Medicare is federal health insurance for people 65 and older and for some younger people with disabilities. Medicare Advantage plans are Medicare plans offered by private companies.",
+  [("Original Medicare","The red, white, and blue Medicare card from the federal government. Covers people 65 and older and some people with disabilities.","Medicare Part B"),
+   ("Railroad Medicare","Medicare for retired railroad workers and their families. Your card will say &ldquo;Railroad Retirement Board.&rdquo;","RRB Medicare"),
+   ("Dual Special Needs Plans (D-SNP)","Medicare Advantage plans for people who have <b>both</b> Medicare and Medicaid (TennCare or Mississippi Medicaid).","D-SNP, Dual Eligible plans"),
+   ("BlueCare Plus","A BlueCross BlueShield of Tennessee plan for people who have both Medicare and TennCare.","BlueCare Plus (HMO D-SNP)"),
+   ("Wellcare","Medicare Advantage and Medicare prescription plans offered by Centene.","A Centene company"),
+   ("Cigna Healthspring","Cigna&rsquo;s Medicare Advantage plans.",""),
+   ("Humana","Medicare Advantage plans, plus employer and individual plans.",""),
+   ("Devoted Health","A Medicare Advantage plan for people with Medicare.","Devoted")]),
+ ("Tennessee Medicaid","TennCare",
+  "TennCare is Tennessee&rsquo;s Medicaid program for eligible children, families, pregnant women, and adults. TennCare members choose or are assigned a health plan, and the plan name appears on your card.",
+  [("BlueCare Tennessee","A TennCare health plan offered by BlueCross BlueShield of Tennessee.","BlueCare"),
+   ("TennCare Select","A TennCare plan mainly for children in state custody and some children with special health care needs.","Offered by BlueCross BlueShield of Tennessee"),
+   ("Wellpoint","A TennCare health plan, formerly called Amerigroup. Wellpoint also offers Medicare and other plans.","Formerly Amerigroup")]),
+ ("Mississippi Medicaid","Mississippi Medicaid",
+  "Mississippi Medicaid covers eligible children, families, pregnant women, and adults. Many members are enrolled in a MississippiCAN or CHIP health plan, and the plan name appears on your card.",
+  [("Magnolia Health","A Mississippi Medicaid (MississippiCAN and CHIP) health plan.","A Centene company"),
+   ("Molina Healthcare","A Mississippi Medicaid (MississippiCAN and CHIP) health plan. Molina also offers Marketplace plans.","Molina"),
+   ("TrueCare","A Mississippi Medicaid (MississippiCAN) health plan.","TrueCare Mississippi")]),
+ ("Private Insurance","Employer, Individual, and Marketplace Plans",
+  "These are plans you get through a job, buy on your own, or purchase through the Health Insurance Marketplace (HealthCare.gov).",
+  [("UnitedHealthcare","Employer, individual, and Medicare Advantage plans from UnitedHealth Group, including UMR and Optum behavioral health plans.","UnitedHealth Group, UHC, UMR, Optum"),
+   ("BlueCross BlueShield of Tennessee","Employer and individual plans for Tennessee residents.","BCBST"),
+   ("BlueCross BlueShield of Mississippi","Employer and individual plans for Mississippi residents.","BCBSMS"),
+   ("Aetna","Employer, individual, and Medicare Advantage plans from CVS Health.","CVS Health"),
+   ("Cigna","Employer and individual plans.","Cigna and Evernorth"),
+   ("Ambetter","Individual and family plans sold on the Health Insurance Marketplace.","A Centene company"),
+   ("Oscar","Individual and family plans sold on the Health Insurance Marketplace.","Oscar Health"),
+   ("Alliant Health Plans","Individual, family, and employer plans.","Alliant")]),
+ ("Additional Coverage","Other Plans We Accept",
+  "We also work with these plans and behavioral health networks.",
+  [("TRICARE","Health coverage for active-duty service members, retirees, and their families.",""),
+   ("Anthem","Employer and individual plans.",""),
+   ("Carelon Behavioral Health","A behavioral health network that manages mental health benefits for some plans.","Formerly Beacon Health Options"),
+   ("Magellan","A behavioral health network that manages mental health benefits for some plans.","Magellan Healthcare")]),
+]
+def ins_sections():
+    out=[]
+    for k,(eb,title,intro,plans) in enumerate(INS_GROUPS):
+        cards="".join(f'<div class="panel reveal"><h3 style="margin-bottom:6px">{p}</h3><p class="note" style="margin:0">{d}</p>{f'<p class="aka">{a}</p>' if a else ""}</div>' for p,d,a in plans)
+        out.append(f'<section class="{"mist" if k%2 else ""}"><div class="wrap"><div class="sec-head"><div><span class="eyebrow">{eb}</span><h2 style="margin:0">{title}</h2></div><p class="lead">{intro}</p></div><div class="cards three" style="margin-top:0">{cards}</div></div></section>')
+    return "".join(out)
+ins = f'''<section style="padding-bottom:30px"><div class="wrap"><div class="panel gold" style="display:grid;grid-template-columns:1.4fr 1fr;gap:30px;align-items:center">
+<div><span class="eyebrow">Not Sure What Plan You Have?</span><h2 style="margin-bottom:10px">We Will Help You Figure It Out</h2>
+<ul class="ilist">
+<li>{ico("check",18)}<span>Look at the <b>front of your insurance card</b>. The company name and plan name are usually printed at the top.</span></li>
+<li>{ico("check",18)}<span>In Tennessee, Medicaid is called <b>TennCare</b>. Your card will show BlueCare, TennCare Select, or Wellpoint.</span></li>
+<li>{ico("check",18)}<span>In Mississippi, Medicaid plans are often called <b>MississippiCAN</b>. Your card will show Magnolia, Molina, or TrueCare.</span></li>
+<li>{ico("check",18)}<span>Have both Medicare and Medicaid? You may be in a <b>D-SNP</b> or <b>BlueCare Plus</b> plan. We accept these.</span></li></ul></div>
+<div style="text-align:center"><p style="font-family:var(--serif);font-size:1.25rem;color:var(--deep);margin-bottom:14px">Call us and we will check your coverage before your visit.</p><a class="btn btn-teal" href="{PHONE_LINK}">{ico("phone",16)} Call {PHONE}</a><p class="note" style="margin-top:12px">Bring your insurance card and a photo ID to every visit.</p></div>
+</div></div></section>
+{ins_sections()}
+<section><div class="wrap two">
+<div class="panel"><span class="eyebrow">Good to Know</span><h3>Is my plan accepted for every service?</h3><p style="margin:0">Coverage can vary by plan, provider, and service. Some self-pay programs, such as DOT physicals, the Slim Program, DUI School, and Mississippi medical cannabis certification, are not billed to insurance. Call {PHONE} and we will confirm your benefits before your visit.</p></div>
+<div class="panel deep"><span class="eyebrow gold">No Insurance?</span><h3>Care Is Still Within Reach</h3><p><b>No one will be denied access to services due to inability to pay.</b> A discounted/sliding fee schedule is available based on family size and income, along with CareCredit and Scratchpay financing.</p><a class="btn btn-gold" href="/behavioral-health-care-payment/">Payment Options</a></div>
+</div></section>'''
+page("/insurance/","Insurance Accepted | Brown Behavioral Health Services","Brown Behavioral Health Services accepts Medicare, Railroad Medicare, D-SNP plans, TennCare (BlueCare, TennCare Select, Wellpoint), Mississippi Medicaid (Magnolia, Molina, TrueCare), and major commercial and Marketplace plans.",ins,("Insurance Accepted","Medicare, TennCare, Mississippi Medicaid, and major private plans, explained in plain language.",'<a href="/patient-center/">Patients</a> / Insurance'))
 
 # ---------------- FUNDING ----------------
 # Set show=True only after the award may be announced publicly.
