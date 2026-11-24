@@ -294,3 +294,14 @@ details.faq ul{padding-left:1.1em;margin:0}
 .gallery figcaption{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.92);color:var(--deep);font-weight:600;font-size:.85rem;padding:6px 12px;border-radius:999px}
 @media (max-width:760px){.gallery{grid-template-columns:1fr;grid-template-rows:auto}.gallery .g-big{grid-row:auto}.gallery figure:nth-child(4){grid-column:auto}.gallery figure{height:240px}}
 .hl{list-style:none;padding:0;margin:8px 0 0}.hl li{display:flex;gap:9px;font-size:.9rem;padding:4px 0}.hl li svg{flex:0 0 auto;color:var(--teal);margin-top:4px}
+
+/* Center of Integrated Health: black and orange palette */
+.coi{--deep:#141414;--deep2:#2a2a2a;--teal:#e8772e;--teal-l:#fdeee3;--gold:#f5a24b;--gold-l:#fff3e8;--mist:#faf6f2;--line:#eee4da}
+.coi h1,.coi h2,.coi h3{color:#141414}
+.coi .phero{background:radial-gradient(900px 380px at 92% -30%,rgba(232,119,46,.55),transparent),radial-gradient(700px 360px at 0% 130%,rgba(245,162,75,.35),transparent),#141414}
+.coi .phero h1{color:#fff}
+.coi .panel.deep{background:linear-gradient(150deg,#141414,#2b2b2b)}
+.coi .panel.deep h2,.coi .panel.deep h3{color:#fff}
+.coi .eyebrow::after{background:#e8772e}
+.coi .chips li{background:#fdeee3;color:#141414}
+.coi .btn-gold{background:#e8772e;color:#fff}.coi .btn-gold:hover{background:#f5a24b}

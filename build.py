@@ -652,26 +652,38 @@ funding = f'''<section><div class="wrap split" style="grid-template-columns:1fr 
 page("/funding/","Funding | Brown Behavioral Health Services","State funding supporting rural behavioral health, primary care, workforce, and chronic disease prevention programs at Brown Behavioral Health Services.",funding,("Funding","Public investment that expands access to care in rural Tennessee and Mississippi.",'<a href="/behavioral-health-care-about-us/">About</a> / Funding'))
 
 # ---------------- NONPROFIT ----------------
-coi = f'''<section><div class="wrap split">
+COI_EMAIL = EMAIL  # replace with the Center's own email when provided
+COI_SVCS = [
+ ("heart","Youth Sports and Wellness","A youth sports program serving Hardeman County students for five years, equipped through a Good Sports in-kind award so cost is never a barrier to playing."),
+ ("brain","Youth Mental Health","Wellness education and mental health support for young people, coordinated with Brown Behavioral Health Services."),
+ ("shield","Free Care for Uninsured Patients","Helping uninsured neighbors access behavioral health and primary care through Brown Behavioral Health Services."),
+ ("video","Mobile Health Outreach","Bringing screenings, education, and care to rural communities through the Brown Behavioral Health Services Mobile Health Clinic."),
+ ("portal","School-Based Health and Telehealth","Supporting school health programs and school-based telehealth so students can get care without leaving campus."),
+ ("check","Community Health Fairs and Screenings","Free health fairs and mental health screenings that connect families with care, benefits, and local resources."),
+ ("leaf","Food Access and Nutrition","Community food access, gardens, and nutrition education that support chronic disease prevention."),
+ ("life","Substance Use Recovery Support","Recovery resources, education, and peer support that complement addiction treatment and help people stay well."),
+ ("pin","Reentry and Correctional Health Support","Supporting people returning home from incarceration with connections to health care, recovery, and community resources."),
+]
+coi_cards="".join(f'<div class="panel reveal"><div class="icw"><div class="ci">{ico(ic,24)}</div></div><h3>{t}</h3><p class="note" style="margin:0">{d}</p></div>' for ic,t,d in COI_SVCS)
+coi = f'''<div class="coi">
+<section class="phero"><div class="wrap"><div class="crumbs"><a href="/">Home</a> / <a href="/behavioral-health-care-about-us/">About</a> / Center of Integrated Health</div><h1>Center of Integrated Health</h1><p>Our 501(c)(3) nonprofit partner, extending care and opportunity to rural communities.</p></div></section>
+<section><div class="wrap split">
 <div><span class="eyebrow">Our Nonprofit Partner</span><h2>Center of Integrated Health</h2>
 <p class="lead">Center of Integrated Health is a Tennessee nonprofit and 501(c)(3) public charity founded by Dr. Avanti Cross-Brown to extend health, wellness, and opportunity to rural and underserved families beyond the walls of the clinic.</p>
 <p>Working hand in hand with Brown Behavioral Health Services, the Center pursues grants, community partnerships, and charitable support for programs that strengthen youth, families, and communities across West Tennessee and North Mississippi.</p>
-<ul class="chips" style="margin-top:18px"><li>501(c)(3) Public Charity</li><li>Founded 2023</li><li>Bolivar, Tennessee</li></ul></div>
+<ul class="chips" style="margin-top:18px"><li>501(c)(3) Public Charity</li><li>Founded 2023</li><li>Bolivar, Tennessee</li></ul>
+<p style="margin-top:18px"><b>Founder and Executive Director:</b> Dr. Avanti Cross-Brown, APRN, DNP, PMHNP-BC, CARN-AP, NRCME</p></div>
 <div class="media"><img src="/images/mental-health-awareness.jpg" alt="Community members and BBHS team during a Mental Health Awareness Month event" style="aspect-ratio:4/3;object-fit:cover;width:100%"></div>
 </div></section>
 <section class="mist"><div class="wrap">
-<div class="sec-head"><div><span class="eyebrow">What We Do</span><h2 style="margin:0">Programs and Services</h2></div></div>
-<div class="cards three" style="margin-top:0">
- <div class="panel reveal"><div class="icw"><div class="ci">{ico("heart",24)}</div></div><h3>Youth Sports and Wellness</h3><p class="note" style="margin:0">A youth sports program serving Hardeman County students for five years, now equipped through a Good Sports in-kind award so cost is never a barrier to playing.</p></div>
- <div class="panel reveal"><div class="icw"><div class="ci">{ico("brain",24)}</div></div><h3>Youth Mental Health</h3><p class="note" style="margin:0">Wellness education and mental health support for young people, coordinated with the clinical care of Brown Behavioral Health Services.</p></div>
- <div class="panel reveal"><div class="icw"><div class="ci">{ico("pin",24)}</div></div><h3>Community Health Partnerships</h3><p class="note" style="margin:0">Partnerships with schools, churches, and community organizations that bring outreach, resources, and services to rural families.</p></div>
+<div class="sec-head"><div><span class="eyebrow">What We Do</span><h2 style="margin:0">Programs and Services</h2></div><p class="lead">Delivered in partnership with Brown Behavioral Health Services.</p></div>
+<div class="cards three" style="margin-top:0">{coi_cards}</div></div></section>
+<section><div class="wrap"><div class="panel deep" style="display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:center">
+<div><span class="eyebrow gold">Get Involved</span><h2 style="color:#fff;margin-bottom:8px">Partner, Volunteer, or Give</h2><p style="margin:0">We welcome partnerships with funders, schools, faith communities, and local organizations who share our commitment to healthier rural communities. Center of Integrated Health is a 501(c)(3) public charity, and contributions may be tax-deductible as allowed by law.</p></div>
+<div style="text-align:right"><a class="btn btn-gold" href="mailto:{COI_EMAIL}?subject=Center%20of%20Integrated%20Health">Contact the Center</a><p class="note" style="color:#f3e3d6;margin:12px 0 0">{COI_EMAIL} &middot; {PHONE}</p></div>
 </div></div></section>
-<section><div class="wrap two" style="align-items:start">
-<div class="panel"><span class="eyebrow">Leadership</span><h3>Executive Director</h3><p style="margin:0 0 18px">Dr. Avanti Cross-Brown, APRN, DNP, PMHNP-BC, CARN-AP, NRCME, Founder and Executive Director</p>
-<h3>Board of Directors</h3><ul class="ilist"><li>{ico("check",18)}<span>Brent Brown</span></li><li>{ico("check",18)}<span>Destiny Shaw, BS, MBA</span></li><li>{ico("check",18)}<span>Rosie Cross</span></li><li>{ico("check",18)}<span>Dr. Di&rsquo;Yana Fisher, APRN, DNP, PMHNP-BC</span></li></ul></div>
-<div class="panel deep"><span class="eyebrow gold">Get Involved</span><h3>Partner, Volunteer, or Give</h3><p>We welcome partnerships with funders, schools, faith communities, and local organizations who share our commitment to healthier rural communities.</p><p>Center of Integrated Health is a 501(c)(3) public charity. Contributions may be tax-deductible as allowed by law.</p><a class="btn btn-gold" href="mailto:{EMAIL}?subject=Center%20of%20Integrated%20Health">Contact the Center</a><p class="note" style="color:#d7ebe8;margin:14px 0 0">Call {PHONE} or email {EMAIL}.</p></div>
-</div></section>'''
-page("/center-of-integrated-health/","Center of Integrated Health | Nonprofit Partner of Brown Behavioral Health Services","Center of Integrated Health is a 501(c)(3) nonprofit founded by Dr. Avanti Cross-Brown, supporting youth, families, and rural communities in partnership with Brown Behavioral Health Services.",coi,("Center of Integrated Health","Our 501(c)(3) nonprofit partner, extending care and opportunity to rural communities.",'<a href="/behavioral-health-care-about-us/">About</a> / Center of Integrated Health'))
+</div>'''
+page("/center-of-integrated-health/","Center of Integrated Health | Nonprofit Partner of Brown Behavioral Health Services","Center of Integrated Health is a 501(c)(3) nonprofit founded by Dr. Avanti Cross-Brown, supporting youth, families, and rural communities in partnership with Brown Behavioral Health Services.",coi)
 
 # ---------------- RFP ----------------
 rfp = f'''<section><div class="wrap" style="max-width:900px"><div class="prose">
