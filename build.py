@@ -50,7 +50,7 @@ NAV = [
  ("Services",None,[("All Services","/behavioral-health-care-services/"),("Psychiatric Evaluation","/behavioral-health-care-psychiatric-evaluation/"),("Medical Services","/behavioral-health-care-medical-services/"),("MS Medical Card Certification","/docs/MS-Cannabis-Certification.pdf")]),
  ("Patients",None,[("Patient Center","/patient-center/"),("Request an Appointment","/behavioral-health-request-an-appointment/"),("Insurance Accepted","/insurance/"),("Patient Portal","/behavioral-health-care-healow-patient-portal/"),("Pay Your Bill","/behavioral-health-care-payment/")]),
  ("Referrals","/behavioral-health-care-send-your-referrals/",None),
- ("Mentorship","/mentorship/",None),
+ ("Mentorship","https://www.elitehealthbiz.com/",None),
  ("Contact","/behavioral-health-care-contact-us/",None),
 ]
 
@@ -114,7 +114,7 @@ def page(path, title, desc, body, phero=None):
       <p style="margin-top:14px">Phone: <a href="{PHONE_LINK}">{PHONE}</a><br>Fax: {FAX}<br><a href="mailto:{EMAIL}">{EMAIL}</a></p><div class="social"><a href="{FACEBOOK}" target="_blank" rel="noopener" aria-label="Facebook">{ico("fb",18)}</a><a href="{PSYTODAY}" target="_blank" rel="noopener" aria-label="Psychology Today profile">{ico("user",18)}</a></div>
     </div>
     <div><h4>Navigation</h4><ul><li><a href="/">Home</a></li><li><a href="/behavioral-health-care-about-us/">About Us</a></li><li><a href="/behavioral-health-care-meet-our-professionals/">Meet Our Professionals</a></li><li><a href="/behavioral-health-care-services/">Services</a></li><li><a href="/behavioral-health-care-medical-services/">Medical Services</a></li><li><a href="/behavioral-health-care-send-your-referrals/">Referrals</a></li><li><a href="/behavioral-health-care-careers/">Careers</a></li><li><a href="/behavioral-health-care-contact-us/">Contact Us</a></li></ul></div>
-    <div><h4>Patients</h4><ul><li><a href="/patient-center/">Patient Center</a></li><li><a href="/behavioral-health-request-an-appointment/">Request an Appointment</a></li><li><a href="/behavioral-health-care-healow-patient-portal/">Patient Portal (healow)</a></li><li><a href="/insurance/">Insurance Accepted</a></li><li><a href="/behavioral-health-care-payment/">Payment Options</a></li><li><a href="/funding/">Funding</a></li><li><a href="/center-of-integrated-health/">Center of Integrated Health</a></li><li><a href="/mentorship/">Mentorship &amp; Consulting</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div>
+    <div><h4>Patients</h4><ul><li><a href="/patient-center/">Patient Center</a></li><li><a href="/behavioral-health-request-an-appointment/">Request an Appointment</a></li><li><a href="/behavioral-health-care-healow-patient-portal/">Patient Portal (healow)</a></li><li><a href="/insurance/">Insurance Accepted</a></li><li><a href="/behavioral-health-care-payment/">Payment Options</a></li><li><a href="/funding/">Funding</a></li><li><a href="/center-of-integrated-health/">Center of Integrated Health</a></li><li><a href="https://www.elitehealthbiz.com/" target="_blank" rel="noopener">Mentorship &amp; Consulting</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div>
     <div><h4>Our Offices</h4><ul>
       <li>Accepting patients throughout Tennessee and Mississippi</li>
       <li><b style="color:#fff">Tennessee Office</b><br>793 Tennessee Street<br>Bolivar, TN 38008</li>
@@ -254,7 +254,7 @@ home = f'''
 
 <section style="padding-bottom:0"><div class="wrap"><div class="panel deep" style="display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:center">
   <div><span class="eyebrow gold">Mentorship and Consulting</span><h2 style="color:#fff;margin-bottom:8px">Elite Healthcare Business Solutions</h2><p style="margin:0">Psychiatric mentorship, clinical courses, and practice launch, credentialing, and Rural Health Clinic consulting for providers and entrepreneurs, led by Dr. Avanti Cross-Brown.</p></div>
-  <div style="text-align:right"><a class="btn btn-gold" href="/mentorship/">Explore Mentorship</a></div>
+  <div style="text-align:right"><a class="btn btn-gold" href="https://www.elitehealthbiz.com/" target="_blank" rel="noopener">Explore Mentorship</a></div>
 </div></div></section>
 
 <section style="padding-bottom:0"><div class="wrap"><div class="panel" style="display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:center">
@@ -772,7 +772,9 @@ mentor = f'''<div class="ehbs">
 <button class="btn btn-teal" type="submit">{ico("send",18)} Submit Inquiry</button></form></div>
 </div></section>
 </div>'''
-page("/mentorship/","Mentorship and Consulting | Elite Healthcare Business Solutions","Psychiatric mentorship, clinical courses, and practice and business consulting for PMHNPs, providers, and entrepreneurs in Tennessee and Mississippi, led by Dr. Avanti Cross-Brown.",mentor)
+import os
+os.makedirs("mentorship",exist_ok=True)
+open("mentorship/index.html","w").write('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Elite Healthcare Business Solutions</title><meta http-equiv="refresh" content="0; url=https://www.elitehealthbiz.com/"><link rel="canonical" href="https://www.elitehealthbiz.com/"></head><body><p>Mentorship and consulting have moved to <a href="https://www.elitehealthbiz.com/">elitehealthbiz.com</a>.</p></body></html>')
 
 # ---------------- RFP ----------------
 rfp = f'''<section><div class="wrap" style="max-width:900px"><div class="prose">
@@ -825,7 +827,7 @@ priv = f'''<section><div class="wrap prose" style="max-width:860px">
 page("/privacy-policy/","Privacy Policy | Brown Behavioral Health Services","Privacy Policy for Brown Behavioral Health Services.",priv,("Privacy Policy","","Privacy Policy"))
 
 # ---------------- SITEMAP + THANK YOU + 404 ----------------
-links = [("Home","/"),("About Us","/behavioral-health-care-about-us/"),("Meet Our Professionals","/behavioral-health-care-meet-our-professionals/"),("Services","/behavioral-health-care-services/"),("Psychiatric Evaluation","/behavioral-health-care-psychiatric-evaluation/"),("Medical Services","/behavioral-health-care-medical-services/"),("Patient Center","/patient-center/"),("Request an Appointment","/behavioral-health-request-an-appointment/"),("Patient Portal (eClinicalWorks / healow)","/behavioral-health-care-healow-patient-portal/"),("Insurance Accepted","/insurance/"),("Payment Options","/behavioral-health-care-payment/"),("Funding","/funding/"),("Center of Integrated Health","/center-of-integrated-health/"),("Mentorship and Consulting","/mentorship/"),("Send Your Referrals","/behavioral-health-care-send-your-referrals/"),("Careers","/behavioral-health-care-careers/"),("Request for Proposals","/behavioral-health-care-careers/request-for-proposals/"),("Contact Us","/behavioral-health-care-contact-us/"),("Privacy Policy","/privacy-policy/")]
+links = [("Home","/"),("About Us","/behavioral-health-care-about-us/"),("Meet Our Professionals","/behavioral-health-care-meet-our-professionals/"),("Services","/behavioral-health-care-services/"),("Psychiatric Evaluation","/behavioral-health-care-psychiatric-evaluation/"),("Medical Services","/behavioral-health-care-medical-services/"),("Patient Center","/patient-center/"),("Request an Appointment","/behavioral-health-request-an-appointment/"),("Patient Portal (eClinicalWorks / healow)","/behavioral-health-care-healow-patient-portal/"),("Insurance Accepted","/insurance/"),("Payment Options","/behavioral-health-care-payment/"),("Funding","/funding/"),("Center of Integrated Health","/center-of-integrated-health/"),("Mentorship and Consulting (elitehealthbiz.com)","https://www.elitehealthbiz.com/"),("Send Your Referrals","/behavioral-health-care-send-your-referrals/"),("Careers","/behavioral-health-care-careers/"),("Request for Proposals","/behavioral-health-care-careers/request-for-proposals/"),("Contact Us","/behavioral-health-care-contact-us/"),("Privacy Policy","/privacy-policy/")]
 page("/sitemap/","Sitemap | Brown Behavioral Health Services","All pages on brownbehavioral.com.",f'<section><div class="wrap"><ul class="svc">{"".join(f"<li><a href={chr(34)}{h}{chr(34)}>{t}</a></li>" for t,h in links)}</ul></div></section>',("Sitemap","","Sitemap"))
 page("/thank-you/","Thank You | Brown Behavioral Health Services","Thank you for contacting Brown Behavioral Health Services.",f'<section><div class="wrap center" style="max-width:700px"><h2>Thank you!</h2><p class="lead">Your submission has been received. Our team will get back to you as soon as possible.</p><p>If this is an emergency, please call 911.</p><a class="btn btn-teal" href="/">Back to Home</a></div></section>',("Thank You","","Thank You"))
 page("/404/","Page Not Found | Brown Behavioral Health Services","Page not found.",f'<section><div class="wrap center"><h2>Sorry, we could not find that page.</h2><p class="lead">Try one of the links in the menu, or call us at {PHONE}.</p><a class="btn btn-teal" href="/">Back to Home</a></div></section>',("Page Not Found","","404"))
