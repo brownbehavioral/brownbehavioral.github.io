@@ -8,6 +8,8 @@ SITE = "https://www.brownbehavioral.com"
 PHONE, PHONE_LINK = "731-228-9068", "tel:+17312289068"
 FAX = "901-425-9773"
 EMAIL = "contact@brownbehavioral.com"
+MS_CONTACT = "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=RuSMLnRyoEO132EWQ3UlhFPsLlenjKNMsNxLTjYXcz5UQTY1TVI4WjQ5V05WR0ozWkZFUk1LNzBETS4u"
+MS_REFERRAL = "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=RuSMLnRyoEO132EWQ3UlhFPsLlenjKNMsNxLTjYXcz5URUIxMzBPTlU2QjQ2TUNTQkZZQVZHT0o0MC4u"
 FORM_ENDPOINT = "https://formsubmit.co/" + EMAIL  # free form-to-email service
 HEALOW_BOOK = "https://healow.com/apps/practice/brown-behavioral-health-services-pllc-bolivar-tn-30836?v=2&t=1"
 PORTAL = "https://mycw248.ecwcloud.com/portal28692/jsp/100mp/login_otp.jsp"
@@ -148,18 +150,8 @@ CONNECT = f'''<section class="alt"><div class="wrap"><div class="panel deep" sty
 <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-gold" href="/behavioral-health-request-an-appointment/">Request an Appointment</a><a class="btn btn-ghost" href="/behavioral-health-care-contact-us/">Contact Us</a></div></div></div></section>'''
 
 def contact_form(subject):
-    return f'''<form action="{FORM_ENDPOINT}" method="POST">
-<input type="hidden" name="_subject" value="{subject}"><input type="hidden" name="_template" value="table">
-<input type="hidden" name="_next" value="{SITE}/thank-you/"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-<div class="row"><div><label for="fn">Full Name <span class="req">*</span></label><input id="fn" name="Full_Name" required></div>
-<div><label for="em">Email Address <span class="req">*</span></label><input id="em" type="email" name="Email_Address" required></div></div>
-<div class="row"><div><label for="ph">Phone <span class="req">*</span></label><input id="ph" type="tel" name="Phone" required></div>
-<div><label for="ad">Address <span class="req">*</span></label><input id="ad" name="Address" required></div></div>
-<label for="qc">Question / Comment</label><textarea id="qc" name="Question_or_Comment"></textarea>
-<label class="check"><input type="checkbox" name="Privacy_Policy" value="Agreed" required> <span>By submitting this form you agree to the terms of the <a href="/privacy-policy/">Privacy Policy</a>.</span></label>
-<label class="check"><input type="checkbox" name="SMS_Consent" value="Agreed"> <span>By providing a telephone number and submitting this form you are consenting to be contacted by SMS text message. Message &amp; data rates may apply. You can reply STOP to opt-out of further messaging.</span></label>
-<p class="note">Please do not include private medical details in this form. For medical concerns, call {PHONE} or use the patient portal.</p>
-<button class="btn btn-teal" type="submit">{ico("send",18)} Send Message</button></form>'''
+    return f'''<iframe class="msform" src="{MS_CONTACT}&embed=true" title="Contact Brown Behavioral Health Services form" loading="lazy" style="height:1180px" allowfullscreen></iframe>
+<p class="note" style="margin-top:10px">Trouble seeing the form? <a href="{MS_CONTACT}" target="_blank" rel="noopener">Open it in a new window</a>. Please do not include private medical details. For medical concerns, call {PHONE} or use the patient portal.</p>'''
 
 # ---------------- HOME ----------------
 BOLIVAR_MAP = "https://www.google.com/maps?q=793+Tennessee+Street,+Bolivar,+TN+38008&output=embed"
@@ -306,7 +298,7 @@ about = f'''
 </div></section>
 <section class="alt" id="mission"><div class="wrap two">
  <div class="panel"><span class="eyebrow">Our Mission</span><p>The mission of Brown Behavioral Health Services is to provide proficient and competent care related to diagnosing and treating psychiatric illnesses in pediatrics and adults while improving overall health status. BBHS is committed to the mental health population and is eager to serve each individual holistically while enhancing mental health awareness, promoting individual empowerment, and increasing access to treatment and services for persons living with mental illnesses.</p></div>
- <div class="panel deep"><span class="eyebrow gold">Our Vision</span><p style="font-family:var(--serif);font-size:1.1rem;color:#f1f6f4">&ldquo;To provide client-centered, expert mental health services such as evaluations, patient advocacy, and medication management to the medically underserved communities with an aim to treat conditions such as Schizophrenia, Bipolar Disorders, ADHD, Depression, Anxiety, Substance Abuse, and many more.&rdquo;</p><p style="margin:0;color:var(--gold)">Dr. Avanti Cross-Brown, DNP, PMHNP-BC</p></div>
+ <div class="panel deep"><span class="eyebrow gold">Our Vision</span><p style="font-family:var(--serif);font-size:1.1rem;color:#faf4f7">&ldquo;To provide client-centered, expert mental health services such as evaluations, patient advocacy, and medication management to the medically underserved communities with an aim to treat conditions such as Schizophrenia, Bipolar Disorders, ADHD, Depression, Anxiety, Substance Abuse, and many more.&rdquo;</p><p style="margin:0;color:var(--gold)">Dr. Avanti Cross-Brown, DNP, PMHNP-BC</p></div>
 </div></section>
 <section id="nondiscrimination"><div class="wrap" style="max-width:900px"><span class="eyebrow">Policy</span><h2>Nondiscrimination Policy</h2>
 <p>It is the policy of Brown Behavioral Health Services (BBHS), under Title VI of the Civil Rights Act of 1964 and related statutes, to ensure that no person be excluded from participation in, be denied the benefits of, or be otherwise subjected to discrimination under any program or activity, on the grounds of race, religion, sex, color, age, disability, national origin, or any other protected class status. Equal opportunity will be provided to all members, program participants, service recipients, volunteers, contractors, employees, and subcontractors.</p>
@@ -469,7 +461,7 @@ portal = f'''<section><div class="wrap split" style="align-items:start">
 <li><span>Enter your portal username and password to log in, then create a new password.</span></li>
 <li><span>Set up your PIN to securely access your health records.</span></li></ol>
 <p class="note" style="margin-top:16px">Forgot your password? Use the &ldquo;Forgot Password&rdquo; link on the login screen or call our office for a reset.</p></div>
-<div class="panel deep center sidecard"><div style="width:64px;height:64px;border-radius:16px;background:rgba(224,168,74,.2);color:var(--gold);display:grid;place-items:center;margin:0 auto 18px">{ico("portal",30)}</div><h3>Already have an account?</h3><p>Log in to the eClinicalWorks patient portal to view records, message your care team, and more.</p><a class="btn btn-gold" href="{PORTAL}" target="_blank" rel="noopener">Go to Patient Portal</a><p style="margin:18px 0 0">healow app practice code: <b style="color:var(--gold)">ACGHDD</b></p><p class="note" style="color:#d7ebe8;margin:10px 0 0">The portal is for non-urgent communication. In an emergency, call 911.</p></div>
+<div class="panel deep center sidecard"><div style="width:64px;height:64px;border-radius:16px;background:rgba(212,135,122,.2);color:var(--gold);display:grid;place-items:center;margin:0 auto 18px">{ico("portal",30)}</div><h3>Already have an account?</h3><p>Log in to the eClinicalWorks patient portal to view records, message your care team, and more.</p><a class="btn btn-gold" href="{PORTAL}" target="_blank" rel="noopener">Go to Patient Portal</a><p style="margin:18px 0 0">healow app practice code: <b style="color:var(--gold)">ACGHDD</b></p><p class="note" style="color:#f3e6ef;margin:10px 0 0">The portal is for non-urgent communication. In an emergency, call 911.</p></div>
 </div></section>'''
 page("/behavioral-health-care-healow-patient-portal/","Patient Portal (eClinicalWorks and healow) | Brown Behavioral Health Services","Access the Brown Behavioral Health Services eClinicalWorks patient portal on the web or in the healow app. Practice code ACGHDD.",portal,("Patient Portal","Powered by eClinicalWorks and the healow app. Practice code ACGHDD.",'<a href="/patient-center/">Patients</a> / Patient Portal'))
 
@@ -507,28 +499,9 @@ REF_ENDPOINT = FORM_ENDPOINT  # see note in README: use a HIPAA-covered form ser
 def radios(name, opts, req=False):
     return '<div class="radios">'+"".join(f'<label><input type="radio" name="{name}" value="{o}"{" required" if req and i==0 else ""}> {o}</label>' for i,o in enumerate(opts))+'</div>'
 ref = f'''<section><div class="wrap split" style="grid-template-columns:1.6fr 1fr;align-items:start">
-<div class="formcard"><h2 style="margin-bottom:6px">Patient Referral Form</h2><p class="note">Fields marked <span class="req" style="color:#b4441c">*</span> are required. Our team will contact the patient to schedule.</p>
-<form action="{REF_ENDPOINT}" method="POST" enctype="multipart/form-data">
-<input type="hidden" name="_subject" value="New patient referral from brownbehavioral.com"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="{SITE}/thank-you/"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-<fieldset><legend>Referring Provider or Agency</legend>
-<div class="row"><div><label for="r1">Your Name <span class="req">*</span></label><input id="r1" name="Referring_Name" required></div><div><label for="r2">Organization / Practice <span class="req">*</span></label><input id="r2" name="Referring_Organization" required></div></div>
-<div class="row3"><div><label for="r3">Phone <span class="req">*</span></label><input id="r3" type="tel" name="Referring_Phone" required></div><div><label for="r4">Fax</label><input id="r4" type="tel" name="Referring_Fax"></div><div><label for="r5">Email <span class="req">*</span></label><input id="r5" type="email" name="Referring_Email" required></div></div>
-<label for="r6">Referral Source Type</label><select id="r6" name="Referral_Source_Type"><option>Physician / Provider Office</option><option>Hospital / Emergency Department</option><option>School / School Counselor</option><option>Court / Probation / Drug Court</option><option>Community Agency</option><option>Employer</option><option>Family Member / Self-Referral</option><option>Other</option></select>
-</fieldset>
-<fieldset><legend>Patient Information</legend>
-<div class="row3"><div><label for="p1">Patient Full Name <span class="req">*</span></label><input id="p1" name="Patient_Name" required></div><div><label for="p2">Date of Birth <span class="req">*</span></label><input id="p2" type="date" name="Patient_DOB" required></div><div><label for="p3">Patient Phone <span class="req">*</span></label><input id="p3" type="tel" name="Patient_Phone" required></div></div>
-<div class="row"><div><label for="p4">Parent / Guardian (if under 18)</label><input id="p4" name="Guardian_Name"></div><div><label for="p5">Insurance</label><select id="p5" name="Insurance"><option value="">Select...</option><option>TennCare</option><option>Mississippi Medicaid</option><option>Medicare</option><option>Commercial Insurance</option><option>Self-Pay / Uninsured</option><option>Unknown</option></select></div></div>
-</fieldset>
-<fieldset><legend>Referral Details</legend>
-<label>Services Requested <span class="req">*</span></label>
-<div class="radios"><label><input type="checkbox" name="Services[]" value="Psychiatric Evaluation"> Psychiatric Evaluation</label><label><input type="checkbox" name="Services[]" value="Medication Management"> Medication Management</label><label><input type="checkbox" name="Services[]" value="Psychotherapy"> Psychotherapy</label><label><input type="checkbox" name="Services[]" value="ADHD Testing"> ADHD Testing</label><label><input type="checkbox" name="Services[]" value="MAT Program"> MAT Program</label><label><input type="checkbox" name="Services[]" value="DUI School"> DUI School</label><label><input type="checkbox" name="Services[]" value="Primary Care"> Primary Care</label><label><input type="checkbox" name="Services[]" value="Other"> Other</label></div>
-<label>Preferred Visit Type</label>{radios("Preferred_Visit",["Bolivar, TN Office","Olive Branch, MS Office","Telehealth","No Preference"])}
-<label>Urgency</label>{radios("Urgency",["Routine","Soon (within 2 weeks)","Urgent"])}
-<label for="d1">Reason for Referral <span class="req">*</span></label><textarea id="d1" name="Reason_for_Referral" required placeholder="Briefly describe presenting concerns and any relevant history."></textarea>
-<label for="d2">Attach Records (optional)</label><input id="d2" type="file" name="attachment" accept=".pdf,.doc,.docx,.jpg,.png">
-</fieldset>
-<label class="check"><input type="checkbox" name="Consent" value="Confirmed" required> <span>I confirm the patient (or guardian) is aware of and agrees to this referral, and the information provided is accurate to the best of my knowledge.</span></label>
-<button class="btn btn-teal" type="submit" style="margin-top:8px">{ico("send",18)} Submit Referral</button></form></div>
+<div class="formcard"><h2 style="margin-bottom:6px">Patient Referral Form</h2><p class="note">Fields marked * are required. If you choose an insurance, the plan name and member ID are required. Our team will contact the patient to schedule.</p>
+<iframe class="msform" src="{MS_REFERRAL}&embed=true" title="BBHS patient referral form" loading="lazy" style="height:2700px" allowfullscreen></iframe>
+<p class="note" style="margin-top:10px">Trouble seeing the form? <a href="{MS_REFERRAL}" target="_blank" rel="noopener">Open it in a new window</a>. To send records or a copy of the insurance card, fax {FAX}.</p></div>
 <aside class="sidecard"><div class="panel deep"><span class="eyebrow gold">For Referral Partners</span><h3>Thank You for Trusting Us</h3><p>Allow us to help others by sending your referrals. We contact every referred patient promptly to schedule care.</p><ul class="ilist">
 <li>{ico("clock",18)}<span>Urgent referrals: please also call {PHONE}</span></li>
 <li>{ico("fax",18)}<span>Prefer to fax? Send records to {FAX}</span></li>
@@ -766,7 +739,7 @@ mentor = f'''<div class="ehbs">
 <p class="note center" style="margin-top:16px">Course participants receive first access to open mentor slots.</p></div></section>
 
 <section class="band" id="consultations"><div class="wrap" style="position:relative">
-<div class="sec-head"><div><span class="eyebrow gold">Consultation Menu</span><h2 style="margin:0">Virtual Consultations</h2></div><p style="color:#eaf6f3;margin:0;max-width:520px">One-time sessions or packages, with discounted rates for mentorship members.</p></div>
+<div class="sec-head"><div><span class="eyebrow gold">Consultation Menu</span><h2 style="margin:0">Virtual Consultations</h2></div><p style="color:#f3e6ef;margin:0;max-width:520px">One-time sessions or packages, with discounted rates for mentorship members.</p></div>
 <div class="cmenu">{"".join(f'<div><span>{n}</span><b>{p}</b></div>' for n,p in CONSULT)}</div></div></section>
 
 <section><div class="wrap">
