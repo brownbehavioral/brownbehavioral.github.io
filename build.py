@@ -13,6 +13,11 @@ HEALOW_BOOK = "https://healow.com/apps/practice/brown-behavioral-health-services
 PORTAL = "https://mycw248.ecwcloud.com/portal28692/jsp/100mp/login_otp.jsp"
 REFERRAL = "https://form.jotform.com/233037233370144"
 CARECREDIT = "https://www.carecredit.com/go/747MJQ/"
+HOURS = "Monday to Friday, 8:00 a.m. to 4:30 p.m."
+HOURS_EXT = "Extended evening hours and Saturday appointments are available based on each provider&rsquo;s schedule."
+HRP_LINE = "Free care for uninsured patients is offered through available and limited Healthcare Resiliency Program (HRP) grant funds."
+LANG_EN = "Interpreter services are available free of charge. If you speak Spanish, our team can assist you, and a free interpreter can be provided for any language."
+LANG_ES = "ATENCI&Oacute;N: si habla espa&ntilde;ol, tiene a su disposici&oacute;n servicios gratuitos de asistencia ling&uuml;&iacute;stica. Llame al 731-228-9068."
 SCRATCHPAY = "https://scratchbilling.com/w/Brown_Behavioral_Health_Services/kOQJtmXyyvrrL2naiv0H"
 FACEBOOK = "https://www.facebook.com/BrownBehavioralHealthServices"
 PSYTODAY = "https://www.psychologytoday.com/profile/964592"
@@ -48,7 +53,7 @@ NAV = [
  ("Home","/",None),
  ("About",None,[("Our Practice","/behavioral-health-care-about-us/"),("Our Team","/behavioral-health-care-meet-our-professionals/"),("Funding","/funding/"),("Center of Integrated Health (Nonprofit)","/center-of-integrated-health/"),("Careers","/behavioral-health-care-careers/"),("Request for Proposals","/behavioral-health-care-careers/request-for-proposals/")]),
  ("Services",None,[("All Services","/behavioral-health-care-services/"),("Psychiatric Evaluation","/behavioral-health-care-psychiatric-evaluation/"),("Medical Services","/behavioral-health-care-medical-services/"),("MS Medical Card Certification","/docs/MS-Cannabis-Certification.pdf")]),
- ("Patients",None,[("Patient Center","/patient-center/"),("Request an Appointment","/behavioral-health-request-an-appointment/"),("Insurance Accepted","/insurance/"),("Patient Portal","/behavioral-health-care-healow-patient-portal/"),("Pay Your Bill","/behavioral-health-care-payment/")]),
+ ("Patients",None,[("Patient Center","/patient-center/"),("Request an Appointment","/behavioral-health-request-an-appointment/"),("Insurance Accepted","/insurance/"),("Frequently Asked Questions","/faq/"),("Notice of Privacy Practices","/notice-of-privacy-practices/"),("Good Faith Estimate","/good-faith-estimate/"),("Patient Portal","/behavioral-health-care-healow-patient-portal/"),("Pay Your Bill","/behavioral-health-care-payment/"),("FAQ","/faq/")]),
  ("Referrals","/behavioral-health-care-send-your-referrals/",None),
  ("Mentorship","https://www.elitehealthbiz.com/",None),
  ("Contact","/behavioral-health-care-contact-us/",None),
@@ -84,13 +89,13 @@ def page(path, title, desc, body, phero=None):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
-<script type="application/ld+json">{{"@context":"https://schema.org","@type":"MedicalClinic","name":"Brown Behavioral Health Services, PLLC","url":"{SITE}","telephone":"+1-{PHONE}","faxNumber":"+1-{FAX}","email":"{EMAIL}","logo":"{SITE}/images/logo-270.png","areaServed":["Tennessee","Mississippi"],"address":[{{"@type":"PostalAddress","addressLocality":"Bolivar","addressRegion":"TN","postalCode":"38008","addressCountry":"US"}},{{"@type":"PostalAddress","addressLocality":"Olive Branch","addressRegion":"MS","postalCode":"38654","addressCountry":"US"}}],"sameAs":["{FACEBOOK}","{PSYTODAY}"]}}</script>
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"MedicalClinic","name":"Brown Behavioral Health Services, PLLC","url":"{SITE}","telephone":"+1-{PHONE}","faxNumber":"+1-{FAX}","email":"{EMAIL}","logo":"{SITE}/images/logo-270.png","areaServed":["Tennessee","Mississippi"],"openingHours":"Mo-Fr 08:00-16:30","address":[{{"@type":"PostalAddress","addressLocality":"Bolivar","addressRegion":"TN","postalCode":"38008","addressCountry":"US"}},{{"@type":"PostalAddress","addressLocality":"Olive Branch","addressRegion":"MS","postalCode":"38654","addressCountry":"US"}}],"sameAs":["{FACEBOOK}","{PSYTODAY}"]}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="topbar"><div class="wrap">
-  <div class="tb-left"><a href="{PHONE_LINK}">{ico("phone",15)} {PHONE}</a><a class="hide-sm" href="mailto:{EMAIL}">{ico("mail",15)} {EMAIL}</a><span class="hide-sm">Serving Tennessee and Mississippi, in person and by telehealth</span></div>
-  <div class="tb-right"><a href="{CARECREDIT}" target="_blank" rel="noopener">We accept CareCredit</a><a class="crisis" href="tel:988">In crisis? Call or text 988</a></div>
+  <div class="tb-left"><a href="{PHONE_LINK}">{ico("phone",15)} {PHONE}</a><a class="hide-sm" href="mailto:{EMAIL}">{ico("mail",15)} {EMAIL}</a></div>
+  <div class="tb-right"><span class="hide-sm">Se habla espa&ntilde;ol</span><a href="{SCRATCHPAY}" target="_blank" rel="noopener">Pay Your Bill</a><a class="crisis" href="tel:988">In crisis? Call or text 988</a></div>
 </div></div>
 <header class="site"><div class="wrap">
   <a class="brand" href="/"><img src="/images/logo-270.png" alt="Brown Behavioral Health Services logo" width="58" height="58"><span><b>Brown Behavioral<br>Health Services</b><small>PLLC</small></span></a>
@@ -110,19 +115,19 @@ def page(path, title, desc, body, phero=None):
   <div class="fgrid">
     <div><a class="brand" href="/" style="color:#fff"><img src="/images/logo-270.png" alt="" width="58" height="58"><span><b style="color:#fff">Brown Behavioral<br>Health Services, PLLC</b></span></a>
       <p style="margin-top:16px">If you need our services or want to learn more, you can reach out to us anytime.</p>
-      <div class="fee"><b>No one will be denied access to services due to inability to pay.</b> There is a discounted/sliding fee schedule available based on family size and income.</div>
-      <p style="margin-top:14px">Phone: <a href="{PHONE_LINK}">{PHONE}</a><br>Fax: {FAX}<br><a href="mailto:{EMAIL}">{EMAIL}</a></p><div class="social"><a href="{FACEBOOK}" target="_blank" rel="noopener" aria-label="Facebook">{ico("fb",18)}</a><a href="{PSYTODAY}" target="_blank" rel="noopener" aria-label="Psychology Today profile">{ico("user",18)}</a></div>
+      <div class="fee"><b>No one will be denied access to services due to inability to pay.</b> There is a discounted/sliding fee schedule available based on family size and income. {HRP_LINE}</div>
+      <p style="margin-top:14px">Phone: <a href="{PHONE_LINK}">{PHONE}</a><br>Fax: {FAX}<br><a href="mailto:{EMAIL}">{EMAIL}</a></p><p style="margin-top:10px"><b style="color:#fff">Office Hours</b><br>{HOURS}<br><span style="opacity:.85">{HOURS_EXT}</span></p><p class="lang" style="margin-top:10px">{LANG_EN}<br><span lang="es">{LANG_ES}</span></p><div class="social"><a href="{FACEBOOK}" target="_blank" rel="noopener" aria-label="Facebook">{ico("fb",18)}</a><a href="{PSYTODAY}" target="_blank" rel="noopener" aria-label="Psychology Today profile">{ico("user",18)}</a></div>
     </div>
     <div><h4>Navigation</h4><ul><li><a href="/">Home</a></li><li><a href="/behavioral-health-care-about-us/">About Us</a></li><li><a href="/behavioral-health-care-meet-our-professionals/">Meet Our Professionals</a></li><li><a href="/behavioral-health-care-services/">Services</a></li><li><a href="/behavioral-health-care-medical-services/">Medical Services</a></li><li><a href="/behavioral-health-care-send-your-referrals/">Referrals</a></li><li><a href="/behavioral-health-care-careers/">Careers</a></li><li><a href="/behavioral-health-care-contact-us/">Contact Us</a></li></ul></div>
-    <div><h4>Patients</h4><ul><li><a href="/patient-center/">Patient Center</a></li><li><a href="/behavioral-health-request-an-appointment/">Request an Appointment</a></li><li><a href="/behavioral-health-care-healow-patient-portal/">Patient Portal (healow)</a></li><li><a href="/insurance/">Insurance Accepted</a></li><li><a href="/behavioral-health-care-payment/">Payment Options</a></li><li><a href="/funding/">Funding</a></li><li><a href="/center-of-integrated-health/">Center of Integrated Health</a></li><li><a href="https://www.elitehealthbiz.com/" target="_blank" rel="noopener">Mentorship &amp; Consulting</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div>
+    <div><h4>Patients</h4><ul><li><a href="/patient-center/">Patient Center</a></li><li><a href="/behavioral-health-request-an-appointment/">Request an Appointment</a></li><li><a href="/behavioral-health-care-healow-patient-portal/">Patient Portal (healow)</a></li><li><a href="/insurance/">Insurance Accepted</a></li><li><a href="/behavioral-health-care-payment/">Payment Options</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/funding/">Funding</a></li><li><a href="/center-of-integrated-health/">Center of Integrated Health</a></li><li><a href="https://www.elitehealthbiz.com/" target="_blank" rel="noopener">Mentorship &amp; Consulting</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div>
     <div><h4>Our Locations</h4><ul>
       <li>Accepting patients throughout Tennessee and Mississippi</li>
       <li><b style="color:#fff">Mobile Health Clinic</b><br>Serving communities across TN and MS</li>
       <li><b style="color:#fff">Tennessee Office</b><br>793 Tennessee Street<br>Bolivar, TN 38008</li>
-      <li><b style="color:#fff">Mississippi Office</b><br>9851 Hwy 178, Suite B<br>Olive Branch, MS 38654</li><li>Telehealth visits available throughout TN and MS</li>
+      <li><b style="color:#fff">Mississippi Office</b><br>9851 Hwy 178, Suite B<br>Olive Branch, MS 38654</li><li><b style="color:#fff">University of Memphis</b><br>Student Health and Counseling Center<br>214 Wilder Tower, Memphis, TN 38152</li><li>Telehealth visits available throughout TN and MS</li>
       </ul></div>
   </div>
-  <div class="bottom"><span>&copy; 2022 - <span id="yr">2026</span> Brown Behavioral Health Services, PLLC. All rights reserved.</span><span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;|&nbsp; <a href="/behavioral-health-care-about-us/#nondiscrimination">Nondiscrimination Policy</a></span></div>
+  <div class="bottom"><span>&copy; 2022 - <span id="yr">2026</span> Brown Behavioral Health Services, PLLC. All rights reserved.</span><span><a href="/notice-of-privacy-practices/">Notice of Privacy Practices</a> &nbsp;|&nbsp; <a href="/good-faith-estimate/">Good Faith Estimate</a> &nbsp;|&nbsp; <a href="/privacy-policy/">Privacy Policy</a> &nbsp;|&nbsp; <a href="/behavioral-health-care-about-us/#nondiscrimination">Nondiscrimination &amp; Language Assistance</a></span></div>
 </div></footer>
 <script src="/assets/site.js"></script>
 </body></html>'''
@@ -172,8 +177,9 @@ def cats_html():
 
 LOCS = f'''<div class="locs">
  <div class="loc"><img src="/images/mobile-clinic.jpg" alt="The BBHS Mobile Health Clinic" loading="lazy" style="width:100%;height:200px;object-fit:cover;display:block"><div class="lb"><span class="eyebrow">Tennessee &amp; Mississippi</span><h3>Mobile Health Clinic</h3><p>Our mobile unit brings care directly to communities, schools, and events across Tennessee and Mississippi.</p><p class="note">Call <a href="{PHONE_LINK}">{PHONE}</a> for the mobile unit schedule.</p></div></div>
- <div class="loc"><iframe src="{BOLIVAR_MAP}" title="Map of Bolivar, TN office" loading="lazy"></iframe><div class="lb"><span class="eyebrow">Tennessee</span><h3>Bolivar Office</h3><p>793 Tennessee Street<br>Bolivar, TN 38008</p><p class="note">Medicare-Certified Rural Health Clinic</p></div></div>
- <div class="loc"><iframe src="{OLIVE_MAP}" title="Map of Olive Branch, MS office" loading="lazy"></iframe><div class="lb"><span class="eyebrow">Mississippi</span><h3>Olive Branch Office</h3><p>9851 Hwy 178, Suite B<br>Olive Branch, MS 38654</p></div></div>
+ <div class="loc"><iframe src="{BOLIVAR_MAP}" title="Map of Bolivar, TN office" loading="lazy"></iframe><div class="lb"><span class="eyebrow">Tennessee</span><h3>Bolivar Office</h3><p>793 Tennessee Street<br>Bolivar, TN 38008</p><p class="note">Medicare-Certified Rural Health Clinic<br>Mon to Fri, 8:00 a.m. to 4:30 p.m.</p></div></div>
+ <div class="loc"><iframe src="{OLIVE_MAP}" title="Map of Olive Branch, MS office" loading="lazy"></iframe><div class="lb"><span class="eyebrow">Mississippi</span><h3>Olive Branch Office</h3><p>9851 Hwy 178, Suite B<br>Olive Branch, MS 38654</p><p class="note">Mon to Fri, 8:00 a.m. to 4:30 p.m.</p></div></div>
+ <div class="loc"><div class="tele">{ico("brief",52)}</div><div class="lb"><span class="eyebrow">Memphis, Tennessee</span><h3>University of Memphis</h3><p>Student Health and Counseling Center<br>214 Wilder Tower, Second Floor<br>Memphis, TN 38152</p><p class="note">Fridays, 9:00 a.m. to 4:00 p.m., in person or by telehealth, for University of Memphis students. Students schedule by calling <a href="tel:9016782068">901-678-2068</a>.</p></div></div>
  <div class="loc"><div class="tele">{ico("video",56)}</div><div class="lb"><span class="eyebrow">Anywhere in TN &amp; MS</span><h3>Secure Telehealth</h3><p>Private video visits from the comfort of home for patients throughout Tennessee and Mississippi.</p></div></div>
 </div>'''
 
@@ -194,7 +200,7 @@ home = f'''
 <div class="quick"><div class="wrap"><div class="grid">
   <a class="qcard" href="/behavioral-health-request-an-appointment/"><span class="ic">{ico("cal")}</span><span><b>Schedule Online</b><span>Book anytime on healow</span></span></a>
   <a class="qcard" href="/behavioral-health-care-healow-patient-portal/"><span class="ic">{ico("portal")}</span><span><b>Patient Portal</b><span>eClinicalWorks &amp; healow app</span></span></a>
-  <a class="qcard" href="/behavioral-health-care-payment/"><span class="ic">{ico("card")}</span><span><b>Pay Your Bill</b><span>Flexible financing available</span></span></a>
+  <a class="qcard" href="/behavioral-health-care-payment/"><span class="ic">{ico("card")}</span><span><b>Pay Your Bill</b><span>Pay online with Scratchpay</span></span></a>
   <a class="qcard" href="/behavioral-health-care-send-your-referrals/"><span class="ic">{ico("send")}</span><span><b>Provider Referrals</b><span>Refer a patient with confidence</span></span></a>
 </div></div></div>
 
@@ -244,7 +250,7 @@ home = f'''
 </div></section>
 
 <section><div class="wrap">
-  <div class="sec-head"><div><span class="eyebrow">Locations</span><h2 style="margin:0">Serving Tennessee and Mississippi</h2></div><p class="lead">We accept patients throughout the State of Tennessee and Mississippi, in office and by telehealth.</p></div>
+  <div class="sec-head"><div><span class="eyebrow">Locations</span><h2 style="margin:0">Serving Tennessee and Mississippi</h2></div><p class="lead">We accept patients throughout the State of Tennessee and Mississippi, in office and by telehealth. Office hours are {HOURS} {HOURS_EXT}</p></div>
   {LOCS}
 </div></section>
 
@@ -265,8 +271,8 @@ home = f'''
 </div></div></section>
 
 <section><div class="wrap"><div class="panel gold payband">
-  <div><span class="eyebrow">Accessible Care</span><h2 style="margin-bottom:10px">Care for Every Family</h2><p style="margin:0"><b>No one will be denied access to services due to inability to pay.</b> A discounted/sliding fee schedule is available based on family size and income, and we proudly accept CareCredit and Scratchpay financing.</p><p style="margin:12px 0 0"><b>We accept Medicare, TennCare, Mississippi Medicaid, and most major private and Marketplace plans.</b></p></div>
-  <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end"><a class="btn btn-teal" href="/insurance/">Insurance Accepted</a><a class="btn btn-teal" href="/behavioral-health-care-payment/">Payment Options</a><a class="btn btn-outline" href="{CARECREDIT}" target="_blank" rel="noopener">Apply for CareCredit</a></div>
+  <div><span class="eyebrow">Accessible Care</span><h2 style="margin-bottom:10px">Care for Every Family</h2><p style="margin:0"><b>No one will be denied access to services due to inability to pay.</b> A discounted/sliding fee schedule is available based on family size and income. {HRP_LINE} Pay your bill online with Scratchpay, or finance care with CareCredit.</p><p style="margin:12px 0 0"><b>We accept Medicare, TennCare, Mississippi Medicaid, and most major private and Marketplace plans.</b></p></div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end"><a class="btn btn-teal" href="/insurance/">Insurance Accepted</a><a class="btn btn-teal" href="/behavioral-health-care-payment/">Payment Options</a><a class="btn btn-outline" href="{SCRATCHPAY}" target="_blank" rel="noopener">Pay Your Bill Online</a></div>
 </div></div></section>
 
 <section class="mist"><div class="wrap split" style="align-items:start">
@@ -297,7 +303,8 @@ about = f'''
 </div></section>
 <section id="nondiscrimination"><div class="wrap" style="max-width:900px"><span class="eyebrow">Policy</span><h2>Nondiscrimination Policy</h2>
 <p>It is the policy of Brown Behavioral Health Services (BBHS), under Title VI of the Civil Rights Act of 1964 and related statutes, to ensure that no person be excluded from participation in, be denied the benefits of, or be otherwise subjected to discrimination under any program or activity, on the grounds of race, religion, sex, color, age, disability, national origin, or any other protected class status. Equal opportunity will be provided to all members, program participants, service recipients, volunteers, contractors, employees, and subcontractors.</p>
-<p>BBHS further assures that every effort will be made to ensure nondiscrimination in all programs and activities, regardless of how they are funded. It is also the policy of BBHS to comply with state and local laws governing nondiscrimination. BBHS prohibits any form of harassment based on race, religion, sex, color, age, disability, national origin, or any other protected class status applicable to federal, state, or local law.</p></div></section>
+<p>BBHS further assures that every effort will be made to ensure nondiscrimination in all programs and activities, regardless of how they are funded. It is also the policy of BBHS to comply with state and local laws governing nondiscrimination. BBHS prohibits any form of harassment based on race, religion, sex, color, age, disability, national origin, or any other protected class status applicable to federal, state, or local law.</p>
+<h3 id="language">Language Assistance Services</h3><p>{LANG_EN} Please let our front desk know when you schedule, or call {PHONE}. Auxiliary aids and services for people with disabilities are also available at no cost.</p><p lang="es"><b>{LANG_ES}</b> Contamos con personal que habla espa&ntilde;ol y podemos proporcionar un int&eacute;rprete sin costo para usted.</p></div></section>
 {CONNECT}'''
 page("/behavioral-health-care-about-us/","About Us | Brown Behavioral Health Services","Mission, vision and nondiscrimination policy of Brown Behavioral Health Services, serving Tennessee and Mississippi.",about,("About Us","Mental health, minor medical, weight loss, substance abuse treatment, and IV hydration services across Tennessee and Mississippi.","About Us"))
 
@@ -311,7 +318,7 @@ def person(img,name,role,cred,paras,tag=""):
 _prov = ([
  person("Dr-Avanti-Brown.jpg","Dr. Avanti Cross-Brown, APRN, DNP, PMHNP-BC, CARN-AP, NRCME","Founder &amp; CEO | Provider | Educator &amp; Community Advocate","Board-Certified Psychiatric Mental Health Practitioner | Addictions Advanced Practice Provider",[
   "Dr. Avanti Cross-Brown is the Founder and CEO of Brown Behavioral Health Services (BBHS), a CMS certified Rural Health Clinic based in Bolivar, Tennessee and Olive Branch, Mississippi that serves urban and rural residents across both states. A native of West Tennessee, she has been serving the mental health community since 2013.",
-  "Under her leadership, BBHS holds facility licenses in Office-Based Opioid Treatment, Outpatient Mental Health, Alcohol and Drug Detox, and DUI School. The practice delivers behavioral health, primary care, addictions treatment, school-based telehealth, correctional health, and mobile clinic services, as well as free care for uninsured patients.",
+  "Under her leadership, BBHS holds facility licenses in Office-Based Opioid Treatment, Outpatient Mental Health, Alcohol and Drug Detox, and DUI School. The practice delivers behavioral health, primary care, addictions treatment, school-based telehealth, correctional health, and mobile clinic services, as well as free care for uninsured patients through available and limited Healthcare Resiliency Program grant funds.",
   "Dr. Cross-Brown earned her Bachelor of Science in Nursing from the University of Memphis in 2015 and worked as a Registered Nurse for many years. In 2021, she completed her Doctor of Nursing Practice at the University of Tennessee Health Science Center (UTHSC), specializing as a Psychiatric Mental Health Nurse Practitioner, and became ANCC board-certified. During graduate school, she received more than five competitive scholarships, including the Chancellor Diversity Scholarship Award, University Scholar Diversity Scholarship, and Grace S. Wallace Scholarship Award, as well as the fully funded HRSA ANEW Award.",
   "In 2022, she became a certified Medical Examiner for the Federal Motor Carrier Safety Administration, providing DOT (Department of Transportation) physical exams for CDL drivers and students. In 2025, she achieved dual certification as a Certified Addictions Advanced Practice Provider, expanding her expertise in MAT and MOUD treatment.",
   "At UTHSC, she serves as a Director on the Alumni Board and as a board member and Healthcare Stakeholder for the Community Advisory Council (CAC) of the ACCESS (Achieving Cancer Care Equity and Systematic Solutions) Study.",
@@ -329,6 +336,8 @@ _prov = ([
   "Dr. Fisher is committed to ensuring every patient feels heard, supported, and understood. She takes a collaborative, whole-person approach to care, recognizing the connection between mind, body, and life experiences. She develops individualized treatment plans for conditions including anxiety, depression, ADHD, bipolar disorder, trauma, and other mental health concerns.",
   "Known for her warm, nonjudgmental style, Dr. Fisher creates a welcoming space where patients feel comfortable asking questions and actively participating in their care. She offers both in-office and secure telehealth appointments and is dedicated to expanding access to high-quality mental health services throughout Tennessee and Mississippi."],"Now accepting new patients. Weekend appointments available."),
 ])
+_md = person(None,"Dr. Kevin Turner, MD","Medical Director","Physician Medical Director",[
+  "Dr. Kevin Turner serves as Medical Director for Brown Behavioral Health Services, providing physician oversight, clinical guidance, and collaboration with the BBHS advanced practice team across our behavioral health and primary care services."])
 _lead = ([
  person("Destiny-Shaw.jpg","Destiny Shaw, BS, MBA","Chief Operating Officer (COO) | Practice Administrator","",[
   "Destiny Shaw serves as Chief Operating Officer and Practice Administrator at Brown Behavioral Health Services, where she oversees daily clinic operations and ensures patients experience seamless, coordinated care.",
@@ -340,19 +349,23 @@ _lead = ([
   "Andreina Acuna serves as the School Health Coordinator and Medical Assistant on the BBHS Clinical Administration team.",
   "With three years of experience in medical and legal translation services, Andreina transitioned into a front-facing healthcare role at BBHS after completing her rural student rotation with the clinic in the fall of 2025. She is excited to assist patients in both English and Spanish, helping expand accessible, welcoming care for every family BBHS serves."],"Se habla espa&ntilde;ol"),
 ])
+_sup = person(None,"Starlett Armstrong, LCSW","Clinical Supervisor","Licensed Clinical Social Worker",[
+  "Starlett Armstrong is a Licensed Clinical Social Worker and serves as Clinical Supervisor at Brown Behavioral Health Services, providing clinical supervision and guidance to BBHS therapists and supporting high-quality, evidence-based behavioral health care."])
+_ruz = person(None,"Ruzelle Mata, RN","Registered Nurse","Registered Nurse",[
+  "Ruzelle Mata is a Registered Nurse on the BBHS clinical team, supporting patients and providers with nursing care, education, and care coordination across our behavioral health and primary care services."])
 THERAPISTS = [
  ("Bernice Lofties","Therapist"),
  ("Broderick Webster","Therapist"),
- ("Cameron Brown, MSW, MBA","Therapist"),
+ ("Cameron Brown, LMSW","Therapist"),
  ("Rodques Jones, MSW","Therapist"),
 ]
-_ther = "".join(person(None,n,r,"Behavioral Health Therapy",[f"{n.split(',')[0]} provides individual psychotherapy as part of the BBHS behavioral health team, supporting patients in building coping skills, insight, and resilience."]) for n,r in THERAPISTS)
+_ther = _sup + "".join(person(None,n,r,"Behavioral Health Therapy",[f"{n.split(',')[0]} provides individual psychotherapy as part of the BBHS behavioral health team, supporting patients in building coping skills, insight, and resilience."]) for n,r in THERAPISTS)
 def tsec(eyebrow,title,body,alt=False):
     return f'''<section class="{'mist' if alt else ''}"><div class="wrap"><div class="center"><span class="eyebrow">{eyebrow}</span><h2>{title}</h2></div><div class="team">{body}</div></div></section>'''
-team = (tsec("Leadership","Executive Leadership",_prov[0]+_lead[0])
+team = (tsec("Leadership","Executive Leadership",_prov[0]+_md+_lead[0])
       + tsec("Clinical Providers","Our Providers","".join(_prov[1:]),True)
       + tsec("Behavioral Health","Our Therapists",_ther)
-      + tsec("Clinical Support","Medical Assistant Team","".join(_lead[1:]),True) + CONNECT)
+      + tsec("Clinical Support","Nursing and Medical Assistant Team",_ruz+"".join(_lead[1:]),True) + CONNECT)
 page("/behavioral-health-care-meet-our-professionals/","Meet Our Professionals | Brown Behavioral Health Services","Meet the leadership, board-certified providers, therapists, and clinical team at Brown Behavioral Health Services.",team,("Meet Our Professionals","Get to know the professionals who are available to help and support you anytime.",'<a href="/behavioral-health-care-about-us/">About</a> / Our Team'))
 
 # ---------------- SERVICES ----------------
@@ -421,6 +434,7 @@ appt = f'''<section><div class="wrap split" style="align-items:start">
 <li><span>Choose your <b>provider</b> and <b>visit reason</b>. Select <b>New Patient</b> if this is your first visit with BBHS, or <b>Established Patient</b> if you have been seen before.</span></li>
 <li><span>Pick an available <b>date and time</b>, in office or by telehealth.</span></li>
 <li><span>Enter your <b>name, date of birth, phone, email, and insurance</b>. healow will send a verification code by text or email to confirm it is you.</span></li>
+<li><span>Office hours are {HOURS} {HOURS_EXT} Online booking is open 24/7.</span></li>
 <li><span>Watch for your <b>confirmation</b> by text or email. Before your visit you may also receive an eClinicalWorks <b>check-in link</b> to complete your forms, insurance, and consents from your phone.</span></li>
 </ol></div>
 <div>
@@ -434,7 +448,7 @@ appt = f'''<section><div class="wrap split" style="align-items:start">
 <li>{ico("check",18)}<span>Tap <b>Book Appointment</b>, then choose your provider, visit reason, and time.</span></li>
 <li>{ico("check",18)}<span>Telehealth visits: our team will send your secure video visit instructions before your appointment.</span></li></ul></div>
 </div></div></section>
-<section class="mist"><div class="wrap center" style="max-width:820px"><span class="eyebrow">New Patients</span><h2>New to BBHS?</h2><p class="lead">We are welcoming new patients ages 5 and up at our Bolivar and Olive Branch offices and by secure telehealth. Book your first visit on healow in minutes and choose <b>New Patient</b> as your visit type, or call {PHONE} and our team will schedule you and set up your eClinicalWorks patient portal.</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn btn-teal" href="{HEALOW_BOOK}" target="_blank" rel="noopener">{ico("cal",18)} Book a New Patient Appointment</a><a class="btn btn-outline" href="/insurance/">Check Insurance Accepted</a></div><p class="note" style="margin-top:18px">No one will be denied access to services due to inability to pay. A sliding fee schedule is available based on family size and income.</p></div></section>'''
+<section class="mist"><div class="wrap center" style="max-width:820px"><span class="eyebrow">New Patients</span><h2>New to BBHS?</h2><p class="lead">We are welcoming new patients ages 5 and up at our Bolivar and Olive Branch offices and by secure telehealth. Book your first visit on healow in minutes and choose <b>New Patient</b> as your visit type, or call {PHONE} and our team will schedule you and set up your eClinicalWorks patient portal.</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn btn-teal" href="{HEALOW_BOOK}" target="_blank" rel="noopener">{ico("cal",18)} Book a New Patient Appointment</a><a class="btn btn-outline" href="/insurance/">Check Insurance Accepted</a></div><p class="note" style="margin-top:18px">No one will be denied access to services due to inability to pay. A sliding fee schedule is available based on family size and income. {HRP_LINE}</p></div></section>'''
 page("/behavioral-health-request-an-appointment/","Request an Appointment | Brown Behavioral Health Services","Book your appointment online through healow (eClinicalWorks) with Brown Behavioral Health Services in Tennessee or Mississippi.",appt,("Request an Appointment","Book online through healow, in the healow app, or by phone.",'<a href="/patient-center/">Patients</a> / Request an Appointment'))
 
 # ---------------- PORTAL ----------------
@@ -454,20 +468,20 @@ page("/behavioral-health-care-healow-patient-portal/","Patient Portal (eClinical
 
 # ---------------- PAYMENT ----------------
 pay = f'''<section><div class="wrap three">
-<div class="panel"><span class="eyebrow">Option 1</span><h3>Debit/Credit Card</h3><p>To pay your balance by debit or credit card, please call our office and our team will process your payment and email you a confirmation.</p><a class="btn btn-outline" href="{PHONE_LINK}">{ico("phone",16)} Call {PHONE}</a></div>
-<div class="panel gold"><span class="eyebrow">Option 2</span><h3>CareCredit Card</h3><p><b>Pay online with the CareCredit credit card.</b> We proudly accept the CareCredit credit card to help you finance your healthcare needs. Now you can pay online with CareCredit to help pay at the time of care, when you get a post-care bill, or up to 30 days before your appointment, quickly and securely. Special financing options are available.*</p>
-<p><a class="btn btn-teal" href="{CARECREDIT}" target="_blank" rel="noopener">Pay with CareCredit</a></p><p class="note">Don&rsquo;t have CareCredit? Get prequalified! <a href="{CARECREDIT}" target="_blank" rel="noopener">Apply here or learn more</a> today.</p></div>
-<div class="panel"><span class="eyebrow">Option 3</span><h3>Scratch Pay</h3><p>We now offer Scratchpay to make financing easy for everyone! With higher approval rates, friendly terms, and a simple application process, Scratchpay lets you get the care you need now and worry about payments later. Learn more at <a href="https://www.scratchpay.com" target="_blank" rel="noopener">www.scratchpay.com</a>.</p><a class="btn btn-outline" href="{SCRATCHPAY}" target="_blank" rel="noopener">Apply today!</a></div>
+<div class="panel gold"><span class="eyebrow">Option 1 &middot; Fastest</span><h3>Pay Your Bill Online</h3><p><b>Pay your copay or account balance online with Scratchpay.</b> Enter the amount you owe, your name, and your contact details, then pay securely by card. You will receive a confirmation by email.</p><p><a class="btn btn-teal" href="{SCRATCHPAY}" target="_blank" rel="noopener">{ico("card",18)} Pay Online with Scratchpay</a></p><p class="note">Not sure of your balance? Call {PHONE} before paying.</p></div>
+<div class="panel"><span class="eyebrow">Option 2</span><h3>CareCredit Card</h3><p>We proudly accept the CareCredit credit card to help you finance your healthcare needs. Pay at the time of care, when you get a post-care bill, or up to 30 days before your appointment. Special financing options are available.*</p>
+<p><a class="btn btn-outline" href="{CARECREDIT}" target="_blank" rel="noopener">Pay with CareCredit</a></p><p class="note">Don&rsquo;t have CareCredit? <a href="{CARECREDIT}" target="_blank" rel="noopener">Apply here or learn more</a>.</p></div>
+<div class="panel"><span class="eyebrow">Option 3</span><h3>Pay by Phone</h3><p>Prefer to talk with someone? Call our office and our team will process your debit or credit card payment and email you a confirmation.</p><a class="btn btn-outline" href="{PHONE_LINK}">{ico("phone",16)} Call {PHONE}</a></div>
 </div>
 <div class="wrap" style="margin-top:28px"><p class="note">*Subject to credit approval. Minimum monthly payments required. Promotional financing options are available on purchases of $200 or more. Standard Account Terms apply to purchases of less than $200. Promotional financing options available through Pay My Provider may differ from options available in-office. See <a href="http://www.carecredit.com" target="_blank" rel="noopener">www.carecredit.com</a> for details.</p>
-<div class="alert">No one will be denied access to services due to inability to pay. There is a discounted/sliding fee schedule available based on family size and income.</div></div></section>'''
-page("/behavioral-health-care-payment/","Payment Options | Brown Behavioral Health Services","Pay by debit/credit card, CareCredit, or Scratchpay. Sliding fee scale available.",pay,("Payment Options","Flexible ways to pay for your care.","Payment Options"))
+<div class="alert">No one will be denied access to services due to inability to pay. There is a discounted/sliding fee schedule available based on family size and income. {HRP_LINE} Uninsured or paying yourself? You have the right to a <a href="/good-faith-estimate/">Good Faith Estimate</a> of your costs.</div></div></section>'''
+page("/behavioral-health-care-payment/","Payment Options | Brown Behavioral Health Services","Pay your BBHS bill online with Scratchpay, with CareCredit, or by phone. Sliding fee scale available.",pay,("Payment Options","Flexible ways to pay for your care.","Payment Options"))
 
 # ---------------- PATIENT CENTER ----------------
 pc = f'''<section><div class="wrap"><div class="cards" style="margin-top:0">
  <div class="panel reveal"><div class="icw"><div class="ci">{ico("cal",24)}</div></div><h3>Request an Appointment</h3><p class="note">Book online at any hour through healow (eClinicalWorks), in the healow app with practice code <span class="code">ACGHDD</span>, or call {PHONE}.</p><a class="btn btn-teal" href="/behavioral-health-request-an-appointment/">Schedule</a></div>
  <div class="panel reveal"><div class="icw"><div class="ci">{ico("portal",24)}</div></div><h3>Patient Portal</h3><p class="note">Your eClinicalWorks portal on the web or in the healow app. Practice code <span class="code">ACGHDD</span>.</p><a class="btn btn-teal" href="/behavioral-health-care-healow-patient-portal/">Open Portal</a></div>
- <div class="panel reveal"><div class="icw"><div class="ci">{ico("card",24)}</div></div><h3>Pay Your Bill</h3><p class="note">Copays, balances, and financing through CareCredit and Scratchpay.</p><a class="btn btn-teal" href="/behavioral-health-care-payment/">Payment Options</a></div>
+ <div class="panel reveal"><div class="icw"><div class="ci">{ico("card",24)}</div></div><h3>Pay Your Bill</h3><p class="note">Pay copays and balances online with Scratchpay, or finance care with CareCredit.</p><a class="btn btn-teal" href="/behavioral-health-care-payment/">Payment Options</a></div>
  <div class="panel reveal"><div class="icw"><div class="ci">{ico("file",24)}</div></div><h3>Insurance Accepted</h3><p class="note">Medicare, TennCare, Mississippi Medicaid, and most major private plans, explained in plain language.</p><a class="btn btn-teal" href="/insurance/">View Plans</a></div>
 </div></div></section>
 <section class="mist"><div class="wrap two">
@@ -477,7 +491,7 @@ pc = f'''<section><div class="wrap"><div class="cards" style="margin-top:0">
   <li>{ico("check",18)}<span>A list of your current medications and doses</span></li>
   <li>{ico("check",18)}<span>Any prior records, evaluations, or school reports that may help your provider</span></li>
   <li>{ico("check",18)}<span>For telehealth: a quiet, private space and a charged phone, tablet, or computer</span></li></ul></div>
- <div class="panel deep"><span class="eyebrow gold">Financial Assistance</span><h3>Care for Every Family</h3><p>No one will be denied access to services due to inability to pay. There is a discounted/sliding fee schedule available based on family size and income.</p><p>Ask our front desk about the sliding fee schedule at {PHONE}.</p></div>
+ <div class="panel deep"><span class="eyebrow gold">Financial Assistance</span><h3>Care for Every Family</h3><p>No one will be denied access to services due to inability to pay. There is a discounted/sliding fee schedule available based on family size and income. {HRP_LINE}</p><p>Ask our front desk about the sliding fee schedule at {PHONE}. Uninsured and self-pay patients may request a <a style="color:#fff" href="/good-faith-estimate/">Good Faith Estimate</a>.</p></div>
 </div></section>{CONNECT}'''
 page("/patient-center/","Patient Center | Brown Behavioral Health Services","Appointments, patient portal, bill pay, and visit information for patients of Brown Behavioral Health Services.",pc,("Patient Center","Everything you need for your care, in one place.","Patient Center"))
 
@@ -796,7 +810,7 @@ contact = f'''<section><div class="wrap">
 <div class="three" style="margin-bottom:40px">
  <div class="panel"><span class="eyebrow">{ico("phone",16)} Call</span><h3><a href="{PHONE_LINK}" style="text-decoration:none">{PHONE}</a></h3><p class="note" style="margin:0">Fax: {FAX}</p></div>
  <div class="panel"><span class="eyebrow">{ico("mail",16)} Email</span><h3 style="font-size:1.05rem;word-break:break-all"><a href="mailto:{EMAIL}" style="text-decoration:none">{EMAIL}</a></h3><p class="note" style="margin:0">We will respond as soon as possible.</p></div>
- <div class="panel"><span class="eyebrow">{ico("pin",16)} Our Locations</span><p style="margin:0"><b>Mobile Health Clinic</b><br>Serving communities across TN and MS<br><b>793 Tennessee Street</b><br>Bolivar, TN 38008<br><b>9851 Hwy 178, Suite B</b><br>Olive Branch, MS 38654<br>Telehealth throughout TN and MS</p></div>
+ <div class="panel"><span class="eyebrow">{ico("pin",16)} Our Locations</span><p style="margin:0"><b>Mobile Health Clinic</b><br>Serving communities across TN and MS<br><b>793 Tennessee Street</b><br>Bolivar, TN 38008<br><b>9851 Hwy 178, Suite B</b><br>Olive Branch, MS 38654<br><b>University of Memphis</b><br>214 Wilder Tower, Memphis, TN 38152<br>Telehealth throughout TN and MS</p><p class="note" style="margin:10px 0 0"><b>Hours:</b> {HOURS} {HOURS_EXT}</p></div>
 </div>
 <div class="split" style="align-items:start"><div class="panel"><h2>Contact Us Form</h2><p class="note">* Required Information</p>{contact_form("New message from brownbehavioral.com (contact page)")}</div>
 <iframe class="map" src="{MAP}" title="Map of Bolivar, TN" loading="lazy" style="height:640px"></iframe></div></div></section>'''
@@ -810,8 +824,7 @@ priv = f'''<section><div class="wrap prose" style="max-width:860px">
 <li><b>Personal Information:</b> We may collect personal information, including your name, email address, phone number, and business information when you submit a form, request an appointment, or otherwise communicate with us.</li>
 <li><b>Payment Information:</b> We may collect payment data for purchases, orders, or service requests, including valid credit card numbers, brands, and expiration dates. We store only very limited, if any, payment information (e.g. payment accounts, bank accounts, credit cards, or cheques) that we collect. Otherwise, all financial information is stored by our payment processor, and you are encouraged to review their privacy policy and contact them directly for responses to your questions.</li>
 <li><b>Form Submissions:</b> Information you choose to provide through our contact, referral, and careers forms, including any files you attach.</li>
-<li><b>Technical Information:</b> We collect information related to your website&rsquo;s usage, such as IP addresses, browser type, and access times.</li>
-<li><b>Cookies and Tracking Technologies:</b> We use cookies and similar technologies to track user behavior on our website. You can manage your cookie preferences through your browser settings.</li></ul>
+<li><b>Website Statistics:</b> We use a privacy-friendly, cookie-free analytics service to count page visits and clicks on our appointment and payment buttons. It does not use cookies, does not store your IP address, and does not identify you. We do not place analytics on our forms, and we do not use advertising or social media tracking pixels.</li></ul>
 <h2>How We Use Your Information</h2><p>We use your information for the following purposes:</p><ul>
 <li><b>Providing Care and Services:</b> We use the information you provide to respond to appointment requests, referrals, and employment applications.</li>
 <li><b>Communication:</b> We use your contact information to respond to your inquiries, provide support, and keep you informed about your request.</li>
@@ -819,7 +832,7 @@ priv = f'''<section><div class="wrap prose" style="max-width:860px">
 <li><b>Legal Compliance:</b> We process your data to comply with legal obligations and protect our rights.</li></ul>
 <h2>How We Share Your Information</h2><p>No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All other categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
 <ul><li><b>Service Providers and Legal Requirements:</b> We may disclose your information if required by law or to protect and ensure your safety and our rights, privacy, safety, or property.</li></ul>
-<h2>Your Health Information</h2><p>Protected health information you share as a patient is handled in accordance with HIPAA and our Notice of Privacy Practices, which is available at our offices or upon request. Please do not send private medical details through our general contact form.</p>
+<h2>Your Health Information</h2><p>Protected health information you share as a patient is handled in accordance with HIPAA, 42 C.F.R. Part 2 where it applies, and our <a href="/notice-of-privacy-practices/">Notice of Privacy Practices</a>. Paper copies are also available at either office. Please do not send private medical details through our general contact form.</p>
 <h2>Security of Your Information</h2><p>We take appropriate measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. We use encryption, access controls, and regular security assessments to safeguard your data.</p>
 <h2>Your Choices and Rights</h2><ul><li><b>Access and Correction:</b> You have the right to access and correct your personal information. You can do this by contacting us at {PHONE}.</li><li><b>Opt-Out:</b> You can opt out of receiving promotional communications from us at any time by following the instructions provided in the communication.</li></ul>
 <h2>Changes to this Privacy Policy</h2><p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal reasons. We will notify you of any significant changes via email or a notice on our website.</p>
@@ -828,6 +841,7 @@ priv = f'''<section><div class="wrap prose" style="max-width:860px">
 </div></section>'''
 page("/privacy-policy/","Privacy Policy | Brown Behavioral Health Services","Privacy Policy for Brown Behavioral Health Services.",priv,("Privacy Policy","","Privacy Policy"))
 
+exec(open('extra_pages.py').read())
 # ---------------- SITEMAP + THANK YOU + 404 ----------------
 links = [("Home","/"),("About Us","/behavioral-health-care-about-us/"),("Meet Our Professionals","/behavioral-health-care-meet-our-professionals/"),("Services","/behavioral-health-care-services/"),("Psychiatric Evaluation","/behavioral-health-care-psychiatric-evaluation/"),("Medical Services","/behavioral-health-care-medical-services/"),("Patient Center","/patient-center/"),("Request an Appointment","/behavioral-health-request-an-appointment/"),("Patient Portal (eClinicalWorks / healow)","/behavioral-health-care-healow-patient-portal/"),("Insurance Accepted","/insurance/"),("Payment Options","/behavioral-health-care-payment/"),("Funding","/funding/"),("Center of Integrated Health","/center-of-integrated-health/"),("Mentorship and Consulting (elitehealthbiz.com)","https://www.elitehealthbiz.com/"),("Send Your Referrals","/behavioral-health-care-send-your-referrals/"),("Careers","/behavioral-health-care-careers/"),("Request for Proposals","/behavioral-health-care-careers/request-for-proposals/"),("Contact Us","/behavioral-health-care-contact-us/"),("Privacy Policy","/privacy-policy/")]
 page("/sitemap/","Sitemap | Brown Behavioral Health Services","All pages on brownbehavioral.com.",f'<section><div class="wrap"><ul class="svc">{"".join(f"<li><a href={chr(34)}{h}{chr(34)}>{t}</a></li>" for t,h in links)}</ul></div></section>',("Sitemap","","Sitemap"))

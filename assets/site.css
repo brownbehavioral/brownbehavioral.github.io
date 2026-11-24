@@ -335,3 +335,47 @@ details.faq ul{padding-left:1.1em;margin:0}
 @media (max-width:1060px){.mgrid,.cmenu{grid-template-columns:1fr 1fr}.mplans{grid-template-columns:1fr}}
 @media (max-width:640px){.mgrid,.cmenu{grid-template-columns:1fr}}
 .badge-float{color:var(--ink)}
+/* FAQ */
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:10px}
+.faq summary{cursor:pointer;font-weight:600;color:var(--deep);font-size:1.02rem}
+.faq details[open] summary{margin-bottom:6px}
+.faq details p{margin:8px 0 0}
+footer .lang{font-size:.88rem;opacity:.9}
+.locs{grid-template-columns:repeat(3,1fr)}
+/* Mobile length trim */
+@media (max-width:640px){
+  section{padding:48px 0}
+  .trust{display:none}
+  .gallery figure:not(.g-big){display:none}
+  .gallery .g-big{height:220px}
+  .loc iframe{height:140px}
+  .loc .tele{height:96px}
+  .loc .tele svg{width:40px;height:40px}
+  .quick .grid{grid-template-columns:1fr 1fr!important;gap:10px}
+  .qcard{padding:14px}
+  .qcard .ic{display:none}
+  .chips li{font-size:.82rem}
+  .hero .tag-line{display:none}
+  .media.arch{display:none}
+  .hstep p{font-size:.92rem}
+}
+@media (max-width:640px){
+  .cat ul{display:none}
+  .cats{grid-template-columns:1fr 1fr!important;gap:12px}
+  .cat{padding:18px}
+  .cat h3{font-size:1.02rem}
+  .cat .note{font-size:.85rem}
+  .pgrid{grid-template-columns:1fr 1fr!important;gap:12px}
+  .pcard img{height:170px;object-fit:cover;object-position:top}
+  .pcard span{display:none}
+  .pcard b{font-size:.82rem}
+  .loc iframe,.loc .tele{display:none}
+  .loc .lb{padding:16px 18px}
+  .locs{gap:12px}
+  .hstep{padding:18px}
+  footer .fgrid > div:nth-child(2), footer .fgrid > div:nth-child(3){display:none}
+  .panel{padding:22px}
+  .panel p{font-size:.95rem}
+  section .wrap[style*="max-width:920px"] p{font-size:1rem!important}
+  .crisis-band .nums a{font-size:.82rem;padding:8px 10px}
+}
