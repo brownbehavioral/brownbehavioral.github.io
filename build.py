@@ -215,10 +215,10 @@ home = f'''
 <section><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow">Our Providers</span><h2 style="margin:0">Board-Certified. Deeply Committed.</h2></div><a class="btn btn-outline" href="/behavioral-health-care-meet-our-professionals/">Meet the Full Team</a></div>
   <div class="pgrid">
-   <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/home-Dr-Avanti-Cross-Brown.jpg" alt="Dr. Avanti Cross-Brown" loading="lazy"><div><b>Dr. Avanti Cross-Brown, APRN, DNP, PMHNP-BC, CARN-AP, NRCME</b><span>Founder &amp; CEO | Provider | Educator &amp; Community Advocate<br>Board-Certified Psychiatric Mental Health Practitioner | Addictions Advanced Practice Provider</span></div></a>
-   <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/home-Dr-Kayla-Williams.jpg" alt="Dr. Kayla Williams" loading="lazy"><div><b>Dr. Kayla Williams, APRN, DNP, PMHNP-BC</b><span>Board-Certified Psychiatric Mental Health Nurse Practitioner</span></div></a>
+   <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-Avanti-Brown.jpg" alt="Dr. Avanti Cross-Brown" loading="lazy"><div><b>Dr. Avanti Cross-Brown, APRN, DNP, PMHNP-BC, CARN-AP, NRCME</b><span>Founder &amp; CEO | Provider | Educator &amp; Community Advocate<br>Board-Certified Psychiatric Mental Health Practitioner | Addictions Advanced Practice Provider</span></div></a>
+   <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-Kayla-Williams.jpg" alt="Dr. Kayla Williams" loading="lazy"><div><b>Dr. Kayla Williams, APRN, DNP, PMHNP-BC</b><span>Board-Certified Psychiatric Mental Health Nurse Practitioner</span></div></a>
    <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-Jessica-Allen.jpg" alt="Dr. Jessica Allen" loading="lazy"><div><b>Dr. Jessica Allen, MSN, DNP, FNP-BC, PMHNP-BC</b><span>Board-Certified Psychiatric Mental Health Nurse and Family Nurse Practitioner</span></div></a>
-   <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/home-Dr-DiYana-Fisher.jpg" alt="Dr. Di&rsquo;Yana Fisher" loading="lazy"><div><b>Dr. Di&rsquo;Yana Fisher, APRN, DNP, PMHNP-BC</b><span>Board-Certified Psychiatric Mental Health Nurse Practitioner</span></div></a>
+   <a class="pcard reveal" href="/behavioral-health-care-meet-our-professionals/"><img src="/images/Dr-DiYana-Fisher.jpg" alt="Dr. Di&rsquo;Yana Fisher" loading="lazy"><div><b>Dr. Di&rsquo;Yana Fisher, APRN, DNP, PMHNP-BC</b><span>Board-Certified Psychiatric Mental Health Nurse Practitioner</span></div></a>
   </div>
 </div></section>
 
@@ -720,7 +720,7 @@ mentor = f'''<div class="ehbs">
 <h1>Build Clinical Confidence and a Practice That Lasts.</h1>
 <p>Mentorship, courses, and consulting for PMHNPs, psychiatric providers, and entrepreneurs in Tennessee and Mississippi, led by Dr. Avanti Cross-Brown.</p>
 <div class="actions" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px"><a class="btn btn-gold" href="#academy">Explore the Academy</a><a class="btn btn-ghost" href="#inquire">Book a Consultation</a></div></div>
-<div class="mphoto"><img src="/images/home-Dr-Avanti-Cross-Brown.jpg" alt="Dr. Avanti Cross-Brown"><div class="badge-float"><b>Dr. Avanti Cross-Brown</b>DNP, PMHNP-BC, CARN-AP, NRCME</div></div>
+<div class="mphoto"><img src="/images/Dr-Avanti-Brown.jpg" alt="Dr. Avanti Cross-Brown"><div class="badge-float"><b>Dr. Avanti Cross-Brown</b>DNP, PMHNP-BC, CARN-AP, NRCME</div></div>
 </div></section>
 <div class="marquee" aria-hidden="true"><div>{MARQ} &bull; {MARQ} &bull; {MARQ} &bull; </div></div>
 
@@ -752,7 +752,7 @@ mentor = f'''<div class="ehbs">
 </div></section>
 
 <section class="mist"><div class="wrap split" style="align-items:center">
-<div class="mphoto"><img src="/images/home-Dr-Avanti-Cross-Brown.jpg" alt="Dr. Avanti Cross-Brown" loading="lazy"></div>
+<div class="mphoto"><img src="/images/Dr-Avanti-Brown.jpg" alt="Dr. Avanti Cross-Brown" loading="lazy"></div>
 <div><span class="eyebrow">Your Mentor</span><h2>Dr. Avanti Cross-Brown, DNP, PMHNP-BC, CARN-AP, NRCME</h2>
 <p>Dr. Cross-Brown is the Founder and CEO of Brown Behavioral Health Services, a CMS certified Rural Health Clinic serving Tennessee and Mississippi. She is a board-certified psychiatric mental health nurse practitioner, a certified Addictions Advanced Practice Provider, and a certified medical examiner.</p>
 <p>She built a multi-state practice that delivers behavioral health, primary care, addiction treatment, school-based telehealth, correctional health, and mobile clinic services, and has secured state funding across Tennessee and Mississippi as a passionate grant writer. She now shares those same systems with the next generation of providers and entrepreneurs.</p>
