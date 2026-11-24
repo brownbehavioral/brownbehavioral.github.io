@@ -503,7 +503,7 @@ def radios(name, opts, req=False):
 ref = f'''<section><div class="wrap split" style="grid-template-columns:1.6fr 1fr;align-items:start">
 <div class="formcard"><h2 style="margin-bottom:6px">Patient Referral Form</h2><p class="note">Fields marked * are required. If you choose an insurance, the plan name and member ID are required. Our team will contact the patient to schedule.</p>
 <iframe class="msform" src="{MS_REFERRAL}&embed=true" title="BBHS patient referral form" loading="lazy" style="height:2700px" allowfullscreen></iframe>
-<p class="note" style="margin-top:10px">Trouble seeing the form? <a href="{MS_REFERRAL}" target="_blank" rel="noopener">Open it in a new window</a>. To send records or a copy of the insurance card, fax {FAX}.</p></div>
+<p class="note" style="margin-top:10px">Trouble seeing the form? <a href="{MS_REFERRAL}" target="_blank" rel="noopener">Open it in a new window</a>.</p></div>
 <aside class="sidecard"><div class="panel deep"><span class="eyebrow gold">For Referral Partners</span><h3>Thank You for Trusting Us</h3><p>Allow us to help others by sending your referrals. We contact every referred patient promptly to schedule care.</p><ul class="ilist">
 <li>{ico("clock",18)}<span>Urgent referrals: please also call {PHONE}</span></li>
 <li>{ico("fax",18)}<span>Prefer to fax? Send records to {FAX}</span></li>
