@@ -75,6 +75,8 @@ def nav_html(active):
     out.append(f'<li class="cta"><a href="/behavioral-health-request-an-appointment/">Book an Appointment</a></li>')
     return "<ul>"+"".join(out)+"</ul>"
 
+import hashlib as _h
+CSSV=_h.md5(open("assets/site.css","rb").read()).hexdigest()[:8]
 def page(path, title, desc, body, phero=None):
     hero = ""
     if phero:
@@ -92,7 +94,7 @@ def page(path, title, desc, body, phero=None):
 <meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:image" content="{SITE}/images/logo-270.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v={CSSV}">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"MedicalClinic","name":"Brown Behavioral Health Services, PLLC","url":"{SITE}","telephone":"+1-{PHONE}","faxNumber":"+1-{FAX}","email":"{EMAIL}","logo":"{SITE}/images/logo-270.png","areaServed":["Tennessee","Mississippi"],"openingHours":"Mo-Fr 08:00-16:30","address":[{{"@type":"PostalAddress","addressLocality":"Bolivar","addressRegion":"TN","postalCode":"38008","addressCountry":"US"}},{{"@type":"PostalAddress","addressLocality":"Olive Branch","addressRegion":"MS","postalCode":"38654","addressCountry":"US"}}],"sameAs":["{FACEBOOK}","{PSYTODAY}"]}}</script>
 </head>
 <body>
@@ -133,7 +135,7 @@ def page(path, title, desc, body, phero=None):
   </div>
   <div class="bottom"><span>&copy; 2022 - <span id="yr">2026</span> Brown Behavioral Health Services, PLLC. All rights reserved.</span><span><a href="/notice-of-privacy-practices/">Notice of Privacy Practices</a> &nbsp;|&nbsp; <a href="/good-faith-estimate/">Good Faith Estimate</a> &nbsp;|&nbsp; <a href="/privacy-policy/">Privacy Policy</a> &nbsp;|&nbsp; <a href="/behavioral-health-care-about-us/#nondiscrimination">Nondiscrimination &amp; Language Assistance</a></span></div>
 </div></footer>
-<script src="/assets/site.js"></script>
+<script src="/assets/site.js?v={CSSV}"></script>
 </body></html>'''
     if UMAMI_ID and path not in NO_TRACK:
         html = html.replace("</head>", f'<script defer src="https://cloud.umami.is/script.js" data-website-id="{UMAMI_ID}" data-do-not-track="true"></script>\n</head>',1)
