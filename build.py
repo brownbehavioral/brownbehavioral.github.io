@@ -13,6 +13,8 @@ HEALOW_BOOK = "https://healow.com/apps/practice/brown-behavioral-health-services
 PORTAL = "https://mycw248.ecwcloud.com/portal28692/jsp/100mp/login_otp.jsp"
 REFERRAL = "https://form.jotform.com/233037233370144"
 CARECREDIT = "https://www.carecredit.com/go/747MJQ/"
+UMAMI_ID = ""  # private, cookie-free analytics (Umami Cloud); paste website ID to turn on
+NO_TRACK = ("/behavioral-health-care-send-your-referrals/","/behavioral-health-care-contact-us/","/behavioral-health-care-careers/","/thank-you/")
 HOURS = "Monday to Friday, 8:00 a.m. to 4:30 p.m."
 HOURS_EXT = "Extended evening hours and Saturday appointments are available based on each provider&rsquo;s schedule."
 HRP_LINE = "Free care for uninsured patients is offered through available and limited Healthcare Resiliency Program (HRP) grant funds."
@@ -131,6 +133,11 @@ def page(path, title, desc, body, phero=None):
 </div></footer>
 <script src="/assets/site.js"></script>
 </body></html>'''
+    if UMAMI_ID and path not in NO_TRACK:
+        html = html.replace("</head>", f'<script defer src="https://cloud.umami.is/script.js" data-website-id="{UMAMI_ID}" data-do-not-track="true"></script>\n</head>',1)
+        for frag,ev in (("healow.com","Book appointment (healow)"),("href=\"/behavioral-health-request-an-appointment/\"","Book appointment (site button)"),("scratchbilling.com","Pay bill (Scratchpay)"),("carecredit.com","CareCredit"),('href="tel:','Phone call'),("ecwcloud.com","Patient portal")):
+            html = html.replace(frag, frag, 0)
+            html = __import__("re").sub(r'<a (?=[^>]*'+__import__("re").escape(frag)+')', f'<a data-umami-event="{ev}" ', html)
     d = path.strip("/")
     os.makedirs(d, exist_ok=True) if d else None
     with open(os.path.join(d, "index.html") if d else "index.html", "w") as f:
