@@ -50,6 +50,7 @@ NAV = [
  ("Services",None,[("All Services","/behavioral-health-care-services/"),("Psychiatric Evaluation","/behavioral-health-care-psychiatric-evaluation/"),("Medical Services","/behavioral-health-care-medical-services/"),("MS Medical Card Certification","/docs/MS-Cannabis-Certification.pdf")]),
  ("Patients",None,[("Patient Center","/patient-center/"),("Request an Appointment","/behavioral-health-request-an-appointment/"),("Insurance Accepted","/insurance/"),("Patient Portal","/behavioral-health-care-healow-patient-portal/"),("Pay Your Bill","/behavioral-health-care-payment/")]),
  ("Referrals","/behavioral-health-care-send-your-referrals/",None),
+ ("Mentorship","/mentorship/",None),
  ("Contact","/behavioral-health-care-contact-us/",None),
 ]
 
@@ -113,7 +114,7 @@ def page(path, title, desc, body, phero=None):
       <p style="margin-top:14px">Phone: <a href="{PHONE_LINK}">{PHONE}</a><br>Fax: {FAX}<br><a href="mailto:{EMAIL}">{EMAIL}</a></p><div class="social"><a href="{FACEBOOK}" target="_blank" rel="noopener" aria-label="Facebook">{ico("fb",18)}</a><a href="{PSYTODAY}" target="_blank" rel="noopener" aria-label="Psychology Today profile">{ico("user",18)}</a></div>
     </div>
     <div><h4>Navigation</h4><ul><li><a href="/">Home</a></li><li><a href="/behavioral-health-care-about-us/">About Us</a></li><li><a href="/behavioral-health-care-meet-our-professionals/">Meet Our Professionals</a></li><li><a href="/behavioral-health-care-services/">Services</a></li><li><a href="/behavioral-health-care-medical-services/">Medical Services</a></li><li><a href="/behavioral-health-care-send-your-referrals/">Referrals</a></li><li><a href="/behavioral-health-care-careers/">Careers</a></li><li><a href="/behavioral-health-care-contact-us/">Contact Us</a></li></ul></div>
-    <div><h4>Patients</h4><ul><li><a href="/patient-center/">Patient Center</a></li><li><a href="/behavioral-health-request-an-appointment/">Request an Appointment</a></li><li><a href="/behavioral-health-care-healow-patient-portal/">Patient Portal (healow)</a></li><li><a href="/insurance/">Insurance Accepted</a></li><li><a href="/behavioral-health-care-payment/">Payment Options</a></li><li><a href="/funding/">Funding</a></li><li><a href="/center-of-integrated-health/">Center of Integrated Health</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div>
+    <div><h4>Patients</h4><ul><li><a href="/patient-center/">Patient Center</a></li><li><a href="/behavioral-health-request-an-appointment/">Request an Appointment</a></li><li><a href="/behavioral-health-care-healow-patient-portal/">Patient Portal (healow)</a></li><li><a href="/insurance/">Insurance Accepted</a></li><li><a href="/behavioral-health-care-payment/">Payment Options</a></li><li><a href="/funding/">Funding</a></li><li><a href="/center-of-integrated-health/">Center of Integrated Health</a></li><li><a href="/mentorship/">Mentorship &amp; Consulting</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div>
     <div><h4>Our Offices</h4><ul>
       <li>Accepting patients throughout Tennessee and Mississippi</li>
       <li><b style="color:#fff">Tennessee Office</b><br>793 Tennessee Street<br>Bolivar, TN 38008</li>
@@ -250,6 +251,11 @@ home = f'''
   <p style="font-family:var(--serif);font-size:clamp(1.1rem,2vw,1.35rem);line-height:1.7;color:var(--deep)">The mission of Brown Behavioral Health Services is to provide proficient and competent care related to diagnosing and treating psychiatric illnesses in pediatrics and adults while improving overall health status. BBHS is committed to the mental health population and is eager to serve each individual holistically while enhancing mental health awareness, promoting individual empowerment, and increasing access to treatment and services for persons living with mental illnesses.</p>
   <a class="btn btn-teal" href="/behavioral-health-care-about-us/#mission">Learn About Our Practice</a>
 </div></section>
+
+<section style="padding-bottom:0"><div class="wrap"><div class="panel deep" style="display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:center">
+  <div><span class="eyebrow gold">Mentorship and Consulting</span><h2 style="color:#fff;margin-bottom:8px">Elite Healthcare Business Solutions</h2><p style="margin:0">Psychiatric mentorship, clinical courses, and practice launch, credentialing, and Rural Health Clinic consulting for providers and entrepreneurs, led by Dr. Avanti Cross-Brown.</p></div>
+  <div style="text-align:right"><a class="btn btn-gold" href="/mentorship/">Explore Mentorship</a></div>
+</div></div></section>
 
 <section style="padding-bottom:0"><div class="wrap"><div class="panel" style="display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:center">
   <div><span class="eyebrow">Our Nonprofit Partner</span><h2 style="margin-bottom:8px">Center of Integrated Health</h2><p style="margin:0">Our 501(c)(3) nonprofit extends care beyond the clinic through youth sports and wellness, youth mental health, and community partnerships across rural Tennessee and Mississippi.</p></div>
@@ -685,6 +691,89 @@ coi = f'''<div class="coi">
 </div>'''
 page("/center-of-integrated-health/","Center of Integrated Health | Nonprofit Partner of Brown Behavioral Health Services","Center of Integrated Health is a 501(c)(3) nonprofit founded by Dr. Avanti Cross-Brown, supporting youth, families, and rural communities in partnership with Brown Behavioral Health Services.",coi)
 
+# ---------------- MENTORSHIP (Elite Healthcare Business Solutions) ----------------
+COURSES=[("Psychiatric Clinical Cases","$399","Case library and recorded masterclass","A casebook spanning perinatal, child and adolescent, adult, geriatric, and addiction psychiatry, with diagnosis and differentials, workup, medication selection and monitoring, safety and level of care, treatment plans, and SOAP documentation examples. 4 months of access."),
+ ("Clinical Psychiatry Bootcamp","$899","5 days, recorded or live on Zoom","About 37 hours covering psychopharmacology, major disorders and clinical practice, psychotherapy techniques, evidence-based adjuncts, and career skills, with downloadable PDFs and templates. 4 months of access."),
+ ("Start and Grow a Sustainable Private Practice","$599","About 7 hours, recorded","Practice models, legal and business setup, clinical operations, telepsychiatry compliance, risk management, marketing and referrals, and growth, plus a bonus kit of checklists and templates."),
+ ("Private Practice + Clinical Bootcamp Bundle","$1,300","Both programs, recorded","The complete clinical and business foundation at one bundle price."),
+ ("Insurance Credentialing and Paneling Mini-Course","$197","Self-paced","Timelines, choosing panels, mistakes to avoid, and 1099 versus W-2 explained."),
+ ("Live Workshops and Webinars","$97 to $297","Per seat","Quarterly webinars and half-day workshops on clinical and practice topics.")]
+PLANS=[("Professional Plan","$440","per month",["Assigned psychiatric mentor","Up to 20 texts or emails per week, replies within 24 to 48 weekday hours","One 15-minute weekly call to review one case","Access to the member community"]),
+ ("Prime Plan","$600","per month",["Assigned psychiatric mentor","Up to 30 messages per week","One 30-minute weekly call to review two cases","Access to the member community"])]
+CONSULT=[("Psychiatric case consultation","$200/hr"),("Psychopharmacology guidance","$200/hr"),("Clinical documentation and workflow","$200/hr"),("Clinical confidence and decision-making","$200/hr"),("Career strategy for PMHNPs","$200/hr"),("Private practice development","$250/hr"),("Support for established practices","$250/hr"),("Billing and insurance support","$250/hr"),("Marketing and client acquisition","$250/hr"),("Employment contract review","$297 flat"),("Resume and CV review","$147 flat"),("3-hour or 5-hour packages","$425 / $675")]
+LINES=[("brief","Business Startup Coaching","Any industry, from idea to launch.","From $197"),
+ ("heart","Healthcare Practice Launch","PMHNPs, NPs, therapists, and physicians opening a practice.","From $397"),
+ ("check","Credentialing and Enrollment","Commercial, Medicare, TennCare, and MS Medicaid enrollment.","From $97 per payer"),
+ ("shield","Compliance, Billing, and EHR","HIPAA, policy manuals, audits, templates, and revenue cycle.","From $147"),
+ ("pin","Rural Health Clinic Consulting","Startup, re-survey, cost reports, and mock audits.","From $497"),
+ ("card","Business Credit and Funding Education","Credit foundations, SBA readiness, and lender packages.","From $197"),
+ ("file","Grant Writing and Nonprofit Formation","Grant readiness, applications, and 501(c)(3) setup.","From $497"),
+ ("clock","Retainers and Bundles","Fractional compliance, practice administration, and coaching.","From $500 per month")]
+def mcourse(t,p,f,d): return f'<div class="mcard reveal"><div class="mtop"><span>{f}</span><b>{p}</b></div><h3>{t}</h3><p class="note">{d}</p><a class="btn btn-outline" href="#inquire">Request Enrollment</a></div>'
+def mplan(t,p,per,items,feat):
+    lis="".join(f'<li>{ico("check",16)}<span>{x}</span></li>' for x in items)
+    return f'<div class="mplan{" feat" if feat else ""} reveal">{"<span class=badge>Most Support</span>" if feat else ""}<h3>{t}</h3><div class="price">{p}<small> {per}</small></div><ul>{lis}</ul><a class="btn {"btn-gold" if feat else "btn-teal"}" href="#inquire">Join the Mentorship</a></div>'
+MARQ = " &bull; ".join(["Clinical Excellence","Psychiatric Mentorship","Private Practice","Credentialing","Rural Health Clinics","Grants and Funding","Business Startup Coaching"])
+mentor = f'''<div class="ehbs">
+<section class="mhero"><div class="wrap split" style="align-items:center">
+<div><span class="eyebrow gold">Elite Healthcare Business Solutions</span>
+<h1>Build Clinical Confidence and a Practice That Lasts.</h1>
+<p>Mentorship, courses, and consulting for PMHNPs, psychiatric providers, and entrepreneurs in Tennessee and Mississippi, led by Dr. Avanti Cross-Brown.</p>
+<div class="actions" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px"><a class="btn btn-gold" href="#academy">Explore the Academy</a><a class="btn btn-ghost" href="#inquire">Book a Consultation</a></div></div>
+<div class="mphoto"><img src="/images/home-Dr-Avanti-Cross-Brown.jpg" alt="Dr. Avanti Cross-Brown"><div class="badge-float"><b>Dr. Avanti Cross-Brown</b>DNP, PMHNP-BC, CARN-AP, NRCME</div></div>
+</div></section>
+<div class="marquee" aria-hidden="true"><div>{MARQ} &bull; {MARQ} &bull; {MARQ} &bull; </div></div>
+
+<section><div class="wrap center" style="max-width:900px"><span class="eyebrow">From Clinical Confidence to Practice Success</span><h2>Support for Every Stage of Your Career</h2>
+<p class="lead">Whether you are a PMHNP student preparing for practice, a new graduate building confidence, an experienced provider sharpening your skills, or an entrepreneur launching a business, our programs pair real-world clinical reasoning with the business know-how to build something that lasts.</p></div>
+<div class="wrap"><div class="cards" style="margin-top:34px">
+<div class="panel reveal"><div class="icw"><div class="ci">{ico("brain",24)}</div></div><h3>Students and New Graduates</h3><p class="note" style="margin:0">Build the clinical reasoning and documentation skills you need on day one.</p></div>
+<div class="panel reveal"><div class="icw"><div class="ci">{ico("heart",24)}</div></div><h3>Practicing Psychiatric Providers</h3><p class="note" style="margin:0">Strengthen prescribing, complex case management, and confidence.</p></div>
+<div class="panel reveal"><div class="icw"><div class="ci">{ico("brief",24)}</div></div><h3>Healthcare Entrepreneurs</h3><p class="note" style="margin:0">Launch, credential, fund, and run a compliant practice or Rural Health Clinic.</p></div>
+<div class="panel reveal"><div class="icw"><div class="ci">{ico("check",24)}</div></div><h3>New Business Owners</h3><p class="note" style="margin:0">Startup coaching for any industry across Tennessee and Mississippi.</p></div>
+</div></div></section>
+
+<section class="mist" id="academy"><div class="wrap">
+<div class="sec-head"><div><span class="eyebrow">The Academy</span><h2 style="margin:0">Courses and Clinical Education</h2></div><p class="lead">Practical, case-based programs built by practicing psychiatric clinicians.</p></div>
+<div class="mgrid">{"".join(mcourse(*c) for c in COURSES)}</div></div></section>
+
+<section id="mentorship"><div class="wrap">
+<div class="center"><span class="eyebrow">One-to-One Mentorship</span><h2>Clinical Support When You Need It</h2><p class="lead" style="max-width:720px;margin:0 auto">Get matched with an experienced psychiatric mentor for ongoing case review, guidance, and growth.</p></div>
+<div class="mplans">{mplan(*PLANS[0],False)}{mplan(*PLANS[1],True)}</div>
+<p class="note center" style="margin-top:16px">Course participants receive first access to open mentor slots.</p></div></section>
+
+<section class="band" id="consultations"><div class="wrap" style="position:relative">
+<div class="sec-head"><div><span class="eyebrow gold">Consultation Menu</span><h2 style="margin:0">Virtual Consultations</h2></div><p style="color:#eaf6f3;margin:0;max-width:520px">One-time sessions or packages, with discounted rates for mentorship members.</p></div>
+<div class="cmenu">{"".join(f'<div><span>{n}</span><b>{p}</b></div>' for n,p in CONSULT)}</div></div></section>
+
+<section><div class="wrap">
+<div class="sec-head"><div><span class="eyebrow">Practice and Business Consulting</span><h2 style="margin:0">Launch, Credential, Fund, and Grow</h2></div><p class="lead">Tennessee and Mississippi specifics built into every engagement.</p></div>
+<div class="cards">{"".join(f'<div class="panel reveal"><div class="icw"><div class="ci">{ico(i,24)}</div></div><h3>{t}</h3><p class="note">{d}</p><p class="aka" style="margin:0">{p}</p></div>' for i,t,d,p in LINES)}</div>
+</div></section>
+
+<section class="mist"><div class="wrap split" style="align-items:center">
+<div class="mphoto"><img src="/images/home-Dr-Avanti-Cross-Brown.jpg" alt="Dr. Avanti Cross-Brown" loading="lazy"></div>
+<div><span class="eyebrow">Your Mentor</span><h2>Dr. Avanti Cross-Brown, DNP, PMHNP-BC, CARN-AP, NRCME</h2>
+<p>Dr. Cross-Brown is the Founder and CEO of Brown Behavioral Health Services, a CMS certified Rural Health Clinic serving Tennessee and Mississippi. She is a board-certified psychiatric mental health nurse practitioner, a certified Addictions Advanced Practice Provider, and a certified medical examiner.</p>
+<p>She built a multi-state practice that delivers behavioral health, primary care, addiction treatment, school-based telehealth, correctional health, and mobile clinic services, and has secured state funding across Tennessee and Mississippi as a passionate grant writer. She now shares those same systems with the next generation of providers and entrepreneurs.</p>
+<a class="btn btn-teal" href="/behavioral-health-care-meet-our-professionals/">Read Full Bio</a></div>
+</div></section>
+
+<section id="inquire"><div class="wrap split" style="align-items:start">
+<div><span class="eyebrow">Get Started</span><h2>Request Enrollment or a Consultation</h2><p class="lead">Tell us what you need and we will follow up with next steps, availability, and enrollment details.</p>
+<div class="panel" style="margin-top:20px"><h3>Important Information</h3><p class="note" style="margin:0">Elite Healthcare Business Solutions provides business coaching, education, and consulting. We are not attorneys, CPAs, lenders, brokers, or medical providers, and nothing we provide is legal, tax, financial, investment, or medical advice. We do not guarantee any outcome, including credentialing approval, licensure, survey or audit results, funding, grant awards, credit scores, or revenue. Clinical education and mentorship are educational only; mentors are not supervising clinicians or the provider of record, and all patient information must be de-identified. Elite Healthcare Business Solutions is separate from the clinical services of Brown Behavioral Health Services, PLLC.</p></div></div>
+<div class="formcard"><form action="{FORM_ENDPOINT}" method="POST">
+<input type="hidden" name="_subject" value="New mentorship or consulting inquiry from brownbehavioral.com"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="{SITE}/thank-you/"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<div class="row"><div><label for="m1">Full Name <span class="req">*</span></label><input id="m1" name="Full_Name" required></div><div><label for="m2">Email <span class="req">*</span></label><input id="m2" type="email" name="Email" required></div></div>
+<div class="row"><div><label for="m3">Phone</label><input id="m3" type="tel" name="Phone"></div><div><label for="m4">I am a...</label><select id="m4" name="Role"><option>PMHNP student</option><option>New graduate PMHNP</option><option>Practicing PMHNP or psychiatric provider</option><option>Nurse practitioner (other specialty)</option><option>Therapist or counselor</option><option>Physician</option><option>Clinic owner or administrator</option><option>New business owner (non-healthcare)</option><option>Nonprofit leader</option><option>Other</option></select></div></div>
+<label for="m5">I am interested in <span class="req">*</span></label><select id="m5" name="Interest" required><option value="">Select...</option><option>Psychiatric Clinical Cases</option><option>Clinical Psychiatry Bootcamp</option><option>Start and Grow a Private Practice course</option><option>Course bundle</option><option>Credentialing mini-course</option><option>Mentorship: Professional Plan</option><option>Mentorship: Prime Plan</option><option>Virtual consultation</option><option>Business startup coaching</option><option>Healthcare practice launch</option><option>Credentialing and enrollment services</option><option>Compliance, billing, or EHR</option><option>Rural Health Clinic consulting</option><option>Business credit and funding education</option><option>Grant writing or nonprofit formation</option><option>Retainer or bundle</option></select>
+<label for="m6">State</label><select id="m6" name="State"><option>Tennessee</option><option>Mississippi</option><option>Other</option></select>
+<label for="m7">Tell us about your goals</label><textarea id="m7" name="Message" placeholder="Please do not include any patient information."></textarea>
+<button class="btn btn-teal" type="submit">{ico("send",18)} Submit Inquiry</button></form></div>
+</div></section>
+</div>'''
+page("/mentorship/","Mentorship and Consulting | Elite Healthcare Business Solutions","Psychiatric mentorship, clinical courses, and practice and business consulting for PMHNPs, providers, and entrepreneurs in Tennessee and Mississippi, led by Dr. Avanti Cross-Brown.",mentor)
+
 # ---------------- RFP ----------------
 rfp = f'''<section><div class="wrap" style="max-width:900px"><div class="prose">
 <div class="alert" style="margin-bottom:24px"><b>Status: Closed.</b> This Request for Proposal closed on July 8, 2025, and is no longer accepting submissions. Future opportunities will be posted on this page.</div><span class="eyebrow">Request for Proposal (RFP)</span><h2 style="margin-top:0">Technical Assistance and Evaluation Advisor: Brown Behavioral Health Services</h2>
@@ -736,7 +825,7 @@ priv = f'''<section><div class="wrap prose" style="max-width:860px">
 page("/privacy-policy/","Privacy Policy | Brown Behavioral Health Services","Privacy Policy for Brown Behavioral Health Services.",priv,("Privacy Policy","","Privacy Policy"))
 
 # ---------------- SITEMAP + THANK YOU + 404 ----------------
-links = [("Home","/"),("About Us","/behavioral-health-care-about-us/"),("Meet Our Professionals","/behavioral-health-care-meet-our-professionals/"),("Services","/behavioral-health-care-services/"),("Psychiatric Evaluation","/behavioral-health-care-psychiatric-evaluation/"),("Medical Services","/behavioral-health-care-medical-services/"),("Patient Center","/patient-center/"),("Request an Appointment","/behavioral-health-request-an-appointment/"),("Patient Portal (eClinicalWorks / healow)","/behavioral-health-care-healow-patient-portal/"),("Insurance Accepted","/insurance/"),("Payment Options","/behavioral-health-care-payment/"),("Funding","/funding/"),("Center of Integrated Health","/center-of-integrated-health/"),("Send Your Referrals","/behavioral-health-care-send-your-referrals/"),("Careers","/behavioral-health-care-careers/"),("Request for Proposals","/behavioral-health-care-careers/request-for-proposals/"),("Contact Us","/behavioral-health-care-contact-us/"),("Privacy Policy","/privacy-policy/")]
+links = [("Home","/"),("About Us","/behavioral-health-care-about-us/"),("Meet Our Professionals","/behavioral-health-care-meet-our-professionals/"),("Services","/behavioral-health-care-services/"),("Psychiatric Evaluation","/behavioral-health-care-psychiatric-evaluation/"),("Medical Services","/behavioral-health-care-medical-services/"),("Patient Center","/patient-center/"),("Request an Appointment","/behavioral-health-request-an-appointment/"),("Patient Portal (eClinicalWorks / healow)","/behavioral-health-care-healow-patient-portal/"),("Insurance Accepted","/insurance/"),("Payment Options","/behavioral-health-care-payment/"),("Funding","/funding/"),("Center of Integrated Health","/center-of-integrated-health/"),("Mentorship and Consulting","/mentorship/"),("Send Your Referrals","/behavioral-health-care-send-your-referrals/"),("Careers","/behavioral-health-care-careers/"),("Request for Proposals","/behavioral-health-care-careers/request-for-proposals/"),("Contact Us","/behavioral-health-care-contact-us/"),("Privacy Policy","/privacy-policy/")]
 page("/sitemap/","Sitemap | Brown Behavioral Health Services","All pages on brownbehavioral.com.",f'<section><div class="wrap"><ul class="svc">{"".join(f"<li><a href={chr(34)}{h}{chr(34)}>{t}</a></li>" for t,h in links)}</ul></div></section>',("Sitemap","","Sitemap"))
 page("/thank-you/","Thank You | Brown Behavioral Health Services","Thank you for contacting Brown Behavioral Health Services.",f'<section><div class="wrap center" style="max-width:700px"><h2>Thank you!</h2><p class="lead">Your submission has been received. Our team will get back to you as soon as possible.</p><p>If this is an emergency, please call 911.</p><a class="btn btn-teal" href="/">Back to Home</a></div></section>',("Thank You","","Thank You"))
 page("/404/","Page Not Found | Brown Behavioral Health Services","Page not found.",f'<section><div class="wrap center"><h2>Sorry, we could not find that page.</h2><p class="lead">Try one of the links in the menu, or call us at {PHONE}.</p><a class="btn btn-teal" href="/">Back to Home</a></div></section>',("Page Not Found","","404"))
