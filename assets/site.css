@@ -412,3 +412,18 @@ body .coi .chips li{background:#fdeee3;color:#141414}
 body .coi .btn-gold{background:#e8772e;color:#fff}.coi .btn-gold:hover{background:#f5a24b}
 .panel.deep [style*="color:#fff"]{color:#4a2545!important}
 .panel.deep .eyebrow.gold{color:#b5655a}
+/* ===== Balanced plum: richer headers and bands ===== */
+.topbar{background:#4a2545;color:#f3e6ef}
+.topbar a{color:#f3e6ef}.topbar .crisis{color:#f4c2b8!important}
+.hero::after{background:linear-gradient(100deg,rgba(58,28,54,.90) 0%,rgba(74,37,69,.68) 50%,rgba(155,91,140,.18) 100%)}
+.phero{background:radial-gradient(900px 380px at 92% -30%,rgba(212,135,122,.45),transparent),radial-gradient(800px 400px at 0% 120%,rgba(155,91,140,.55),transparent),#4a2545;color:#fff;border-bottom:0}
+.phero h1{color:#fff}.phero p{color:#ecdbe6}.phero .crumbs,.phero .crumbs a{color:#f4c2b8}
+.band{background:linear-gradient(135deg,#4a2545,#7a3f6f);color:#f3e6ef}
+.band::before{border-color:rgba(244,194,184,.35)}
+.band h2,.band h3{color:#fff}.band blockquote{color:#fcefec}
+.band .hstep{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);box-shadow:none}
+.band .hstep h3{color:#fff}.band .hstep p{color:#f3e6ef}
+.band .eyebrow{color:#f4c2b8}
+.panel.deep{background:linear-gradient(150deg,#f8e9ef,#f1dbe5);border:1px solid #e6c9d6}
+.loc .tele{background:linear-gradient(135deg,#6b3a63,#9b5b8c);color:#f4c2b8}
+section.mist{background:#f8eef3}
