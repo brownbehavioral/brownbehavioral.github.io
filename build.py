@@ -423,8 +423,8 @@ appt = f'''<section><div class="wrap split" style="align-items:start">
 </ol></div>
 <div>
 <div class="two" style="margin-bottom:22px">
-<div class="panel"><span class="eyebrow">Tennessee</span><h3>TN Brown Behavioral Health Services</h3><p class="note">793 Tennessee Street, Bolivar, TN 38008</p><p class="note">Medical Provider Only</p><a class="btn btn-outline" href="{HEALOW_BOOK}" target="_blank" rel="noopener">Book in TN</a></div>
-<div class="panel"><span class="eyebrow">Mississippi</span><h3>MS Brown Behavioral Health Services</h3><p class="note">9851 Hwy 178, Suite B, Olive Branch, MS 38654</p><p class="note">&nbsp;</p><a class="btn btn-outline" href="{HEALOW_BOOK}" target="_blank" rel="noopener">Book in MS</a></div>
+<div class="panel"><span class="eyebrow">Tennessee</span><h3>TN Brown Behavioral Health Services</h3><p class="note">793 Tennessee Street, Bolivar, TN 38008</p><a class="btn btn-outline" href="{HEALOW_BOOK}" target="_blank" rel="noopener">Book in TN</a></div>
+<div class="panel"><span class="eyebrow">Mississippi</span><h3>MS Brown Behavioral Health Services</h3><p class="note">9851 Hwy 178, Suite B, Olive Branch, MS 38654</p><a class="btn btn-outline" href="{HEALOW_BOOK}" target="_blank" rel="noopener">Book in MS</a></div>
 </div>
 <div class="panel deep"><span class="eyebrow gold">Prefer the App?</span><h3>Book in the healow App</h3><ul class="ilist">
 <li>{ico("check",18)}<span>Download the free <b>healow&trade;</b> app from the App Store or Google Play.</span></li>
