@@ -115,8 +115,9 @@ def page(path, title, desc, body, phero=None):
     </div>
     <div><h4>Navigation</h4><ul><li><a href="/">Home</a></li><li><a href="/behavioral-health-care-about-us/">About Us</a></li><li><a href="/behavioral-health-care-meet-our-professionals/">Meet Our Professionals</a></li><li><a href="/behavioral-health-care-services/">Services</a></li><li><a href="/behavioral-health-care-medical-services/">Medical Services</a></li><li><a href="/behavioral-health-care-send-your-referrals/">Referrals</a></li><li><a href="/behavioral-health-care-careers/">Careers</a></li><li><a href="/behavioral-health-care-contact-us/">Contact Us</a></li></ul></div>
     <div><h4>Patients</h4><ul><li><a href="/patient-center/">Patient Center</a></li><li><a href="/behavioral-health-request-an-appointment/">Request an Appointment</a></li><li><a href="/behavioral-health-care-healow-patient-portal/">Patient Portal (healow)</a></li><li><a href="/insurance/">Insurance Accepted</a></li><li><a href="/behavioral-health-care-payment/">Payment Options</a></li><li><a href="/funding/">Funding</a></li><li><a href="/center-of-integrated-health/">Center of Integrated Health</a></li><li><a href="https://www.elitehealthbiz.com/" target="_blank" rel="noopener">Mentorship &amp; Consulting</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div>
-    <div><h4>Our Offices</h4><ul>
+    <div><h4>Our Locations</h4><ul>
       <li>Accepting patients throughout Tennessee and Mississippi</li>
+      <li><b style="color:#fff">Mobile Health Clinic</b><br>Serving communities across TN and MS</li>
       <li><b style="color:#fff">Tennessee Office</b><br>793 Tennessee Street<br>Bolivar, TN 38008</li>
       <li><b style="color:#fff">Mississippi Office</b><br>9851 Hwy 178, Suite B<br>Olive Branch, MS 38654</li><li>Telehealth visits available throughout TN and MS</li>
       </ul></div>
@@ -170,6 +171,7 @@ def cats_html():
     return '<div class="cats">'+"".join(out)+'</div>'
 
 LOCS = f'''<div class="locs">
+ <div class="loc"><img src="/images/mobile-clinic.jpg" alt="The BBHS Mobile Health Clinic" loading="lazy" style="width:100%;height:200px;object-fit:cover;display:block"><div class="lb"><span class="eyebrow">Tennessee &amp; Mississippi</span><h3>Mobile Health Clinic</h3><p>Our mobile unit brings care directly to communities, schools, and events across Tennessee and Mississippi.</p><p class="note">Call <a href="{PHONE_LINK}">{PHONE}</a> for the mobile unit schedule.</p></div></div>
  <div class="loc"><iframe src="{BOLIVAR_MAP}" title="Map of Bolivar, TN office" loading="lazy"></iframe><div class="lb"><span class="eyebrow">Tennessee</span><h3>Bolivar Office</h3><p>793 Tennessee Street<br>Bolivar, TN 38008</p><p class="note">Medicare-Certified Rural Health Clinic</p></div></div>
  <div class="loc"><iframe src="{OLIVE_MAP}" title="Map of Olive Branch, MS office" loading="lazy"></iframe><div class="lb"><span class="eyebrow">Mississippi</span><h3>Olive Branch Office</h3><p>9851 Hwy 178, Suite B<br>Olive Branch, MS 38654</p></div></div>
  <div class="loc"><div class="tele">{ico("video",56)}</div><div class="lb"><span class="eyebrow">Anywhere in TN &amp; MS</span><h3>Secure Telehealth</h3><p>Private video visits from the comfort of home for patients throughout Tennessee and Mississippi.</p></div></div>
@@ -794,7 +796,7 @@ contact = f'''<section><div class="wrap">
 <div class="three" style="margin-bottom:40px">
  <div class="panel"><span class="eyebrow">{ico("phone",16)} Call</span><h3><a href="{PHONE_LINK}" style="text-decoration:none">{PHONE}</a></h3><p class="note" style="margin:0">Fax: {FAX}</p></div>
  <div class="panel"><span class="eyebrow">{ico("mail",16)} Email</span><h3 style="font-size:1.05rem;word-break:break-all"><a href="mailto:{EMAIL}" style="text-decoration:none">{EMAIL}</a></h3><p class="note" style="margin:0">We will respond as soon as possible.</p></div>
- <div class="panel"><span class="eyebrow">{ico("pin",16)} Our Offices</span><p style="margin:0"><b>793 Tennessee Street</b><br>Bolivar, TN 38008<br><b>9851 Hwy 178, Suite B</b><br>Olive Branch, MS 38654<br>Telehealth throughout TN and MS</p></div>
+ <div class="panel"><span class="eyebrow">{ico("pin",16)} Our Locations</span><p style="margin:0"><b>Mobile Health Clinic</b><br>Serving communities across TN and MS<br><b>793 Tennessee Street</b><br>Bolivar, TN 38008<br><b>9851 Hwy 178, Suite B</b><br>Olive Branch, MS 38654<br>Telehealth throughout TN and MS</p></div>
 </div>
 <div class="split" style="align-items:start"><div class="panel"><h2>Contact Us Form</h2><p class="note">* Required Information</p>{contact_form("New message from brownbehavioral.com (contact page)")}</div>
 <iframe class="map" src="{MAP}" title="Map of Bolivar, TN" loading="lazy" style="height:640px"></iframe></div></div></section>'''
