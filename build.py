@@ -119,18 +119,18 @@ def page(path, title, desc, body, phero=None):
 </div></div>
 <footer class="site"><div class="wrap">
   <div class="fgrid">
-    <div><a class="brand" href="/" style="color:#fff"><img src="/images/logo-270.png" alt="" width="58" height="58"><span><b style="color:#fff">Brown Behavioral<br>Health Services, PLLC</b></span></a>
+    <div><a class="brand" href="/" style="color:#ffffff"><img src="/images/logo-270.png" alt="" width="58" height="58"><span><b style="color:#ffffff">Brown Behavioral<br>Health Services, PLLC</b></span></a>
       <p style="margin-top:16px">If you need our services or want to learn more, you can reach out to us anytime.</p>
       <div class="fee"><b>No one will be denied access to services due to inability to pay.</b> There is a discounted/sliding fee schedule available based on family size and income. {HRP_LINE}</div>
-      <p style="margin-top:14px">Phone: <a href="{PHONE_LINK}">{PHONE}</a><br>Fax: {FAX}<br><a href="mailto:{EMAIL}">{EMAIL}</a></p><p style="margin-top:10px"><b style="color:#fff">Office Hours</b><br>{HOURS}<br><span style="opacity:.85">{HOURS_EXT}</span></p><p class="lang" style="margin-top:10px">{LANG_EN}<br><span lang="es">{LANG_ES}</span></p><div class="social"><a href="{FACEBOOK}" target="_blank" rel="noopener" aria-label="Facebook">{ico("fb",18)}</a><a href="{PSYTODAY}" target="_blank" rel="noopener" aria-label="Psychology Today profile">{ico("user",18)}</a></div>
+      <p style="margin-top:14px">Phone: <a href="{PHONE_LINK}">{PHONE}</a><br>Fax: {FAX}<br><a href="mailto:{EMAIL}">{EMAIL}</a></p><p style="margin-top:10px"><b style="color:#ffffff">Office Hours</b><br>{HOURS}<br><span style="opacity:.85">{HOURS_EXT}</span></p><p class="lang" style="margin-top:10px">{LANG_EN}<br><span lang="es">{LANG_ES}</span></p><div class="social"><a href="{FACEBOOK}" target="_blank" rel="noopener" aria-label="Facebook">{ico("fb",18)}</a><a href="{PSYTODAY}" target="_blank" rel="noopener" aria-label="Psychology Today profile">{ico("user",18)}</a></div>
     </div>
     <div><h4>Navigation</h4><ul><li><a href="/">Home</a></li><li><a href="/behavioral-health-care-about-us/">About Us</a></li><li><a href="/behavioral-health-care-meet-our-professionals/">Meet Our Professionals</a></li><li><a href="/behavioral-health-care-services/">Services</a></li><li><a href="/behavioral-health-care-medical-services/">Medical Services</a></li><li><a href="/behavioral-health-care-send-your-referrals/">Referrals</a></li><li><a href="/behavioral-health-care-careers/">Careers</a></li><li><a href="/behavioral-health-care-contact-us/">Contact Us</a></li></ul></div>
     <div><h4>Patients</h4><ul><li><a href="/patient-center/">Patient Center</a></li><li><a href="/behavioral-health-request-an-appointment/">Request an Appointment</a></li><li><a href="/behavioral-health-care-healow-patient-portal/">Patient Portal (healow)</a></li><li><a href="/insurance/">Insurance Accepted</a></li><li><a href="/behavioral-health-care-payment/">Payment Options</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/funding/">Funding</a></li><li><a href="/center-of-integrated-health/">Center of Integrated Health</a></li><li><a href="https://www.elitehealthbiz.com/" target="_blank" rel="noopener">Mentorship &amp; Consulting</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div>
     <div><h4>Our Locations</h4><ul>
       <li>Accepting patients throughout Tennessee and Mississippi</li>
-      <li><b style="color:#fff">Mobile Health Clinic</b><br>Serving communities across TN and MS</li>
-      <li><b style="color:#fff">Tennessee Office</b><br>793 Tennessee Street<br>Bolivar, TN 38008</li>
-      <li><b style="color:#fff">Mississippi Office</b><br>9851 Hwy 178, Suite B<br>Olive Branch, MS 38654</li><li><b style="color:#fff">University of Memphis</b><br>Student Health and Counseling Center<br>214 Wilder Tower, Memphis, TN 38152</li><li>Telehealth visits available throughout TN and MS</li>
+      <li><b style="color:#ffffff">Mobile Health Clinic</b><br>Serving communities across TN and MS</li>
+      <li><b style="color:#ffffff">Tennessee Office</b><br>793 Tennessee Street<br>Bolivar, TN 38008</li>
+      <li><b style="color:#ffffff">Mississippi Office</b><br>9851 Hwy 178, Suite B<br>Olive Branch, MS 38654</li><li><b style="color:#ffffff">University of Memphis</b><br>Student Health and Counseling Center<br>214 Wilder Tower, Memphis, TN 38152</li><li>Telehealth visits available throughout TN and MS</li>
       </ul></div>
   </div>
   <div class="bottom"><span>&copy; 2022 - <span id="yr">2026</span> Brown Behavioral Health Services, PLLC. All rights reserved.</span><span><a href="/notice-of-privacy-practices/">Notice of Privacy Practices</a> &nbsp;|&nbsp; <a href="/good-faith-estimate/">Good Faith Estimate</a> &nbsp;|&nbsp; <a href="/privacy-policy/">Privacy Policy</a> &nbsp;|&nbsp; <a href="/behavioral-health-care-about-us/#nondiscrimination">Nondiscrimination &amp; Language Assistance</a></span></div>
@@ -262,7 +262,7 @@ home = f'''
 </div></section>
 
 <section style="padding-bottom:0"><div class="wrap"><div class="panel deep" style="display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:center">
-  <div><span class="eyebrow gold">Mentorship and Consulting</span><h2 style="color:#fff;margin-bottom:8px">Elite Healthcare Business Solutions</h2><p style="margin:0">Psychiatric mentorship, clinical courses, and practice launch, credentialing, and Rural Health Clinic consulting for providers and entrepreneurs, led by Dr. Avanti Cross-Brown.</p></div>
+  <div><span class="eyebrow gold">Mentorship and Consulting</span><h2 style="color:#ffffff;margin-bottom:8px">Elite Healthcare Business Solutions</h2><p style="margin:0">Psychiatric mentorship, clinical courses, and practice launch, credentialing, and Rural Health Clinic consulting for providers and entrepreneurs, led by Dr. Avanti Cross-Brown.</p></div>
   <div style="text-align:right"><a class="btn btn-gold" href="https://www.elitehealthbiz.com/" target="_blank" rel="noopener">Explore Mentorship</a></div>
 </div></div></section>
 
@@ -279,9 +279,9 @@ home = f'''
 <section class="mist"><div class="wrap split" style="align-items:start">
   <div><span class="eyebrow">Connect With Us</span><h2>We Welcome Your Inquiry</h2><p class="lead">Share your questions or concerns, and a member of our team will respond promptly and confidentially.</p>
     <div class="panel deep" style="margin-top:24px"><ul class="ilist">
-      <li>{ico("phone",18)}<span>Phone: <a style="color:#fff" href="{PHONE_LINK}">{PHONE}</a></span></li>
+      <li>{ico("phone",18)}<span>Phone: <a style="color:#ffffff" href="{PHONE_LINK}">{PHONE}</a></span></li>
       <li>{ico("fax",18)}<span>Fax: {FAX}</span></li>
-      <li>{ico("mail",18)}<span><a style="color:#fff" href="mailto:{EMAIL}">{EMAIL}</a></span></li>
+      <li>{ico("mail",18)}<span><a style="color:#ffffff" href="mailto:{EMAIL}">{EMAIL}</a></span></li>
       <li>{ico("pin",18)}<span>Bolivar, TN &amp; Olive Branch, MS<br>Telehealth throughout TN &amp; MS</span></li></ul></div></div>
   <div class="formcard">{contact_form("New message from brownbehavioral.com (home page)")}</div>
 </div></section>
@@ -300,7 +300,7 @@ about = f'''
 </div></section>
 <section class="alt" id="mission"><div class="wrap two">
  <div class="panel"><span class="eyebrow">Our Mission</span><p>The mission of Brown Behavioral Health Services is to provide proficient and competent care related to diagnosing and treating psychiatric illnesses in pediatrics and adults while improving overall health status. BBHS is committed to the mental health population and is eager to serve each individual holistically while enhancing mental health awareness, promoting individual empowerment, and increasing access to treatment and services for persons living with mental illnesses.</p></div>
- <div class="panel deep"><span class="eyebrow gold">Our Vision</span><p style="font-family:var(--serif);font-size:1.1rem;color:#faf4f7">&ldquo;To provide client-centered, expert mental health services such as evaluations, patient advocacy, and medication management to the medically underserved communities with an aim to treat conditions such as Schizophrenia, Bipolar Disorders, ADHD, Depression, Anxiety, Substance Abuse, and many more.&rdquo;</p><p style="margin:0;color:var(--gold)">Dr. Avanti Cross-Brown, DNP, PMHNP-BC</p></div>
+ <div class="panel deep"><span class="eyebrow gold">Our Vision</span><p style="font-family:var(--serif);font-size:1.1rem;color:#f1f5fd">&ldquo;To provide client-centered, expert mental health services such as evaluations, patient advocacy, and medication management to the medically underserved communities with an aim to treat conditions such as Schizophrenia, Bipolar Disorders, ADHD, Depression, Anxiety, Substance Abuse, and many more.&rdquo;</p><p style="margin:0;color:var(--gold)">Dr. Avanti Cross-Brown, DNP, PMHNP-BC</p></div>
 </div></section>
 <section id="nondiscrimination"><div class="wrap" style="max-width:900px"><span class="eyebrow">Policy</span><h2>Nondiscrimination Policy</h2>
 <p>It is the policy of Brown Behavioral Health Services (BBHS), under Title VI of the Civil Rights Act of 1964 and related statutes, to ensure that no person be excluded from participation in, be denied the benefits of, or be otherwise subjected to discrimination under any program or activity, on the grounds of race, religion, sex, color, age, disability, national origin, or any other protected class status. Equal opportunity will be provided to all members, program participants, service recipients, volunteers, contractors, employees, and subcontractors.</p>
@@ -403,7 +403,7 @@ services = f'''<section style="padding-bottom:40px"><div class="wrap" style="max
 <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px"><a class="btn btn-outline" href="#behavioral">Behavioral Health</a><a class="btn btn-outline" href="#recovery">Addiction &amp; Recovery</a><a class="btn btn-outline" href="#medical">Primary &amp; Medical</a><a class="btn btn-outline" href="#wellness">Wellness &amp; Specialty</a></div></div></section>
 <span id="medication-management"></span>{svc_sections()}
 <section class="band"><div class="wrap center" style="position:relative"><span class="eyebrow gold">Conditions We Treat</span><h2>Expert Care for a Wide Range of Conditions</h2>
-<ul class="chips" style="justify-content:center;margin-top:28px">{"".join(f'<li style="background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.18)">{c}</li>' for c in cond)}</ul></div></section>{CONNECT}'''
+<ul class="chips" style="justify-content:center;margin-top:28px">{"".join(f'<li style="background:rgba(255,255,255,.08);color:#ffffff;border:1px solid rgba(255,255,255,.18)">{c}</li>' for c in cond)}</ul></div></section>{CONNECT}'''
 page("/behavioral-health-care-services/","Services | Brown Behavioral Health Services","Behavioral health, addiction and recovery, primary care, and wellness services for ages 5 and up in Tennessee and Mississippi.",services,("Our Services","Behavioral health, recovery, medical, and wellness services, coordinated by one dedicated team.","Services"))
 
 # ---------------- PSYCH EVAL ----------------
@@ -416,7 +416,7 @@ pe = f'''<section><div class="wrap split" style="align-items:start"><div class="
 <li>Complete medical history, including description of the person&rsquo;s overall physical health, list of any other illnesses or conditions present, and any current treatments</li>
 <li>Lab tests including:<ul><li>Blood tests</li><li>Radiology studies to look for abnormalities, particularly in the brain structures</li><li>Educational assessments</li><li>Speech and language assessments</li><li>Psychological assessments</li></ul></li></ul>
 <p>After reviewing the evaluation and formulating a diagnosis, we will work with you to establish long-term and short-term treatment goals.</p></div>
-<aside><div class="media" style="margin-bottom:22px"><img src="/images/therapy-notes.jpg" alt="A provider taking notes during an evaluation" style="aspect-ratio:4/3;object-fit:cover;width:100%"></div><div class="panel deep"><h3>Ready to talk?</h3><p>If you are interested in hearing more about our services, please feel free to reach out to us at any time.</p><a class="btn btn-gold" href="/behavioral-health-request-an-appointment/">Request an Appointment</a><p style="margin:16px 0 0">Or call <a style="color:#fff" href="{PHONE_LINK}">{PHONE}</a></p></div></aside>
+<aside><div class="media" style="margin-bottom:22px"><img src="/images/therapy-notes.jpg" alt="A provider taking notes during an evaluation" style="aspect-ratio:4/3;object-fit:cover;width:100%"></div><div class="panel deep"><h3>Ready to talk?</h3><p>If you are interested in hearing more about our services, please feel free to reach out to us at any time.</p><a class="btn btn-gold" href="/behavioral-health-request-an-appointment/">Request an Appointment</a><p style="margin:16px 0 0">Or call <a style="color:#ffffff" href="{PHONE_LINK}">{PHONE}</a></p></div></aside>
 </div></section>'''
 page("/behavioral-health-care-psychiatric-evaluation/","Psychiatric Evaluation | Brown Behavioral Health Services","Comprehensive psychiatric evaluations for children, adolescents and adults in Tennessee and Mississippi.",pe,("Psychiatric Evaluation","Schedule an evaluation to understand your cognitive status.",'<a href="/behavioral-health-care-services/">Services</a> / Psychiatric Evaluation'))
 
@@ -463,7 +463,7 @@ portal = f'''<section><div class="wrap split" style="align-items:start">
 <li><span>Enter your portal username and password to log in, then create a new password.</span></li>
 <li><span>Set up your PIN to securely access your health records.</span></li></ol>
 <p class="note" style="margin-top:16px">Forgot your password? Use the &ldquo;Forgot Password&rdquo; link on the login screen or call our office for a reset.</p></div>
-<div class="panel deep center sidecard"><div style="width:64px;height:64px;border-radius:16px;background:rgba(212,135,122,.2);color:var(--gold);display:grid;place-items:center;margin:0 auto 18px">{ico("portal",30)}</div><h3>Already have an account?</h3><p>Log in to the eClinicalWorks patient portal to view records, message your care team, and more.</p><a class="btn btn-gold" href="{PORTAL}" target="_blank" rel="noopener">Go to Patient Portal</a><p style="margin:18px 0 0">healow app practice code: <b style="color:var(--gold)">ACGHDD</b></p><p class="note" style="color:#f3e6ef;margin:10px 0 0">The portal is for non-urgent communication. In an emergency, call 911.</p></div>
+<div class="panel deep center sidecard"><div style="width:64px;height:64px;border-radius:16px;background:rgba(239,153,95,.2);color:var(--gold);display:grid;place-items:center;margin:0 auto 18px">{ico("portal",30)}</div><h3>Already have an account?</h3><p>Log in to the eClinicalWorks patient portal to view records, message your care team, and more.</p><a class="btn btn-gold" href="{PORTAL}" target="_blank" rel="noopener">Go to Patient Portal</a><p style="margin:18px 0 0">healow app practice code: <b style="color:var(--gold)">ACGHDD</b></p><p class="note" style="color:#e0e9f9;margin:10px 0 0">The portal is for non-urgent communication. In an emergency, call 911.</p></div>
 </div></section>'''
 page("/behavioral-health-care-healow-patient-portal/","Patient Portal (eClinicalWorks and healow) | Brown Behavioral Health Services","Access the Brown Behavioral Health Services eClinicalWorks patient portal on the web or in the healow app. Practice code ACGHDD.",portal,("Patient Portal","Powered by eClinicalWorks and the healow app. Practice code ACGHDD.",'<a href="/patient-center/">Patients</a> / Patient Portal'))
 
@@ -492,7 +492,7 @@ pc = f'''<section><div class="wrap"><div class="cards" style="margin-top:0">
   <li>{ico("check",18)}<span>A list of your current medications and doses</span></li>
   <li>{ico("check",18)}<span>Any prior records, evaluations, or school reports that may help your provider</span></li>
   <li>{ico("check",18)}<span>For telehealth: a quiet, private space and a charged phone, tablet, or computer</span></li></ul></div>
- <div class="panel deep"><span class="eyebrow gold">Financial Assistance</span><h3>Care for Every Family</h3><p>No one will be denied access to services due to inability to pay. There is a discounted/sliding fee schedule available based on family size and income. {HRP_LINE}</p><p>Ask our front desk about the sliding fee schedule at {PHONE}. Uninsured and self-pay patients may request a <a style="color:#fff" href="/good-faith-estimate/">Good Faith Estimate</a>.</p></div>
+ <div class="panel deep"><span class="eyebrow gold">Financial Assistance</span><h3>Care for Every Family</h3><p>No one will be denied access to services due to inability to pay. There is a discounted/sliding fee schedule available based on family size and income. {HRP_LINE}</p><p>Ask our front desk about the sliding fee schedule at {PHONE}. Uninsured and self-pay patients may request a <a style="color:#ffffff" href="/good-faith-estimate/">Good Faith Estimate</a>.</p></div>
 </div></section>{CONNECT}'''
 page("/patient-center/","Patient Center | Brown Behavioral Health Services","Appointments, patient portal, bill pay, and visit information for patients of Brown Behavioral Health Services.",pc,("Patient Center","Everything you need for your care, in one place.","Patient Center"))
 
@@ -523,7 +523,7 @@ careers = f'''<section><div class="wrap split" style="grid-template-columns:1fr 
 <li>{ico("check",18)}<span>In-office and telehealth settings in Tennessee and Mississippi</span></li>
 <li>{ico("check",18)}<span>Clinical training site partnerships and student rotations</span></li></ul></div>
 <p style="margin-top:18px"><a href="/behavioral-health-care-careers/request-for-proposals/">Consultants and vendors: view our Requests for Proposals &rarr;</a></p></aside>
-<div class="formcard"><h2 style="margin-bottom:6px">Employment Application</h2><p class="note">Fields marked <span class="req" style="color:#b4441c">*</span> are required.</p>
+<div class="formcard"><h2 style="margin-bottom:6px">Employment Application</h2><p class="note">Fields marked <span class="req" style="color:#d05300">*</span> are required.</p>
 <form action="{FORM_ENDPOINT}" method="POST" enctype="multipart/form-data">
 <input type="hidden" name="_subject" value="New job application from brownbehavioral.com"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="{SITE}/thank-you/"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 <fieldset><legend>Your Information</legend>
@@ -683,7 +683,7 @@ coi = f'''<div class="coi">
 <div class="sec-head"><div><span class="eyebrow">What We Do</span><h2 style="margin:0">Programs and Services</h2></div><p class="lead">Delivered in partnership with Brown Behavioral Health Services.</p></div>
 <div class="cards three" style="margin-top:0">{coi_cards}</div></div></section>
 <section><div class="wrap"><div class="panel deep" style="display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:center">
-<div><span class="eyebrow gold">Get Involved</span><h2 style="color:#fff;margin-bottom:8px">Partner, Volunteer, or Give</h2><p style="margin:0">We welcome partnerships with funders, schools, faith communities, and local organizations who share our commitment to healthier rural communities. Center of Integrated Health is a 501(c)(3) public charity, and contributions may be tax-deductible as allowed by law.</p></div>
+<div><span class="eyebrow gold">Get Involved</span><h2 style="color:#ffffff;margin-bottom:8px">Partner, Volunteer, or Give</h2><p style="margin:0">We welcome partnerships with funders, schools, faith communities, and local organizations who share our commitment to healthier rural communities. Center of Integrated Health is a 501(c)(3) public charity, and contributions may be tax-deductible as allowed by law.</p></div>
 <div style="text-align:right"><a class="btn btn-gold" href="mailto:{COI_EMAIL}?subject=Center%20of%20Integrated%20Health">Contact the Center</a><p class="note" style="color:#f3e3d6;margin:12px 0 0">{COI_EMAIL} &middot; {PHONE}</p></div>
 </div></div></section>
 </div>'''
@@ -741,7 +741,7 @@ mentor = f'''<div class="ehbs">
 <p class="note center" style="margin-top:16px">Course participants receive first access to open mentor slots.</p></div></section>
 
 <section class="band" id="consultations"><div class="wrap" style="position:relative">
-<div class="sec-head"><div><span class="eyebrow gold">Consultation Menu</span><h2 style="margin:0">Virtual Consultations</h2></div><p style="color:#f3e6ef;margin:0;max-width:520px">One-time sessions or packages, with discounted rates for mentorship members.</p></div>
+<div class="sec-head"><div><span class="eyebrow gold">Consultation Menu</span><h2 style="margin:0">Virtual Consultations</h2></div><p style="color:#e0e9f9;margin:0;max-width:520px">One-time sessions or packages, with discounted rates for mentorship members.</p></div>
 <div class="cmenu">{"".join(f'<div><span>{n}</span><b>{p}</b></div>' for n,p in CONSULT)}</div></div></section>
 
 <section><div class="wrap">
