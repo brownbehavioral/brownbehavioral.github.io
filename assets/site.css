@@ -448,13 +448,9 @@ section.mist{background:#fbf6ee}
 h2,h3{color:#1f478c}
 
 /* ===== Ombre: blue to green, warm orange glow ===== */
-.topbar{background:linear-gradient(90deg,#1f4f9c 0%,#22708a 50%,#2f7a49 100%)!important}
 .hero::after{background:linear-gradient(100deg,rgba(31,79,156,.90) 0%,rgba(36,112,110,.70) 45%,rgba(47,122,73,.40) 75%,rgba(240,136,62,.20) 100%)!important}
-.phero{background:radial-gradient(700px 320px at 100% 0%,rgba(240,136,62,.45),transparent 70%),linear-gradient(120deg,#1f4f9c 0%,#25707f 50%,#2f7a49 100%)!important}
-.band{background:radial-gradient(800px 360px at 100% 100%,rgba(240,136,62,.40),transparent 70%),linear-gradient(135deg,#1f4f9c 0%,#24707c 50%,#2f7a49 100%)!important}
 .inshead{background:linear-gradient(135deg,#1f4f9c,#2f7a49)!important}
 .loc .tele{background:linear-gradient(135deg,#1f4f9c,#2f7a49 70%,#d9722c)!important}
-footer,.footer,.site-footer{background:linear-gradient(160deg,#1f4f9c 0%,#25707f 55%,#2f7a49 100%)!important}
 .btn-gold{background:linear-gradient(90deg,#f39a4c,#e8742a)!important;color:#1d1d1d!important}
 .btn-teal{background:linear-gradient(90deg,#1f5fb0,#2f7a49)!important;color:#fff!important}
 section.mist{background:linear-gradient(180deg,#fbf6ee,#f1f6f1)}
